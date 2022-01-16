@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>complete responsive nike shoe website design tutorial</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   {% load static %}
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+   <link rel="stylesheet" href='{% static "css/shop.css" %}'>
+
+</head>
+<body>
+
+<!-- header section starts-->
+<header class="header">
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+   <a href="home.html"><img src="img/404 logo.png" width="150" height="80"></a>
+
+   <nav class="navbar">
+       <a href="flights.html" style="text-decoration: none;">Flights</a>
+       <a href="hotel.html" style="text-decoration: none;">Hotel</a>
+       <a href="vehichle_rent.html" style="text-decoration: none;">Vehichle Rent</a>
+       <a href="things_to_do.html" style="text-decoration: none;">Things to do</a>
+       <a href="explore.html" style="text-decoration: none;">Explore</a>
+       <a href="trip.html" style="text-decoration: none;">Trip</a>
+       <a href="event.html" style="text-decoration: none;">Event</a>
+       <a href="guide.html" style="text-decoration: none;">Find a guide</a>
+       <a href="food.html" style="text-decoration: none;">Food</a>
+       <a href="shop.html" style="text-decoration: none;">Shop</a>
+       <a href="f_q.html" style="text-decoration: none;">F&Q</a>
+       <a href="contact.html" style="text-decoration: none;">CONTACT</a>
+   </nav>
+
+   <a data-aos="zoom-in-left" data-aos-delay="1300" href="search.html" class="btn">Search</a>
+   <a data-aos="zoom-in-left" data-aos-delay="1300" href="login.html" class="btn">Login</a>
+
+</header>
+
+<!-- header section ends-->
+
+
+<section class="heading-link">
+   <h3>Shop With nepGhuma</h3>
+   <p>  Men / <a href="shop2.html">Women</a></p>
+</section>
+
+<!-- prodcuts section starts  -->
+
+<section class="shoes" id="shoes">
+
+   <h1 class="heading" data-aos="fade-up" data-aos-delay="150"> Our <span>Shoes</span> </h1>
+
+   <div class="swiper shoes-slider">
+
+      <div class="swiper-wrapper" >
+
+         <div class="swiper-slide slide" data-aos="fade-down" data-aos-delay="600">
+            <img src="img/shoe-1.png" alt="">
+            <h3>Shoe 1</h3>
+            <div class="btn" data-shoe="shoe-1">see details</div>
+         </div>
+
+         <div class="swiper-slide slide"data-aos="fade-down" data-aos-delay="300">
+            <img src="img/shoe-2.png" alt="">
+            <h3>Shoe 2</h3>
+            <div class="btn" data-shoe="shoe-2">see details</div>
+         </div>
+
+         <div class="swiper-slide slide"data-aos="fade-down" data-aos-delay="150">
+            <img src="img/shoe-3.png" alt="">
+            <h3>Shoe 3</h3>
+            <div class="btn" data-shoe="shoe-3">see details</div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="img/shoe-4.png" alt="">
+            <h3>Shoe 4</h3>
+            <div class="btn" data-shoe="shoe-4">see details</div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="img/shoe-5.png" alt="">
+            <h3>Shoe 5</h3>
+            <div class="btn" data-shoe="shoe-5">see details</div>
+         </div>
+
+         <div class="swiper-slide slide" data-aos="fade-down" data-aos-delay="900">
+            <img src="img/shoe-6.png" alt="">
+            <h3>Shoe 6</h3>
+            <div class="btn" data-shoe="shoe-6">see details</div>
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- prodcuts section ends -->
+
+<!-- shoe preview section starts  -->
+
+<section class="shoes-preview-container">
+
+   <div class="shoe-preview" data-target="shoe-1">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/shoe-1.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Shoe 1</h3>
+         <p>Very Nice Shoe</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="shoe-preview" data-target="shoe-2">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/shoe-2.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Shoe 2</h3>
+         <p>Very Nice Shoe</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="shoe-preview" data-target="shoe-3">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/shoe-3.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Shoe 3</h3>
+         <p>Very Nice Shoe</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="shoe-preview" data-target="shoe-4">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/shoe-4.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Shoe 4</h3>
+         <p>Very Nice Shoe</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="shoe-preview" data-target="shoe-5">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/shoe-5.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Shoe 5</h3>
+         <p>Very Nice Shoe</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="shoe-preview" data-target="shoe-6">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/shoe-6.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Shoe 6</h3>
+         <p>Very Nice Shoe</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+</section>
+
+<!-- shoe preview section ends -->
+
+
+<!-- prodcuts section starts  -->
+
+<section class="jackets" id="jackets">
+
+   <h1 class="heading2" data-aos="fade-down" data-aos-delay="600"> our <span>Jackets</span> </h1>
+
+   <div class="swiper jackets-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide" data-aos="fade-down" data-aos-delay="600">
+            <img src="img/jacket-1.png" alt="">
+            <h3>Jacket 1</h3>
+            <div class="btn" data-jacket="jacket-1">see details</div>
+         </div>
+
+         <div class="swiper-slide slide" data-aos="fade-down" data-aos-delay="450">
+            <img src="img/jacket-2.png" alt="">
+            <h3>Jacket 2</h3>
+            <div class="btn" data-jacket="jacket-2">see details</div>
+         </div>
+
+         <div class="swiper-slide slide" data-aos="fade-down" data-aos-delay="300">
+            <img src="img/jacket-3.png" alt="">
+            <h3>Jacket 3</h3>
+            <div class="btn" data-jacket="jacket-3">see details</div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="img/jacket-4.png" alt="">
+            <h3>Jacket 4</h3>
+            <div class="btn" data-jacket="jacket-4">see details</div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="img/jacket-3.png" alt="">
+            <h3>Jacket 5</h3>
+            <div class="btn" data-jacket="jacket-5">see details</div>
+         </div>
+
+         <div class="swiper-slide slide" data-aos="fade-down" data-aos-delay="900">
+            <img src="img/jacket-4.png" alt="">
+            <h3>Jacket 6</h3>
+            <div class="btn" data-jacket="jacket-6">see details</div>
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- shoe section ends -->
+
+<!-- jacket preview section starts  -->
+
+<section class="jackets-preview-container">
+
+   <div class="jacket-preview" data-target="jacket-1">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/jacket-1.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Jacket 1</h3>
+         <p>Very Nice Jacket</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="jacket-preview" data-target="jacket-2">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/jacket-2.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Jacket 2</h3>
+         <p>Very Nice Jacket</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="jacket-preview" data-target="jacket-3">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/jacket-3.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Jacket 3</h3>
+         <p>Very Nice Jacket</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="jacket-preview" data-target="jacket-4">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/jacket-4.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Jacket 4</h3>
+         <p>Very Nice Jacket</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="jacket-preview" data-target="jacket-5">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/jacket-3.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Jacket 5</h3>
+         <p>Very Nice Jacket</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+   <div class="jacket-preview" data-target="jacket-6">
+      <div class="fas fa-times"></div>
+      <div class="image">
+         <img src="img/jacket-4.png" alt="">
+      </div>
+      <div class="content">
+         <h3>Jacket 6</h3>
+         <p>Very Nice Jacket</p>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <div class="price">Nrs. 5000</div>
+         <a href="#" class="btn">buy now</a>
+      </div>
+   </div>
+
+</section>
+
+<!-- jacket preview section ends -->
+
+
+<!-- services section starts  -->
+
+
+<section class="service">
+
+   <div class="box" data-aos="fade-down" data-aos-delay="150">
+      <i class="fas fa-shipping-fast"></i>
+      <p>free delivery</p>
+   </div>
+
+   <div class="box" data-aos="fade-down" data-aos-delay="300">
+      <i class="fas fa-redo"></i>
+      <p>7 days return</p>
+   </div>
+
+   <div class="box" data-aos="fade-down" data-aos-delay="600">
+      <i class="fas fa-headset"></i>
+      <p>24/7 support</p>
+   </div>
+
+</section>
+<!-- services section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="box-container">
+
+       <div class="box" data-aos="fade-up" data-aos-delay="150">
+         <a href="home.html"><img src="img/404 logo.png" width="150" height="80"></a>
+           <p>A perfect travel guide book</p>
+           
+       </div>
+
+       <div class="box" data-aos="fade-up" data-aos-delay="300">
+           <h3>quick links</h3>
+           <a href="flights.html" class="links"> <i class="fas fa-arrow-right"></i> Flights </a>
+           <a href="hotel.html" class="links"> <i class="fas fa-arrow-right"></i> Hotel </a>
+           <a href="vehichle_rent.html" class="links"> <i class="fas fa-arrow-right"></i> Vehicle Rent </a>
+           <a href="things_to_do.html" class="links"> <i class="fas fa-arrow-right"></i> Things to do </a>
+           <a href="explore.html" class="links"> <i class="fas fa-arrow-right"></i> Explore </a>
+           <a href="food.html" class="links"> <i class="fas fa-arrow-right"></i> Food </a>
+           <a href="blogs.html" class="links"> <i class="fas fa-arrow-right"></i> Blogs </a>
+           
+       </div>
+
+       <div class="box" data-aos="fade-up" data-aos-delay="450">
+           <h3>Contact info</h3>
+           <p> <i class="fas fa-map"></i> Kathmandu, Nepal </p>
+           <p> <i class="fas fa-phone"></i> +977 9880327811 </p>
+           <p> <i class="fas fa-envelope"></i> team404@gmail.com </p>
+       </div>
+
+   
+
+   </div>
+
+</section>
+
+<div class="credit">created by <span>404 Not Found</span> </div>
+
+<!-- footer section ends -->
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+
+<!-- custom js file link  -->
+<script src="js/shop.js"></script>
+
+<script>
+
+    AOS.init({
+        duration: 900,
+        offset:150,
+    });
+
+</script>
+
+</body>
+</html>

@@ -9,3 +9,8 @@ def guide(request):
 
 def event(request): 
     return render(request,'event.html')
+
+def shop1(request): 
+    return render(request,'shop.html')
+def shop2(request): 
+    return render(request,'shop2.html')
