@@ -1,0 +1,365 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #111;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #29d9d5;
+  border-radius: 5rem;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  color: #29d9d5;
+  font-size: 2rem;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #29d9d5;
+  border: 0.2rem solid #29d9d5;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
+  background: #29d9d5;
+  color: #111;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: #aaa;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+  color: #29d9d5;
+}
+
+.header .btn {
+  margin-top: 0;
+}
+
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: #29d9d5;
+  cursor: pointer;
+  display: none;
+}
+
+
+.home {
+    margin: 0 auto;
+    margin-top: 9rem;
+    width: 90%;
+    border-radius: 1rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(/static/assets/gro.jpg) no-repeat;
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(/static/assets/gro.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 80vh;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 5rem;
+}
+  
+.home .content {
+    text-align: center;
+}
+  
+.home .content span {
+    font-weight: bolder;
+    color: transparent;
+    -webkit-text-stroke: 0.1rem #fff;
+    font-size: 4vw;
+    display: block;
+}
+  
+.home .content h3 {
+    font-size: 6vw;
+    color: #fff;
+}
+  
+.home .content p {
+    max-width: 60rem;
+    margin: 1rem auto;
+    font-size: 1.4rem;
+    color: #aaa;
+    line-height: 2;
+}
+  
+
+.guide-details .guide-details-slider{
+    padding-bottom: 2rem;
+    background-color: rgb(4, 7, 155);
+}
+  
+.guide-details .box{
+    padding:2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(41,217,213);
+
+    border-radius: 40px;
+}
+  
+.guide-details .box img{
+    height:13rem;
+    width:13rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+  
+.guide-details .box h3{
+    color:rgb(41,217,213);
+    font-size: 2.5rem;
+}
+  
+.guide-details .box p{
+    color:rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding:1rem 0;
+}
+  
+.guide-details .box .stars i{
+    color:rgb(209, 66, 0);
+    font-size: 1.8rem;
+}
+  
+.footer .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box {
+  padding: 1rem 0;
+}
+
+.footer .box-container .box .logo {
+  padding-bottom: 1rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box p {
+  font-size: 1.4rem;
+  color: #aaa;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.footer .box-container .box p i {
+  padding-right: .5rem;
+  color: #29d9d5;
+}
+
+.footer .box-container .box .share {
+  padding-top: 1rem;
+}
+
+.footer .box-container .box .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  border: 0.2rem solid #29d9d5;
+  color: #29d9d5;
+  margin-right: .5rem;
+  text-align: center;
+}
+
+.footer .box-container .box .share a:hover {
+  background: #29d9d5;
+  color: #111;
+}
+
+.footer .box-container .box .links {
+  font-size: 1.4rem;
+  color: #aaa;
+  padding: 1rem 0;
+  display: block;
+}
+
+.footer .box-container .box .links:hover {
+  color: #29d9d5;
+}
+
+.footer .box-container .box .links:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box-container .box .links i {
+  padding-right: .5rem;
+  color: #29d9d5;
+}
+
+.footer .box-container .box form .email {
+  width: 100%;
+  border-radius: 5rem;
+  border: 0.2rem solid #29d9d5;
+  background: none;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: #aaa;
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.credit {
+  background: #222;
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 1rem;
+  color: #aaa;
+}
+
+.credit span {
+  color: #29d9d5;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #222;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    margin: 2rem;
+    font-size: 2rem;
+    display: block;
+  }
+  .home {
+    margin-top: 10rem;
+  }
+  .home .content span {
+    font-size: 8vw;
+  }
+  .home .content h3 {
+    font-size: 9vw;
+  }
+}
+
+
+
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .about .content h3 {
+    font-size: 3.5rem;
+  }
+  .banner .content h3 {
+    font-size: 2.7rem;
+  }
+}
