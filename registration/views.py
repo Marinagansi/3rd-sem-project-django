@@ -6,3 +6,6 @@ def home(request):
 
 def guide(request): 
     return render(request,'book_guide.html')
+
+def event(request): 
+    return render(request,'event.html')
