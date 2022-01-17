@@ -1,11 +1,15 @@
 from django.shortcuts import render
-
+from book_guide.models import Book_guide
 # Create your views here.
 def home(request):
     return render(request,'home.html')
 
 def guide(request): 
-    return render(request,'book_guide.html')
+
+    guides=Book_guide.objects.raw('select * from book_guide')
+
+    return render(request,"book_guide.html",{'guides':guides})
+   
 
 def event(request): 
     return render(request,'event.html')

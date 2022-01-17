@@ -78,12 +78,13 @@
         <div class="swiper-container guide-slider">
         
             <div class="swiper-wrapper">
+              {% for book_guide in guides %}
     
                 <div class="swiper-slide">
                     <div class="box">
                         <img data-aos="zoom-in" data-aos-delay="150" src="{% static "assets/pic1.jpg" %}"  alt="">
-                        <h3 data-aos="fade-up" data-aos-delay="300">Mundre</h3>
-                        <p data-aos="fade-up" data-aos-delay="450">Lives in Nepal. Expertise Area: Rukum</p>
+                        <h3 data-aos="fade-up" data-aos-delay="300">{{book_guide.guide_name}}</h3>
+                        <p data-aos="fade-up" data-aos-delay="450">{{book_guide.guide_address}}Lives in Nepal. Expertise Area: Rukum</p>
                         <div data-aos="zoom-in" data-aos-delay="600" class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -93,7 +94,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
+                {% endfor %}
+                <!-- <div class="swiper-slide">
                     <div class="box">
                         <img data-aos="zoom-in" data-aos-delay="150" src="{% static "assets/pic2.jpg" %}"  alt="">
                         <h3 data-aos="fade-up" data-aos-delay="300">Ghiu Chiura</h3>
@@ -182,7 +184,7 @@
     
             </div>
     
-        </div>
+        </div> -->
     </section>
 
     <!-- guide details section ends  -->
