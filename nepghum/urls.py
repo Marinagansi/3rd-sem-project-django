@@ -21,6 +21,7 @@ import registration
 urlpatterns = [
     path('admin/', admin.site.urls),
      path('registration/',include('registration.urls')),
+     path('guide/', include('book_guide.urls')),
      
     
     

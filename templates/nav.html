@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nepGhuma</title>
+    {% load static %}
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/guide.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <!-- custom js file link  -->
+
+    <script src="../js/guide.js" defer></script>
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <a href="{% url 'home' %}"
+        ><img src="{% static "assets/404 logo.png" %}" width="150" height="80"
+      /></a>
+
+      <nav class="navbar">
+        <a href="flights.html" style="text-decoration: none">Flights</a>
+        <a href="hotel.html" style="text-decoration: none">Hotel</a>
+        <a href="vehichle_rent.html" style="text-decoration: none"
+          >Vehicle Rent</a
+        >
+        <a href="things_to_do.html" style="text-decoration: none">Things to do</a>
+        <a href="explore.html" style="text-decoration: none">Explore</a>
+        <a href="trip.html" style="text-decoration: none">Trip</a>
+        <a href="event.html" style="text-decoration: none">Event</a>
+        <a href="guide.html" style="text-decoration: none">Find a guide</a>
+        <a href="food.html" style="text-decoration: none">Food</a>
+        <a href="faq.html" style="text-decoration: none">FAQ</a>
+        <a href="contact.html" style="text-decoration: none">CONTACT</a>
+      </nav>
+
+      <a data-aos="zoom-in-left" data-aos-delay="1300" href="search.html" class="btn">Search</a>
+      <a data-aos="zoom-in-left" data-aos-delay="1300" href="login.html" class="btn">Login</a>
+    </header>
+
+
+<div>
+    {% block content %} {% endblock content %}
+</div>
+   
+    <section class="footer">
+        <div class="box-container">
+          <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <a href="home.html"
+              ><img src="{% static "assets/404 logo.png" %}" width="150" height="80"
+            /></a>
+            <p>A perfect travel guide book</p>
+          </div>
+  
+          <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <h3>quick links</h3>
+            <a href="flights.html" class="links">
+              <i class="fas fa-arrow-right"></i> Flights
+            </a>
+            <a href="hotel.html" class="links">
+              <i class="fas fa-arrow-right"></i> Hotel
+            </a>
+            <a href="vehichle_rent.html" class="links">
+              <i class="fas fa-arrow-right"></i> Vehicle Rent
+            </a>
+            <a href="things_to_do.html" class="links">
+              <i class="fas fa-arrow-right"></i> Things to do
+            </a>
+            <a href="explore.html" class="links">
+              <i class="fas fa-arrow-right"></i> Explore
+            </a>
+            <a href="food.html" class="links">
+              <i class="fas fa-arrow-right"></i> Food
+            </a>
+            <a href="blogs.html" class="links">
+              <i class="fas fa-arrow-right"></i> Blogs
+            </a>
+          </div>
+  
+          <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <h3>Contact info</h3>
+            <p><i class="fas fa-map"></i> Kathmandu, Nepal</p>
+            <p><i class="fas fa-phone"></i> +977-9880327811</p>
+            <p><i class="fas fa-envelope"></i> team404@gmail.com</p>
+          </div>
+        </div>
+      </section>
+  
+      <div class="credit">Created by <span>404 Not Found</span></div>
+  
+      <!-- footer section ends -->
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+      <script>
+        AOS.init({
+          duration: 800,
+          offset: 150,
+        });
+      </script>
+    </body>
+  </html>

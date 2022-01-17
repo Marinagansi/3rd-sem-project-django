@@ -1,0 +1,43 @@
+{% extends 'nav.html' %}
+{% load static}
+{% block content %}
+<section class="home" id="home">
+    <div class="content">
+        <span data-aos="fade-up" data-aos-delay="150">nepGhumau</span>
+        <h3 data-aos="fade-up" data-aos-delay="300">Guides</h3>
+        <p data-aos="fade-up" data-aos-delay="450">
+            Book Your Guide
+        </p>
+        <a data-aos="fade-up" data-aos-delay="600" href="#guide-details" class="btn">Book</a>
+    </div>
+</section>
+
+<section class="guide-details">
+
+    <div class="swiper-container guide-slider">
+
+        <div class="swiper-wrapper">
+
+           
+            <div class="swiper-slide">
+                <div class="box">
+                  
+                    <h3 data-aos="fade-up" data-aos-delay="300">{{book_guide.guide_name}}</h3>
+                    <p data-aos="fade-up" data-aos-delay="450">{{book_guide.guide_address}}Lives in Nepal. Expertise
+                        Area: Rukum</p>
+                    <div data-aos="zoom-in" data-aos-delay="600" class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+
+    </div>
+   
+</section>
+{% endblock content %}
