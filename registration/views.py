@@ -25,6 +25,18 @@ def shop2(request):
 def try2(request): 
     return render(request,'try.html')
 
+def faq(request): 
+    return render(request,'faq.html')
+
+def flights(request): 
+    return render(request,'flights.html')
+
+def user_profile(request): 
+    return render(request,'user_profile.html')
+
+def vehicle_rent(request): 
+    return render(request,'vehicle_rent.html')
+
 
 def signin(request):
     if request.method=='POST':

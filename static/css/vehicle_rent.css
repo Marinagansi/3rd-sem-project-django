@@ -45,93 +45,6 @@ section {
 .heading {
   text-align: center;
   margin-bottom: 2rem;
-  margin-top: 5rem;
-}
-
-.heading span {
-  color: #29d9d5;
-  font-size: 2rem;
-}
-
-.heading h1 {
-  font-size: 4rem;
-  color: #fff;
-}
-.content .btn{
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.5rem;
-  color: #29d9d5;
-  border: 0.2rem solid #29d9d5;
-  border-radius: 5rem;
-  cursor: pointer;
-  background: none;
-}
-.btn {
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.7rem;
-  color: #29d9d5;
-  border: 0.2rem solid #29d9d5;
-  border-radius: 5rem;
-  cursor: pointer;
-  background: none;
-}
-
-.btn:hover {
-  background: #29d9d5;
-  color: #111;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
-* {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  text-transform: capitalize;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-padding-top: 9rem;
-}
-
-html::-webkit-scrollbar {
-  width: 1rem;
-}
-
-html::-webkit-scrollbar-track {
-  background: #111;
-}
-
-html::-webkit-scrollbar-thumb {
-  background: #29d9d5;
-  border-radius: 5rem;
-}
-
-body {
-  background: #111;
-  overflow-x: hidden;
-}
-
-section {
-  padding: 3rem 9%;
-}
-
-.heading {
-  text-align: center;
-  margin-bottom: 2rem;
 }
 
 .heading span {
@@ -213,15 +126,7 @@ section {
   display: none;
 }
 
-#background-video{
-  width:90vw;
-  height: 95vh;
-  
-  position: absolute;
-  margin: auto;
-  padding-top: 20px;
-  z-index: -2;
-}
+
 
 .home {
     margin: 0 auto;
@@ -229,7 +134,10 @@ section {
     width: 90%;
     border-radius: 1rem;
     overflow: hidden;
-   
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(static/assets/vehicle_rent.png) no-repeat;
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(/static/assets/vehicle_rent.png) no-repeat;
+    background-size: cover;
+    background-position: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -246,24 +154,20 @@ section {
   
 .home .content {
     text-align: center;
-    position: relative;
-    margin-top: 40vh;
-    
 }
   
 .home .content span {
     font-weight: bolder;
     /* color: transparent; */
-    color : #fff;
+    color : rgb(41,217,213);
     -webkit-text-stroke: 0.1rem rgb(8, 7, 7);
-    font-size: 2.3vw;
+    font-size: 4vw;
     display: block;
 }
   
 .home .content h3 {
-    font-size: 4vw;
-    color: rgb(41,217,213);
-    
+    font-size: 6vw;
+    color: #fff;
 }
   
 .home .content p {
