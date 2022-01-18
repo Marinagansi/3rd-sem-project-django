@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <title>Sign In and Sign up</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <!-- login form -->
+                <form action="login" class="sign-in-form" id="form1" method="POST">
+                    {% csrf_token %}
+                    <h2 class="title">Sign in</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="customer_name" placeholder=username id="usertxt">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="customer_phone" placeholder="password" id="passwordtxt">
+                    </div>
+                    <div id="error1"></div>
+                    <input type="submit" value="Login" class="btn solid">
+
+                    <p class="social-text">Or sign in with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+                <!-- login form end -->
+                <!-- sign up start -->
+                <form action="" class="sign-up-form" id='form2' method="POST">
+                    {% csrf_token %}
+                    <h2 class="title">Sign Up</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="username" name="customer_name" id='nametxt'>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="customer_email" placeholder=Email id='emailtxt'>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="address" name="customer_address" placeholder="password" id='passtxt'>
+                    </div> 
+
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="customer_phone" placeholder="password" id='pastxt'>
+                    </div>
+                    <div id="error2" class="error">
+                    </div>
+                    <input type="submit" value="Register" class="btn solid"/>
+
+                    <p class="social-text">Or sign in with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+                <!-- sign up end -->
+            </div>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>New here?</h3>
+                    <p> The journey of a thousand miles begins with a single step.</p>
+                    <button class="btn transparent" id="sign-up-btn">Sign up</button>
+                </div>
+                <!-- <img src="img/nepalpic.jpg" class="image" alt="pic"> -->
+
+            </div>
+            <!-- right paneel -->
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Already have an account</h3>
+                    <p> The journey of a thousand miles begins with a single step.</p>
+                    <button class="btn transparent" id="sign-in-btn">Sign in</button>
+                </div>
+                <!-- <img src="img/home1.jpg" class="image" alt="pic"> -->
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="{% static 'js/signup.js' %}"></script>
+</body>
+
+</html>

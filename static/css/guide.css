@@ -198,6 +198,8 @@ section {
     font-size: 1.5rem;
     padding:1rem 0;
 }
+
+
   
 .guide-details .box .stars i{
     color:rgb(209, 66, 0);
@@ -303,6 +305,8 @@ section {
 .credit span {
   color: #29d9d5;
 }
+
+
 
 @media (max-width: 991px) {
   html {

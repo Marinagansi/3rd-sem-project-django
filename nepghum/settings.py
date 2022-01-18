@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',
-    'book_guide'
+    'book_guide',
+    'book_event'
 ]
 
 MIDDLEWARE = [
