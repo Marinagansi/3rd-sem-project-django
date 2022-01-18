@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'registration',
     'book_guide',
-    'book_event'
+    'book_event',
+    'Event'
 ]
 
 MIDDLEWARE = [
