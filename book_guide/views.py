@@ -6,4 +6,4 @@ def guide(request):
 
     guides=Book_guide.objects.raw('select * from book_guide')
 
-    return render(request,"book_guide.html",{'guides':guides})
+    return render(request,"guide/book_guide.html",{'guides':guides})

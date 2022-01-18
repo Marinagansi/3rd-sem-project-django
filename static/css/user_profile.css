@@ -37,15 +37,73 @@ body {
   background: rgb(0, 0, 0);
   overflow-x: hidden;
 }
+.navigation-menu{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  
+}
 
 section {
   padding: 3rem 9%;
+}
+section.scroll{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+.scroll a {
+  position: absolute;
+  bottom: 20px;
+  left: 44%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.scroll a:hover {
+  opacity: .5;
+}
+#scroller a {
+  padding-top: 60px;
+}
+#scroller a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+section.scroll::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+}
+#scroller { 
+  background: black;
 }
 
 .heading {
   text-align: center;
   margin-bottom: 2rem;
-  margin-top: 5rem;
 }
 
 .heading span {
@@ -57,17 +115,7 @@ section {
   font-size: 4rem;
   color: #fff;
 }
-.content .btn{
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.5rem;
-  color: #29d9d5;
-  border: 0.2rem solid #29d9d5;
-  border-radius: 5rem;
-  cursor: pointer;
-  background: none;
-}
+
 .btn {
   margin-top: 1rem;
   display: inline-block;
@@ -79,7 +127,49 @@ section {
   cursor: pointer;
   background: none;
 }
+.home .content .profile-area{
+  background-color: rgba(185, 199, 209, 0.226);
+  height: 20vh;
+  width: 23vw;
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  align-items: center;
+}
 
+.home .content .profile-area .formbutton{
+ margin-top: 3.5rem;
+ margin-left: 12px;
+}
+
+
+.dp{
+  position: relative;
+  border-radius: 50%;
+  width: 190px;
+  height: 199px;
+  top: 5%;
+  left: 70%;
+}
+
+
+.home .content .btn{
+  position: absolute;
+  top: 60%;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #29d9d5;
+  border: 0.2rem solid #29d9d5;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+}
+.home .content .btn:hover {
+  background: #29d9d5;
+  color: #111;
+}
 .btn:hover {
   background: #29d9d5;
   color: #111;
@@ -213,23 +303,17 @@ section {
   display: none;
 }
 
-#background-video{
-  width:90vw;
-  height: 95vh;
-  
-  position: absolute;
-  margin: auto;
-  padding-top: 20px;
-  z-index: -2;
-}
-
 .home {
     margin: 0 auto;
     margin-top: 9rem;
     width: 90%;
     border-radius: 1rem;
+    border:#29d9d5 3px solid;
     overflow: hidden;
-   
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(static/assets/vehicle_rent.png) no-repeat;
+    background: linear-gradient(rgba(20, 83, 94, 0.623), rgba(17, 17, 17, 0.7));
+    background-size: cover;
+    background-position: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -242,36 +326,77 @@ section {
         -ms-flex-pack: center;
             justify-content: center;
     padding-bottom: 5rem;
+    position: relative;
 }
   
 .home .content {
-    text-align: center;
-    position: relative;
-    margin-top: 40vh;
+    width: 100vw;
+    height: 70vh;
+    position: absolute;
+    top: 4%;
+    left: 1%;
     
 }
   
 .home .content span {
     font-weight: bolder;
+    position: absolute;
+    top: 0%;
+    left: 1%;
     /* color: transparent; */
-    color : #fff;
+    color : rgb(41,217,213);
     -webkit-text-stroke: 0.1rem rgb(8, 7, 7);
-    font-size: 2.3vw;
+    font-size: 2vw;
     display: block;
+
 }
-  
-.home .content h3 {
-    font-size: 4vw;
-    color: rgb(41,217,213);
+
+
+.home .content .tanuja {
+  position: relative;
+    font-size: 10vh;
+    line-height: 90px;
+    font-weight: bolder;
+    top: 15%;
+    color:transparent;
+    -webkit-text-stroke:1px rgb(31, 233, 91);
+    background-image:url(static/assets/back.png);
+  background-size:contain;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* animation:back 20s linear infinite; */
     
+    
+}
+@keyframes back{
+  100%{
+    background-position:2000px 0 ;
+  }
+}
+.home .content .hii h3{
+  position: relative;
+    font-size: 10vh;
+    line-height: 90px;
+    font-weight: bolder;
+    top: 50%;
+    color:transparent;
+    -webkit-text-stroke:1px #fff;
+  
+}
+.home .content .hii{
+  position: relative;
+  top:15%
 }
   
 .home .content p {
-    max-width: 60rem;
+   position: absolute;
+   top: 43%;
     margin: 1rem auto;
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: #aaa;
     line-height: 2;
+   
+    
 }
 
 

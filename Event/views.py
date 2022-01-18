@@ -4,7 +4,11 @@ from Event.models import event
 
 # Create your views here.
 def event(request): 
-    return render(request,'event.html')
+    return render(request,'event/event.html')
+
+
+def receipt(request): 
+    return render(request,'event/booked_event.html')
 
 
 def fillform(request):
@@ -12,8 +16,15 @@ def fillform(request):
     if request.method=="POST":
         form=EventForm(request.POST)
         form.save()
-        return redirect ("home")
+        return redirect ('booked_event')
               
     else:
         form=EventForm()
-    return render (request,"event_form.html",{'form':form})
+    return render (request,"event/event_form.html",{'form':form})
+
+
+def Event(request): 
+
+    events=event.objects.raw('select * from Event')
+
+    return render(request,"Event.html",{'events':events})

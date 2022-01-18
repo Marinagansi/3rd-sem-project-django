@@ -34,23 +34,24 @@
       /></a>
 
       <nav class="navbar">
-        <a href="flights.html" style="text-decoration: none">Flights</a>
-        <a href="hotel.html" style="text-decoration: none">Hotel</a>
-        <a href="vehichle_rent.html" style="text-decoration: none"
+        <a href="flights" style="text-decoration: none">Flights</a>
+        <a href="hotel" style="text-decoration: none">Hotel</a>
+        <a href="{% url 'vehicle style="text-decoration: none"
           >Vehicle Rent</a
         >
-        <a href="things_to_do.html" style="text-decoration: none">Things to do</a>
-        <a href="explore.html" style="text-decoration: none">Explore</a>
-        <a href="trip.html" style="text-decoration: none">Trip</a>
-        <a href="event" style="text-decoration: none">Event</a>
-        <a href="guide.html" style="text-decoration: none">Find a guide</a>
-        <a href="food.html" style="text-decoration: none">Food</a>
-        <a href="faq.html" style="text-decoration: none">FAQ</a>
-        <a href="contact.html" style="text-decoration: none">CONTACT</a>
+        <a href= 'things_to_do' style="text-decoration: none">Things to do</a>
+        <a href='explore'  style="text-decoration:none">Explore</a>
+        <a href='trip'  style="text-decoration: none">Trip</a>
+        <a href='event' style="text-decoration: none">Event</a>
+        <a href= 'guide/' style="text-decoration: none">Find a guide</a>
+        <a href= 'food'  style="text-decoration: none">Food</a>
+        <a href= 'faq' style="text-decoration: none">FAQ</a>
+        <a href= 'contact' style="text-decoration: none">CONTACT</a>
       </nav>
 
       <a data-aos="zoom-in-left" data-aos-delay="1300" href="search.html" class="btn">Search</a>
-      <p style="color:red">{{registration.customer_name}} hhhhheello</p>
+      <p data-aos="zoom-in-left" data-aos-delay="1300" style="font-size: 4rem; color:white">{{request.user.username}} </p>
+      <!-- <p style="color:red">{{request.user.username}} hhhhheello</p> -->
     <!-- <a data-aos="zoom-in-left" data-aos-delay="1300" href="login" class="btn">login</a>  -->
     </header>
 

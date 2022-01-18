@@ -1,0 +1,84 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/faq.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <!-- custom js file link  -->
+
+    <script src="{% static '/js/faq.js' %}" defer></script>
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+        <div class="content">
+            
+        
+            <div class="container-fluid">
+                <span data-aos="fade-up" data-aos-delay="150">Users Frequently Asked Questions :</span>
+                <div class="accordion">
+                    <div class="icon"></div>
+                    <h5>What is the best low budget hotel inside Pokhara ?</h5>
+                </div>
+                <div class="panel">
+                    <p>It is Hotel Pokhara Lakeside. It offers one of the lowest price 
+                        in the area while not deviating away from the quality services
+                        provided. It has won various awards and achievements which you
+                        can easily chekout in the hotel website. 
+                    </p>
+                </div>
+                <div class="accordion">
+                    <div class="icon"></div>
+                    <h5>What is the best place to eat in Jhapa ?</h5>
+                </div>
+                <div class="panel">
+                    <p>Prachin Restaurant and Bar offers very delicious and healthy food 
+                        in jhapa. It has been dominating the area with majority of customers
+                        choosing Praching as their first go-to place for food or for hanging 
+                        out with friends. It also has ancitent traditional theme that reflets
+                        its name "Prachin".
+                    </p>
+                </div>
+                <div class="accordion">
+                    <div class="icon"></div>
+                    <h5>Whaere is Burger House Gyaneshowr?</h5>
+                </div>
+                <div class="panel">
+                    <p>It is just near the turning 300m east of maitidevi chowk, from where you go to
+                        softwarica college of it and Commerce.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        
+
+    </section>
+
+
+    <!-- home section ends -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800,
+        offset: 150,
+      });
+    </script>
+  </body>
+</html>
+
+{% endblock content %}
+   
+
+    
