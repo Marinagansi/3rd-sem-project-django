@@ -3,76 +3,75 @@
 {% block content %}
 
 
-   
-    <link rel="stylesheet" href="{% static '/css/home.css' %}">
-    <link rel="stylesheet" href="{% static '/css/aos.css' %}">
 
-    <!-- custom js file link  -->
+<link rel=stylesheet href="{% static '/css/home1.css' %}">
+<link rel="stylesheet" href="{% static '/css/aos.css' %}">
 
-    <script src="{% static '../js/home.js' %}" defer></script>
-  </head>
-  <body>
+<!-- custom js file link  -->
 
-    <!-- header section ends -->
+<script src="{% static '/js/home.js' %}" defer></script>
+</head>
 
-    <!-- home section starts  -->
+<body>
 
-    <section class="home" id="home">
+  <!-- header section ends -->
+
+  <!-- home section starts  -->
+  
+
+  <section class="home" id="home">
       <div class="content">
         <span data-aos="fade-up" data-aos-delay="150">Visit Nepal</span>
         <h3 data-aos="fade-up" data-aos-delay="300">Lifetime Experiences</h3>
         <p data-aos="fade-up" data-aos-delay="450">
           The journey of a thousand miles begins with a single step.
         </p>
+       
         <a
           data-aos="fade-up"
           data-aos-delay="600"
-          href="explore.html"
+          href="explore"
+          
           class="btn"
           >Explore</a
         >
       </div>
     </section>
 
-    <!-- home section ends -->
+  <!-- home section ends -->
 
-    <!-- about section starts  -->
+  <!-- about section starts  -->
 
-    <section class="about" id="about">
-      <div class="video-container" data-aos="fade-right" data-aos-delay="300">
-        <video src="../vid/vid-3.mp4" muted autoplay loop class="video"></video>
-        <div class="controls">
-          <span class="control-btn" data-src="../vid/vid-3.mp4"></span>
-          <span class="control-btn" data-src="../vid/vid-1.mp4"></span>
-          <span class="control-btn" data-src="../vid/vid-2.mp4"></span>
-          <span class="control-btn" data-src="../vid/vid-0.mp4"></span>
-          <span class="control-btn" data-src="../vid/vid-4.mp4"></span>
-        </div>
+  <section class="about" id="about">
+    <div class="video-container" data-aos="fade-right" data-aos-delay="300">
+      <video src="{% static '/assets/vid/vid-2.mp4' %}" muted autoplay loop class="video"></video>
+      <div class="controls">
+        <span class="control-btn" data-src="{% static '/assets/vid/vid-2.mp4' %}"></span>
+        <span class="control-btn" data-src="{% static '/assets/vid/vid-1.mp4' %}"></span>
+        <span class="control-btn" data-src="{% static '/assets/vid/vid-2.mp4' %}"></span>
+        <span class="control-btn" data-src="{% static '/assets/vid/vid-0.mp4' %}"></span>
+        <span class="control-btn" data-src="{% static '/assets/vid/vid-4.mp4' %}"></span>
       </div>
+    </div>
 
-      <div class="content" data-aos="fade-left" data-aos-delay="600">
-        <span>Why choose us?</span>
-        <h3>We are your travel book.</h3>
-        <p>nepGhuma</p>
-        <a
-          data-aos="fade-up"
-          data-aos-delay="600"
-          href="about_us.html"
-          class="btn"
-          >About Us</a
-        >
-      </div>
-    </section>
+    <div class="content" data-aos="fade-left" data-aos-delay="600">
+      <span>Why choose us?</span>
+      <h3>We are your travel book.</h3>
+      <p>nepGhuma</p>
+      <a data-aos="fade-up" data-aos-delay="600" href="about_us.html" class="btn">About Us</a>
+    </div>
+  </section>
 
-    <!-- footer section starts  -->
+  <!-- footer section starts  -->
 
-   
 
-    
 
-    <!-- footer section ends -->
 
-    
-  </body>
+
+  <!-- footer section ends -->
+
+
+</body>
+
 </html>
 {% endblock content %}
