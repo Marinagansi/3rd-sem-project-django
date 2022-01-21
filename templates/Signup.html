@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,6 +28,13 @@
                         <input type="password" name="customer_phone" placeholder="password" id="passwordtxt">
                     </div>
                     <div id="error1"></div>
+                    {% if messages %}
+                    <ul class="messages" style="color: white;">
+                        {% for message in messages %}
+                        {{ message }}
+                            {% endfor %}
+                    </ul>
+                    {% endif %}
                     <input type="submit" value="Login" class="btn solid">
 
                     <p class="social-text">Or sign in with social platforms</p>
@@ -52,25 +60,25 @@
                     <h2 class="title">Sign Up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="username" name="customer_name" id='nametxt'>
+                        <input type="text" placeholder="username" name="name" id='nametxt'>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" name="customer_email" placeholder=Email id='emailtxt'>
+                        <input type="email" name="email" placeholder=Email id='emailtxt'>
                     </div>
 
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="address" name="customer_address" placeholder="password" id='passtxt'>
-                    </div> 
+                        <input type="password" name="cpsw" placeholder="password" id='passtxt'>
+                    </div>
 
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="customer_phone" placeholder="password" id='pastxt'>
+                        <input type="password" name="psw" placeholder="password" id='pastxt'>
                     </div>
                     <div id="error2" class="error">
                     </div>
-                    <input type="submit" value="Register" class="btn solid"/>
+                    <input type="submit" value="Register" class="btn solid" />
 
                     <p class="social-text">Or sign in with social platforms</p>
                     <div class="social-media">

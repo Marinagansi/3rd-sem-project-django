@@ -20,9 +20,13 @@ import registration
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('registration/',include('registration.urls')),
-     path('guide/', include('book_guide.urls')),
-     path('', include('book_event.urls')),
+     path('',include('registration.urls')),
+     path('', include('book_guide.urls')),
+     path('', include('Event.urls')),
+     path('', include('flights.urls')),
+     path('', include('rent.urls')),
+     path('', include('booking_vehicle.urls'))
+     
      
     
     
