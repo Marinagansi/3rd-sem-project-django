@@ -43,20 +43,30 @@
             <span data-aos="fade-up" data-aos-delay="150">Popular Vehicles</span>
             <h1 data-aos="fade-up" data-aos-delay="150">Choose vehicle of your choice</h1>
         </div>
+      
+
+      
     
         <div class="box-container">
-    
+            {% for rent in rents %}
             <div class="box" data-aos="fade-up" data-aos-delay="150">
                 <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
+                    <img data-aos="fade-up" data-aos-delay="150" src="{% static 'assets/' %}{{rent.v_image}}" alt="">
                 </div>
                 <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
+                    <h3 data-aos="fade-up" data-aos-delay="300"> 
+                        {{rent.v_color}}</h3>
+                        <h3 data-aos="fade-up" data-aos-delay="300"> 
+                            {{rent.V_model}}</h3>
+                            
+                    <a data-aos="zoom-in-left" data-aos-delay="300" href="vehicle_detail/{{rent.v_id}}">Details <i class="fas fa-angle-right"></i></a>
+                    <p class="ml-5" >Your Customer ID is:
+                        {{request.session.customer_id}}</p>
+                  
                 </div>
             </div>
-    
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
+            {% endfor %}
+            <!-- <div class="box" data-aos="fade-up" data-aos-delay="150">
                 <div class="image">
                     <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
                 </div>
@@ -144,7 +154,7 @@
                     <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
                     <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
                 </div>
-            </div>    
+            </div>     -->
         </div>
     
     </section>

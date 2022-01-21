@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'registration',
     'book_guide',
     'book_event',
-    'Event'
+    'Event',
+    'flights',
+    'vehicle',
+    'rent',
+    'booking_vehicle'
 ]
 
 MIDDLEWARE = [
@@ -127,6 +131,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS =[os.path.join(BASE_DIR,'static')]
 
+#file upload url and root
+MEDIA_URL="/assets/"
+MEDIA_ROOT=os.path.join(BASE_DIR,'static/assets')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

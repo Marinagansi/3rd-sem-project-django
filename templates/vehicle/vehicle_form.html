@@ -1,0 +1,15 @@
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label >First name:</label><br>
+    <input type="text"  name="V_model"><br>
+    <label >color:</label><br>
+    <input type="text"   name="v_color"><br>
+    <label>rent:</label><br>
+    <input type="text"  name="v_rent"><br>
+    <label >image</label><br>
+    <input type="file"  name="v_image"><br>
+    <label>purchase date</label><br>
+    <input type="date"  name="v_purchase"><br>
+
+    <input value="Register Data" type="submit" class="btn btn-success ml-5"/> 
+</form>

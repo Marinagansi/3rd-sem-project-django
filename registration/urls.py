@@ -16,7 +16,8 @@ urlpatterns = [
           path('faq',views.faq),
            path('flights',views.flights,name="flights"),
             path('user_profile',views.user_profile),
-            path('vehicle_rent',views.vehicle_rent, name="vechile_rent"),
+            
+          
            
        
    

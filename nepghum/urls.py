@@ -22,7 +22,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
      path('',include('registration.urls')),
      path('', include('book_guide.urls')),
-     path('', include('Event.urls'))
+     path('', include('Event.urls')),
+     path('', include('flights.urls')),
+     path('', include('rent.urls')),
+     path('', include('booking_vehicle.urls'))
      
      
     

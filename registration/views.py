@@ -4,6 +4,7 @@ from registration.forms import CustomerForm
 from registration.models import Registration
 from django.contrib.auth import authenticate,login
 from django.contrib.auth.models import User
+from django.contrib import messages
 # Create your views here.
 def firstpage(request):
     return render(request,'firstpage.html')
@@ -30,13 +31,11 @@ def faq(request):
     return render(request,'faq.html')
 
 def flights(request): 
-    return render(request,'flights.html')
+    return render(request,'flight/flights.html')
 
-def user_profile(request): 
-    return render(request,'user_profile.html')
+   
 
-def vehicle_rent(request): 
-    return render(request,'vehicle_rent.html')
+
 
 
 def signin(request):
@@ -54,7 +53,9 @@ def signin(request):
             login(request, user)
             print(request.user.username)
             return redirect ("home")
-      
+
+        else:
+            messages.info(request,'Invalid user')
     return render(request,"signup.html")
     
     
@@ -87,3 +88,7 @@ def home(request):
     user=Registration.objects.raw('select * from registration')
 
     return render(request,"home.html",{'user':user})                
+
+def user_profile(request): 
+    
+    return render(request,"user_profile.html")

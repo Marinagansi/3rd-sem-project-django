@@ -1,0 +1,11 @@
+{% load static %}
+<h1>{{rents.V_model}}</h1>
+<h1>{{rents.v_color}}</h1>
+<h1>{{rents.v_purchase}}</h1>
+<h1>{{rents.v_rent}}</h1>
+<img style="width:30%" src="{% static 'assets/' %}{{rents.v_image}}">
+<form>
+    <input type="text" value={{rents.v_id}}>
+    <input type="text" value={{user.id}}>
+<a href= '/vbook_fillform' style="text-decoration: none">Book NOw</a>
+</form>
