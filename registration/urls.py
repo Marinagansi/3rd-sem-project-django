@@ -16,6 +16,9 @@ urlpatterns = [
           path('faq',views.faq),
            path('flights',views.flights,name="flights"),
             path('user_profile',views.user_profile),
+            path('contact',views.contact),
+            path('about_us',views.about_us),
+            path('hotel',views.hotel),
             
           
            

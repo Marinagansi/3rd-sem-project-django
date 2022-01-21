@@ -16,9 +16,12 @@ def guide(request):
     return render(request,"book_guide.html",{'guides':guides})
    
 
-
-
-
+def hotel(request): 
+    return render(request,'hotel.html')
+def contact(request): 
+    return render(request,'contact.html')
+def about_us(request): 
+    return render(request,'about_us.html')
 def shop1(request): 
     return render(request,'shop.html')
 def shop2(request): 
