@@ -1,0 +1,115 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+
+<link rel=stylesheet href="{% static '/css/about_us.css' %}">
+<link rel="stylesheet" href="{% static '/css/aos.css' %}">
+
+<!-- custom js file link  -->
+
+<script src="{% static '/js/home.js' %}" defer></script>
+
+
+<!-- home section starts  -->
+
+<header class="home" id="home">
+
+    <div class="content">
+        <span data-aos="fade-up" data-aos-delay="150">About Us</span>
+        <a data-aos="fade-up" data-aos-delay="600" href="#about_us" class="btn">About Us</a>
+    </div>
+
+</header>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about_us" id="about_us">
+
+    <div class="content" data-aos="fade-left" data-aos-delay="600">
+        <span>About Us</span>
+        <p>nepGhuma is a travel metasearch site that finds and compares the best offers on flights,
+            hotels, car rentals and package holidays. We're free, which means that we never add any
+            booking fees, and we never use cookies to inflate prices</p>
+    </div>
+</section>
+
+<section class="what_wedo" id="what_wedo">
+
+    <div class="content" data-aos="fade-left" data-aos-delay="600">
+        <span>What we do</span>
+        <p>nepGhuma is a travel search site comparing flights, hotels and car rental deals. We don't sell flight tickets, hotel rooms or car rental deals – 
+            we show you an overview of available travel options, the latest available prices and let you choose the offer you prefer. One click and you're taken directly to your chosen 
+            site where the booking is completed. Today, we inspire travelers across more than 30 international markets and are internationally praised for our unique product and 
+            services. </p>
+    </div>
+</section> 
+
+<section class="our_vision" id="our_vision"> 
+    <div class="content" data-aos="fade-left" data-aos-delay="600">
+        <span>Our Vision</span>
+        <p>We think everybody should be able to travel the world. Our vision is of a world where our differences are a source of inspiration and development, not intolerance and 
+            prejudice. Our purpose is to give courage and encourage each one of us to stay curious and be open-minded so we can all enjoy a better, more diversified world.            
+            </p>
+    </div>
+</section>
+
+<!-- Our Team section starts -->
+<section class="our_team">
+
+    <h1 data-aos="fade-left" data-aos-delay="800" class="heading">Our Team</h1>
+
+    <div class="box-team">
+
+        <div data-aos="fade-left" data-aos-delay="150" class="box">
+            <img src="{% static 'assets/team1.jpg'%}" alt="">
+            <h3>Aayush Nepal</h3>
+            <p>Member</p>
+            <a href="contact_us.html" class="btn">Contact</a>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="200" class="box">
+            <img src="{% static 'assets/team2.jpg'%}" alt="">
+            <h3>Ashok GC</h3>
+            <p>Member</p>
+            <a href="contact_us.html" class="btn">Contact</a>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="250" class="box">
+            <img src="{% static 'assets/team3.jpg'%}" alt="">
+            <h3>Marina Gansi</h3>
+            <p>Member</p>
+            <a href="contact_us.html" class="btn">Contact</a>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="300" class="box">
+            <img src="{% static 'assets/team4.jpg'%}" alt="">
+            <h3>Sagar Budhathoki</h3>
+            <p>Member</p>
+            <a href="contact_us.html" class="btn">Contact</a>
+        </div>
+        
+        <div data-aos="fade-left" data-aos-delay="350" class="box">
+            <img src="{% static 'assets/team5.jpg'%}" alt="">
+            <h3>Tanuja Bastola</h3>
+            <p>Scrum Master</p>
+            <a href="contact_us.html" class="btn">Contact</a>
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="400" class="box">
+            <img src="{% static 'assets/team6.jpg'%}" alt="">
+            <h3>Vidwat Dahal</h3>
+            <p>Member</p>
+            <a href="contact_us.html" class="btn">Contact</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- our team section ends -->
+
+
+{% endblock content %}
