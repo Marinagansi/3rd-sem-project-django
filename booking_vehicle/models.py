@@ -10,7 +10,7 @@ class VBooking(models.Model):
     customer=models.ForeignKey(User,on_delete=models.CASCADE)
     address=models.CharField(max_length=100)
     start_date = models.DateField()
-    end_plan=models.DateField()
+    end_date=models.DateField()
 
     class Meta:
         db_table="boking_vehicle"

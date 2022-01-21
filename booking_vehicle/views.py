@@ -1,23 +1,35 @@
 from django.shortcuts import render,redirect
 from booking_vehicle.models import VBooking
+from booking_vehicle.forms import vbooked
 # Create your views here.
 
 
 
-def fillform(request):
+def fillform(request,p_id):
     print(request)
     if request.method=="POST":
-        form=VBooking(request.POST)
+        form=vbooked(request.POST)
         form.save()
-        return redirect ('book_vehicle')
+        return redirect ('home')
               
     else:
-        form=VBooking()
-    return render (request,"vehicle/book_vehicle.html",{'form':form})
+        form=vbooked()
+    vehicle=VBooking.objects.get(vbooking_id=p_id)
+    return render(request,"vehicle/book_vehicle.html",{'form':form},{'p_id_id':p_id,'vehicle':vehicle})
+
+  
 
 def booking(request,p_id): 
+    print(request)
+    if request.method=="POST":
+        form=vbooked(request.POST)
+        form.save()
+        return redirect ('home')
+              
+    else:
+        form=vbooked()
     book=VBooking.objects.get(vehicle_id=p_id)
-    return render(request,"vehicle/book_vehicle.html",{'book':book})
+    return render(request,"vehicle/vehicle_details.html",{'book':book})
 
 def book_flights(request): 
 
