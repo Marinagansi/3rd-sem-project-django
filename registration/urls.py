@@ -19,6 +19,7 @@ urlpatterns = [
             path('contact',views.contact),
             path('about_us',views.about_us),
             path('hotel',views.hotel),
+            path('logout',views.logout_view),
             
           
            

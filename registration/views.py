@@ -5,6 +5,10 @@ from registration.models import Registration
 from django.contrib.auth import authenticate,login
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
+
+
 # Create your views here.
 def firstpage(request):
     return render(request,'firstpage.html')
@@ -85,7 +89,7 @@ def registration(request):
     #     form=CustomerForm()
     # return render (request,"signup.html",{'form':form})
                     
-
+@login_required()
 def home(request): 
 
     user=Registration.objects.raw('select * from registration')
@@ -95,3 +99,47 @@ def home(request):
 def user_profile(request): 
     
     return render(request,"user_profile.html")
+
+def logout_view(request):
+    logout(request)
+    return redirect('/firstpage')
+
+# login for hotels
+def Hsignin(request):
+    print(request)
+    if request.method=='POST':
+        customer_name=request.POST.get("customer_name")
+        customer_pasword=request.POST.get("customer_pasword")
+
+        user=Registration.objects.get(customer_name=customer_name,customer_pasword=customer_pasword)
+        if user is not None:
+            return redirect ("/registration/index")
+
+        else:
+            messages.info(request,"incorect username and password") 
+    return render(request,'registration/login.html')
+
+#for hotel registration
+def Hregistration(request):
+        # print(request)
+
+        if request.method=="POST":
+
+            form=CustomerForm(request.POST)
+        # print(form)
+
+            if form.is_valid():
+                try:
+                    print("valid")
+                    form.save()
+                    
+                    return redirect ("/registration/index")
+                except:
+                    
+                 print("invalid")
+
+        else:
+
+                form=CustomerForm()
+                print("invalid")
+                return render (request,"registration/registration.html",{'form':form})
