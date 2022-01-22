@@ -55,7 +55,7 @@ section {
 .add-property span {  
   font-size: 3rem;
   margin-top: 5rem;
-  color: #ffffff;
+  color: #29d9d5;
 }
 
 .add-property h1 {  
@@ -63,7 +63,25 @@ section {
   margin-top: 5rem;
   color: #29d9d5;
 }
+.line-down {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
 
+.line-down::before {
+  content: '';
+  position: absolute;
+  bottom: .7rem;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: #08484e;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
+}
 
 
 .btn {
@@ -72,7 +90,7 @@ section {
   padding: 1rem 3rem;
   font-size: 2rem;
   color: #29d9d5;
-  background: transparent;
+  background: #bac0c0;
   border: 0.2rem solid rgb(204, 204, 204);
   cursor: pointer;
   font-weight: bolder;
