@@ -1,0 +1,73 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+
+<link rel=stylesheet href="{% static '/css/contact.css' %}">
+<link rel="stylesheet" href="{% static '/css/aos.css' %}">
+
+<!-- custom js file link  -->
+
+<script src="{% static '/js/home.js' %}" defer></script>
+
+
+<!-- contact section starts  -->
+
+<section class="contact" data-aos="fade-down" data-aos-delay="150">
+    <div class="heading">
+        <h1>Contact Us</h1>
+    </div>
+    
+ 
+    <div class="icons-container">
+ 
+       <div class="icons" data-aos="fade-up" data-aos-delay="150">
+          <i class="fas fa-clock"></i>
+          <h3>opening hours :</h3>
+          <p>24*7 hours</p>
+       </div>
+ 
+       <div class="icons" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-phone"></i>
+          <h3>Phone :</h3>
+          <p>+977 9880327811</p>
+          <p>+977 9860914588</p>
+       </div>
+ 
+       <div class="icons" data-aos="fade-up" data-aos-delay="450">
+          <i class="fas fa-envelope"></i>
+          <h3> Email : </h3>
+          <p>nepghuma@gmail.com</p>
+          <p>admin@nepghuma.com</p>
+       </div>
+ 
+       <div class="icons" data-aos="fade-up" data-aos-delay="600">
+          <i class="fas fa-map"></i>
+          <h3>Address :</h3>
+          <p>Kathmandu, Nepal</p>
+       </div>
+ 
+    </div>
+ 
+    <div class="row">
+ 
+       <div class="image" data-aos="fade-up" data-aos-delay="750">
+          <img src="{% static 'assets/contact.png'%}" alt="">
+       </div>
+ 
+       <form action="" data-aos="fade-up" data-aos-delay="900">
+          <h3>send us a message</h3>
+          <input type="text" placeholder="Name" class="box">
+          <input type="email" placeholder="Email" class="box">
+          <input type="number" placeholder="Phone" class="box">
+          <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+          <input type="submit" value="Send message" class="btn">
+       </form>
+ 
+    </div>
+ 
+</section>
+ 
+ <!-- contact section ends -->
+
+{% endblock content %}

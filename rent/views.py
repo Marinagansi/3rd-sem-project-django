@@ -2,6 +2,8 @@ from django.shortcuts import redirect, render
 from rent.forms import RentForm
 from rent.models import VDetails
 from django.contrib.auth.models import User
+from booking_vehicle.models import VBooking
+from booking_vehicle.forms import vbooked
 
 # Create your views here.
 def create(request):
@@ -23,7 +25,16 @@ def vehicle(request):
 
     return render(request,"vehicle/vehicle_rent.html",{'rents':rents})
 
-def V_details(request,p_id): 
+# for forienkey
+def V_details(request,p_id):
+    print(request)
+    if request.method=="POST":
+        form=vbooked(request.POST)
+        form.save()
+        return redirect ('home')
+              
+    else:
+        form=vbooked() 
     rents=VDetails.objects.get(v_id=p_id)
     return render(request,"vehicle/vehicle_details.html",{'rents':rents})
 

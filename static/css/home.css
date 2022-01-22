@@ -127,9 +127,9 @@ section {
       from(rgba(17, 17, 17, 0.7)),
       to(rgba(17, 17, 17, 0.7))
     ),
-    url(../img/pic1.jpg) no-repeat;
+    url(/static/assets/na.jpg) no-repeat;
   background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
-    url(../img/pic1.jpg) no-repeat;
+    url(/static/assets/na.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -144,7 +144,7 @@ section {
   -ms-flex-pack: center;
   justify-content: center;
   padding-bottom: 5rem;
-}
+} 
 
 .home .content {
   text-align: center;

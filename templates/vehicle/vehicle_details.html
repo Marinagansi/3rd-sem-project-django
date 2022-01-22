@@ -4,8 +4,21 @@
 <h1>{{rents.v_purchase}}</h1>
 <h1>{{rents.v_rent}}</h1>
 <img style="width:30%" src="{% static 'assets/' %}{{rents.v_image}}">
-<form>
-    <input type="text" value={{rents.v_id}}>
-    <input type="text" value={{user.id}}>
-<a href= '/vbook_fillform' style="text-decoration: none">Book NOw</a>
+<form action="" method="POST">
+    {% csrf_token %}
+    <label>Vehicle</label>
+    <input type="text"  name="vehicle" value={{rents.v_id}}></br>
+    <label>user_id</label>
+    <input type="text" name="customer" value={{user.id}} ></br>
+    <label>address</label>
+    <input type="text" name="address"></br>
+    
+    <label>start_date</label>
+    <input type="date" name='start_date'></br>
+    <label>end_date</label>
+    <input type="date" name="end_date"></br>
+
+    <input type="submit" value="Book Now">
+
 </form>
+<a href= '/vbook_fillform' style="text-decoration: none">Book NOw</a>
