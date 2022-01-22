@@ -388,16 +388,18 @@ section {
   top:15%
 }
   
-.home .content p {
+.home .content  p {
    position: absolute;
    top: 43%;
-    margin: 1rem auto;
+   margin: 1rem auto;
     font-size: 2rem;
     color: #aaa;
     line-height: 2;
    
     
 }
+
+
 
 
 .our_vehicles .box-container {
