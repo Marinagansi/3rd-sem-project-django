@@ -18,6 +18,24 @@ def guide(request):
 
 def hotel(request): 
     return render(request,'hotel.html')
+def forget_password(request): 
+    return render(request,'list_property/forget_password.html')
+def forget_username(request): 
+    return render(request,'list_property/forget_username.html')
+def having_trouble(request): 
+    return render(request,'list_property/having_trouble.html')
+def partneracc_addproperty(request): 
+    return render(request,'list_property/partneracc_addproperty.html')  
+def partneracc_signin(request): 
+    return render(request,'list_property/partneracc_signin.html')  
+def partneracc_signin2(request): 
+    return render(request,'list_property/partneracc_signin2.html')  
+def partneracc_signup(request): 
+    return render(request,'list_property/partneracc_signup.html')
+def partneracc_signup2(request): 
+    return render(request,'list_property/partneracc_signup2.html')   
+def partneracc_signup3(request): 
+    return render(request,'list_property/partneracc_signup3.html')     
 def contact(request): 
     return render(request,'contact.html')
 def about_us(request): 

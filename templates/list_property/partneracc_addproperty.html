@@ -1,0 +1,83 @@
+{% extends 'nav1.html' %}
+{% load static %}
+{% block content %}
+
+<link rel=stylesheet href="{% static '/css/add_property.css' %}">
+<link rel="stylesheet" href="{% static '/css/aos.css' %}">
+
+<!-- custom js file link  -->
+
+<script src="{% static '/js/add_property.js' %}" defer></script>
+
+<!-- partner_account section starts  -->
+
+
+<section class="add-property" id="add-property">
+
+    <div class="heading">
+        <span data-aos="fade-up" data-aos-delay="150">List your property on nepGhuma and start welcoming guests in no time!</span>
+        <h1 data-aos="fade-up" data-aos-delay="300">To get started, choose the type of property you want to list on nepGhuma</h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div data-aos="fade-up" data-aos-delay="450" class="image">
+                <img src="{% static 'assets/ap-add-hotel.png'%}" alt="">
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" class="content">
+                <h3>Add Your <span class="line-down">Hotel</span></h3>
+                <p>Properties like hotels, resorts, apartments, holiday homes, villas, etc.</p>
+                <a href="add_hotel" class="btn">Add Hotel</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div data-aos="fade-up" data-aos-delay="450" class="image">
+                <img src="{% static 'assets/ap-vehicle-rent.png'%}" alt="">
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" class="content">
+                <h3>Add Your <span class="line-down">Vehicles In Rent </span></h3>
+                <p>A person or an organization can add their vehicles, like bikes, scooters, cars, jeeps, scorpios, buses, etc. </p>
+                <a href="add_vechicle" class="btn">Add Vehicle</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div data-aos="fade-up" data-aos-delay="450" class="image">
+                <img src="{% static 'assets/ap-guide.png'%}" alt="">
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" class="content">
+                <h3>Add Yourself <span class="line-down"> as Guide</span></h3>
+                <p>If you are professional guide then you can add yourself as guide.</p>
+                <a href="add_guide" class="btn">Add as Guide</a>
+            </div>
+        </div>
+
+        <!-- <div class="box">
+            <div class="image">
+                <img src="img/ap-guide.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Add Yourself <span class="line-down"> as Guide</span></h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto nisi fugit saepe quisquam adipisci. Consectetur ipsum cumque beatae accusantium similique mollitia commodi, atque laborum, id, eos illo recusandae!</p>
+                <a href="#" class="btn">Add</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="img/ap-guide.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Add Yourself <span class="line-down"> as Guide</span></h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto nisi fugit saepe quisquam adipisci. Consectetur ipsum cumque beatae accusantium similique mollitia commodi, atque laborum, id, eos illo recusandae!</p>
+                <a href="#" class="btn">Add</a>
+            </div>
+        </div> -->
+
+    </div>
+
+</section>
+
+{% endblock content %}
