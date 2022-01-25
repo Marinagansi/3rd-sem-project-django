@@ -388,16 +388,22 @@ section {
   top:15%
 }
   
+<<<<<<< HEAD
 .home .content .email p {
+=======
+.home .content  p {
+>>>>>>> def6c2c667ae156b7f26bc2650b870cd2e2a2bd5
    position: absolute;
    top: 43%;
-    margin: 1rem auto;
+   margin: 1rem auto;
     font-size: 2rem;
     color: #aaa;
     line-height: 2;
    
     
 }
+
+
 
 
 .our_vehicles .box-container {
