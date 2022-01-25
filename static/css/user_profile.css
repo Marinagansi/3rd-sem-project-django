@@ -388,7 +388,7 @@ section {
   top:15%
 }
   
-.home .content p {
+.home .content .email p {
    position: absolute;
    top: 43%;
     margin: 1rem auto;

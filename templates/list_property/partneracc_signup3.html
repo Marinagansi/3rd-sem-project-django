@@ -12,40 +12,46 @@
 <!-- partner_account section starts  -->
 
 <section class="partner_account" data-aos="fade-down" data-aos-delay="150">
-    
 
- 
-    <div class="row">       
-       <form action="" data-aos="fade-up" data-aos-delay="900">
-          <h3>Create your partner account</h3>
-          <p>Create an account to list and manage your property.</p>
-          <h2></h2>
-          <!-- <h3 class="title"> Email Address</h3>
-          <input type="text" placeholder="Email" class="box"> -->
-          <h3 class="title"> Password</h3>
-          <input type="password" placeholder="Password" class="box">
-          <h3 class="title"> Confirm Password</h3>
-          <input type="password" placeholder="Password" class="box">
-          <a href="partneracc_signin" alt="" class="submit-btn" style="display:inline-block;text-align: center;color:black;">Create Account</a>
-          <h2></h2>
-          <!-- <div class="contact_link"> Do you have questions about your property or the extranet? <a href="contact.html">Contact Us</a> 
+
+
+   <div class="row">
+      <form action="" data-aos="fade-up" data-aos-delay="900" method="POST">
+         {% csrf_token %}
+         <h3>Create your partner account</h3>
+         <p>Create an account to list and manage your property.</p>
+         <h2></h2>
+         <h3 class="title"> Email Address</h3>
+          <input type="text" placeholder="Email" name="customer_email" class="box">
+          <h3 class="title"> First Name</h3>
+          <input type="name" placeholder="First Name" name="customer_name" class="box">
+          <h3 class="title"> Phone Number</h3>
+          <input type="text" placeholder="Phone Number "  name="customer_phone" class="box">
+         <h3 class="title"> Password</h3>
+         <input type="text" placeholder="Password" name="customer_address" class="box">
+         <h3 class="title"> Confirm Password</h3>
+         <input type="text"placeholder="Password" class="box">
+         <!-- <a href="partneracc_signin" alt="" class="submit-btn" style="display:inline-block;text-align: center;color:black;">Create Account</a> -->
+         <input type="submit" value="create">
+         <h2></h2>
+         <!-- <div class="contact_link"> Do you have questions about your property or the extranet? <a href="contact.html">Contact Us</a> 
           </div>
           <a href="partneracc_signin.html" alt="" class="submit-btn2" style="display:inline-block;text-align: center;color:black;">Sign in</a>
           <h2></h2> -->
-          <h5>By signing in or creating an account, you agree with our Terms & conditions and Privacy statement</h5>
-          <h2></h2>
-          <h6>All rights reserved.</h6>
-          <h6>Copyright (2001 - 2022) - nepGhuma™</h6>
-        </div> 
-                
+         <h5>By signing in or creating an account, you agree with our Terms & conditions and Privacy statement</h5>
+         <h2></h2>
+         <h6>All rights reserved.</h6>
+         <h6>Copyright (2001 - 2022) - nepGhuma™</h6>
+   </div>
 
-       </form>
- 
-    </div>
- 
+
+   </form>
+
+   </div>
+
 </section>
- 
- <!-- partner_account section ends -->
+
+<!-- partner_account section ends -->
 
 
 

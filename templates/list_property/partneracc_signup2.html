@@ -16,14 +16,15 @@
 
  
     <div class="row">       
-       <form action="" data-aos="fade-up" data-aos-delay="900">
+       <form action="" data-aos="fade-up" data-aos-delay="900" method="POST">
+       {% csrf_token %}
           <h3>Create your partner account</h3>
           <p>Create an account to list and manage your property.</p>
           <h2></h2>
           <!-- <h3 class="title"> Email Address</h3>
           <input type="text" placeholder="Email" class="box"> -->
           <h3 class="title"> First Name</h3>
-          <input type="name" placeholder="First Name" class="box">
+          <input type="name" placeholder="First Name"  class="box">
           <h3 class="title"> Last Name</h3>
           <input type="name" placeholder="Last Name" class="box">
           <h3 class="title"> Phone Number</h3>
