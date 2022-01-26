@@ -92,6 +92,9 @@ def faq(request):
 def flights(request): 
     return render(request,'flight/flights.html')
 
+def user_profile(request): 
+    return render(request,'user_profile.html')
+
    
 
 

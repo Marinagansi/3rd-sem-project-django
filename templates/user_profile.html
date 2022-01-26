@@ -3,7 +3,8 @@
 {% block content %}
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="{% static '/css/user_profile.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/user_profile.css' %}">
+    
 
    
 
@@ -24,6 +25,13 @@
            <span data-aos="fade-up" data-aos-delay="150" class="hii"> <h3 >HII </h3> </span>
             <h3 class="tanuja" data-aos="fade-up" data-aos-delay="150">{{user.username}}</h3>
 <<<<<<< HEAD
+            <p class="bastola">{{user.email}}<br> Welcome to your Nepghumau profile page.<br>
+            You can see your profile details,notifications,history and other progress.
+            </p>
+        
+           
+=======
+<<<<<<< HEAD
             <p data-aos="fade-up" data-aos-delay="450" class="email">{{user.email}}<br> Welcome to your Nepghumau profile page.<br>
                 You can see your profile details,notifications,history and other progress.</p>
            
@@ -31,6 +39,7 @@
 =======
             <p data-aos="fade-up" data-aos-delay="150">{{user.email}}<br> Welcome to your Nepghumau profile page.
             You can see your profile details,notifications,history and other progress.</p>
+>>>>>>> d50fc2db69da2801aa56a5ebd303026d1ff3a54b
            
 >>>>>>> def6c2c667ae156b7f26bc2650b870cd2e2a2bd5
             <a data-aos="fade-up" data-aos-delay="600" href="#our_vehicles" class="btn" >edit</a>
@@ -90,12 +99,8 @@
 
    
 
-    <script>
-      AOS.init({
-        duration: 800,
-        offset: 150,
-      });
-    </script>
+    
+   
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
