@@ -9,6 +9,9 @@ def book_flights(request):
 
     return render(request,"flight/book_flights.html",{'flight':flight})
 
+def flights2(request): 
+    return render(request,'flights2.html')
+
 def flights(request): 
     return render(request,'flight/flights.html')
 

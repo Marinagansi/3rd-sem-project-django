@@ -32,18 +32,23 @@ def partneracc_addproperty(request):
     return render(request,'list_property/partneracc_addproperty.html') 
 # for login list property 
 def partneracc_signin(request): 
-    print(request)
+   
     if request.method=='POST':
         customer_name=request.POST.get("customer_name")
         customer_pasword=request.POST.get("customer_address")
 
         user=Registration.objects.get(customer_name=customer_name,customer_address=customer_pasword)
+       
         if user is not None:
-            return redirect ("/partneracc_addproperty")
-
-        else:
             messages.info(request,"incorect username and password")
-
+            return redirect ("/partneracc_addproperty")
+           
+        else:
+            print("invalid")
+            messages.info(request,"incorect username and password")
+       
+           
+    
     return render(request,'list_property/partneracc_signin.html')  
 
 def partneracc_signin2(request): 
@@ -136,7 +141,7 @@ def registration(request):
     #     form=CustomerForm()
     # return render (request,"signup.html",{'form':form})
                     
-@login_required()
+@login_required(login_url='/login')
 def home(request): 
 
     user=Registration.objects.raw('select * from registration')
