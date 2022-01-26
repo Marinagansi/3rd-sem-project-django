@@ -19,12 +19,6 @@ urlpatterns = [
             path('about_us',views.about_us),
             path('hotel',views.hotel),
             path('logout',views.logout_view),
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> def6c2c667ae156b7f26bc2650b870cd2e2a2bd5
->>>>>>> d50fc2db69da2801aa56a5ebd303026d1ff3a54b
             path('forget_password',views.forget_password),
             path('forget_username',views.forget_username),
             path('having_trouble',views.having_trouble),
@@ -37,15 +31,11 @@ urlpatterns = [
 
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            
+
           
            
        
    
-=======
->>>>>>> def6c2c667ae156b7f26bc2650b870cd2e2a2bd5
->>>>>>> d50fc2db69da2801aa56a5ebd303026d1ff3a54b
+
+
 ]
