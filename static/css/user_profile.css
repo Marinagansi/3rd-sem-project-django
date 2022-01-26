@@ -388,7 +388,15 @@ section {
   top:15%
 }
   
+<<<<<<< HEAD
 .home .content .bastola   {
+=======
+<<<<<<< HEAD
+.home .content .email p {
+=======
+.home .content  p {
+>>>>>>> def6c2c667ae156b7f26bc2650b870cd2e2a2bd5
+>>>>>>> d50fc2db69da2801aa56a5ebd303026d1ff3a54b
    position: absolute;
    top: 43%;
    font-size: 2rem;

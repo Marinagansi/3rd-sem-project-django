@@ -12,40 +12,55 @@
 <!-- partner_account section starts  -->
 
 <section class="partner_account" data-aos="fade-down" data-aos-delay="150">
-    
 
- 
-    <div class="row">
- 
-       
-       <form action="" data-aos="fade-up" data-aos-delay="900">
-          <h3>Sign in to manage your property</h3>
 
-          <h2></h2>
-          <h3 class="title"> Username</h3>
-          <input type="text" placeholder="Also known as 'Login name' and 'Email id'" required=" " class="box">
-          <a href="partneracc_signin2" alt="" class="submit-btn" style="display:inline-block;text-align: center;color:black;">Next</a>
-          <div class="having_trouble"><a href="having_trouble">Having trouble signing in?</a> 
-          </div>
-          <h2></h2>
-          <div class="contact_link" > Do you have questions about your property or the extranet?  <a href="contact">Contact Us</a> 
-          </div>
-          <a href="partneracc_signup" alt="" class="submit-btn2" style="display:inline-block;text-align: center;color:black;">Create your partner account</a>
-          <h2></h2>
-          <h5>By signing in or creating an account, you agree with our Terms & conditions and Privacy statement</h5>
-          <h2></h2>
-          <h6>All rights reserved.</h6>
-          <h6>Copyright (2001 - 2022) - nepGhuma™</h6>
-        </div> 
-                
 
-       </form>
- 
-    </div>
- 
+   <div class="row">
+
+
+      <form action="partneracc_signin" data-aos="fade-up" data-aos-delay="900" method="POST">
+         <h3>Sign in to manage your property</h3>
+         {% csrf_token %}
+         <h2></h2>
+         <h3 class="title"> Username</h3>
+         <input type="text" name="customer_name" placeholder="Also known as 'Login name' and 'Email id'" required=" "
+            class="box">
+
+         <h2></h2>
+         <h3 class="title"> Password</h3>
+         <input type="text" name="customer_address" placeholder="Enter your password" class="box">
+         <!-- <a  alt="" class="submit-btn" style="display:inline-block;text-align: center;color:black;">Next</a> -->
+         {% if messages %}
+         <ul class="messages" style="color: white;">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+         </ul>
+         {% endif %}
+         <input type="submit" value="login">
+         <div class="having_trouble"><a href="having_trouble">Having trouble signing in?</a>
+         </div>
+         <h2></h2>
+         <div class="contact_link"> Do you have questions about your property or the extranet? <a href="contact">Contact
+               Us</a>
+         </div>
+         <a href="partneracc_signup3" alt="" class="submit-btn2"
+            style="display:inline-block;text-align: center;color:black;">Create your partner account</a>
+         <h2></h2>
+         <h5>By signing in or creating an account, you agree with our Terms & conditions and Privacy statement</h5>
+         <h2></h2>
+         <h6>All rights reserved.</h6>
+         <h6>Copyright (2001 - 2022) - nepGhuma™</h6>
+   </div>
+
+
+   </form>
+
+   </div>
+
 </section>
- 
- <!-- partner_account section ends -->
+
+<!-- partner_account section ends -->
 
 
 

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/flights-oho.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 80px;
+}
+.regform {
+  font-size: 30px;
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 800px;
+  color: rgb(41, 217, 213);
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  border-radius: 15px 15px 0px 0px;
+}
+.main {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 800px;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+}
+
+form {
+  padding: 20px;
+}
+.label {
+  margin-left: 25px;
+  margin-top: 30px;
+  width: 125px;
+  color: seashell;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.to,
+.airlines,
+.from,
+.date,
+.price {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  width: 500px;
+  line-height: 40px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 20px;
+  font-family: monospace;
+  color: slategray;
+}
+button {
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5rem;
+  border: 0.2rem solid rgb(41, 217, 213);
+  color: rgb(41, 217, 213);
+  font-size: 28px;
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25px;
+  position: relative;
+  left: 610px;
+  top: -4px;
+}
+button:hover {
+  background-color: rgb(41, 217, 213);
+  color: black;
+}

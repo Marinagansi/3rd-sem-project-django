@@ -42,21 +42,6 @@ section {
   padding: 3rem 9%;
 }
 
-.heading {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.heading span {
-  color: #29d9d5;
-  font-size: 2rem;
-}
-
-.heading h1 {
-  font-size: 4rem;
-  color: #fff;
-}
-
 .btn {
   margin-top: 1rem;
   display: inline-block;
@@ -108,135 +93,31 @@ section {
   margin-top: 0;
 }
 
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.logo i {
+  color: #29d9d5;
+  padding-right: 0.5rem;
+}
+
 #menu-btn {
   font-size: 2.5rem;
-  color: #29d9d5;
+  color: #fff;
   cursor: pointer;
   display: none;
 }
 
-.home {
-  margin: 0 auto;
-  margin-top: 9rem;
-  width: 90%;
-  border-radius: 1rem;
-  background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(17, 17, 17, 0.7)),
-      to(rgba(17, 17, 17, 0.7))
-    ),
-    url(/static/assets/home2.jpg) no-repeat;
-  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
-    url(/static/assets/home2.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 80vh;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-bottom: 5rem;
-} 
-
-.home .content {
-  text-align: center;
+.content {
+  font-size: 30px;
+  font-family: Robotoo;
+  color: #ffffff;
 }
-
-.home .content span {
-  font-weight: bolder;
-  color: #29d9d5;
-  -webkit-text-stroke: 0.2rem rgb(15, 13, 13);
-  font-size: 4vw;
-  display: block;
-}
-
-.home .content h3 {
-  font-size: 6vw;
-  color: #fff;
-}
-
-.home .content p {
-  max-width: 60rem;
-  margin: 1rem auto;
-  font-size: 1.4rem;
-  color: #aaa;
-  line-height: 2;
-}
-
-.about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 5rem;
-}
-
-.about .video-container {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 42rem;
-  flex: 1 1 42rem;
-}
-
-.about .video-container video {
-  border-radius: 1rem;
-  width: 100%;
-}
-
-.about .video-container .controls {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.about .video-container .controls span {
-  display: inline-block;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  background: #fff;
-  cursor: pointer;
-  margin: 0.7rem;
-}
-
-.about .video-container .controls span:hover {
-  background: #29d9d5;
-}
-
-.about .content {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 42rem;
-  flex: 1 1 42rem;
-  margin-bottom: 5rem;
-}
-
-.about .content span {
-  color: #29d9d5;
-  font-size: 2rem;
-}
-
-.about .content h3 {
-  color: #fff;
-  font-size: 4rem;
-  margin-top: 0.5rem;
-}
-
-.about .content p {
-  padding: 1rem 0;
-  font-size: 1.4rem;
-  color: #aaa;
-  line-height: 2;
+.box-container {
+  margin-top: 500px;
 }
 
 .footer .box-container {
@@ -245,6 +126,28 @@ section {
   -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
+}
+
+#pokhara {
+  width: 500px;
+  height: 75%;
+  left: 80px;
+  top: 80px;
+  border-radius: 80px;
+}
+#rara {
+  width: 500px;
+  height: 75%;
+  left: 40px;
+  top: 40px;
+  border-radius: 80px;
+}
+#chitwan {
+  width: 500px;
+  height: 75%;
+  left: 80px;
+  top: 80px;
+  border-radius: 80px;
 }
 
 .footer .box-container .box {
@@ -327,6 +230,10 @@ section {
   padding: 1.2rem 1.4rem;
 }
 
+#btn2 {
+  size: 10000px;
+}
+
 .credit {
   background: #222;
   text-align: center;
@@ -376,6 +283,9 @@ section {
   .home {
     margin-top: 10rem;
   }
+  .home {
+    margin-top: 10rem;
+  }
   .home .content span {
     font-size: 8vw;
   }
@@ -395,4 +305,39 @@ section {
     font-size: 2.7rem;
   }
 }
-/* over */
+.packages .heading {
+  color: #ffffff;
+}
+
+.packages .heading h1 {
+  margin-left: 20rem;
+  margin-top: 15rem;
+  font-size: 70px;
+  padding: 10rem 0;
+  max-width: 100rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+}
+
+#background-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.packages h1,h2 {
+  color: white;
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
