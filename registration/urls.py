@@ -19,9 +19,7 @@ urlpatterns = [
             path('contact',views.contact),
             path('about_us',views.about_us),
             path('hotel',views.hotel),
-<<<<<<< HEAD
             path('logout',views.logout_view),
-=======
             path('forget_password',views.forget_password),
             path('forget_username',views.forget_username),
             path('having_trouble',views.having_trouble),
@@ -33,10 +31,4 @@ urlpatterns = [
             path('partneracc_signup3',views.partneracc_signup3),
 
 
->>>>>>> 5ce1095e2daa8dc05f008ec7ce864730f146a66f
-            
-          
-           
-       
-   
 ]

@@ -388,15 +388,13 @@ section {
   top:15%
 }
   
-.home .content  p {
+.home .content .bastola   {
    position: absolute;
    top: 43%;
-   margin: 1rem auto;
-    font-size: 2rem;
-    color: #aaa;
-    line-height: 2;
-   
-    
+   font-size: 2rem;
+   margin:1rem auto;
+  color: #aaa;
+  line-height: 2;
 }
 
 
