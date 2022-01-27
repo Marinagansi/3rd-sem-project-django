@@ -29,7 +29,7 @@
          <h2></h2>
          <h3 class="title"> Password</h3>
          <input type="text" name="customer_address" placeholder="Enter your password" class="box">
-         <!-- <a  alt="" class="submit-btn" style="display:inline-block;text-align: center;color:black;">Next</a> -->
+
          {% if messages %}
          <ul class="messages" style="color: white;">
             {% for message in messages %}
@@ -37,7 +37,8 @@
             {% endfor %}
          </ul>
          {% endif %}
-         <input type="submit" value="login">
+         <!-- <a  alt="" class="submit-btn" style="display:inline-block;text-align: center;color:black;">Next</a> -->
+         <input type="submit" value="login" class="submit-btn" style="display:inline-block;text-align: center;color:black;"> 
          <div class="having_trouble"><a href="having_trouble">Having trouble signing in?</a>
          </div>
          <h2></h2>
