@@ -29,19 +29,53 @@ def forget_username(request):
 def having_trouble(request): 
     return render(request,'list_property/having_trouble.html')
 def partneracc_addproperty(request): 
-    return render(request,'list_property/partneracc_addproperty.html')  
+    return render(request,'list_property/partneracc_addproperty.html') 
+# for login list property 
 def partneracc_signin(request): 
+   
+    if request.method=='POST':
+        customer_name=request.POST.get("customer_name")
+        customer_pasword=request.POST.get("customer_address")
+
+        user=Registration.objects.get(customer_name=customer_name,customer_address=customer_pasword)
+       
+        if user is not None:
+            messages.info(request,"incorect username and password")
+            return redirect ("/partneracc_addproperty")
+           
+        else:
+            print("invalid")
+            messages.info(request,"incorect username and password")
+       
+           
+    
     return render(request,'list_property/partneracc_signin.html')  
+
 def partneracc_signin2(request): 
     return render(request,'list_property/partneracc_signin2.html')  
-def partneracc_signup(request): 
-    return render(request,'list_property/partneracc_signup.html')
+
+#for hotel registration
+def partneracc_signup3(request): 
+    if request.method=="POST":
+        form=CustomerForm(request.POST)
+        # print(form)
+        form.save()
+                
+        return redirect ("/home")
+           
+
+    else:
+
+        form=CustomerForm()
+        print("invalid")
+               
+    return render(request,'list_property/partneracc_signup3.html', {'form':form})
+
 def partneracc_signup2(request): 
     return render(request,'list_property/partneracc_signup2.html')   
-def partneracc_signup3(request): 
-    return render(request,'list_property/partneracc_signup3.html')     
-def contact(request): 
-    return render(request,'contact.html')
+def partneracc_signup(request): 
+    return render(request,'list_property/partneracc_signup.html')     
+
 def about_us(request): 
     return render(request,'about_us.html')
 def shop1(request): 
@@ -58,6 +92,7 @@ def faq(request):
 def flights(request): 
     return render(request,'flight/flights.html')
 
+<<<<<<< HEAD
 def add_hotel(request): 
     return render(request,'list_property/add_hotel.html')
 
@@ -65,6 +100,10 @@ def add_guide(request):
     return render(request,'list_property/add_guide.html')
 
 
+=======
+def user_profile(request): 
+    return render(request,'user_profile.html')
+>>>>>>> 9aa6b8a0fcedec5dfc661ef668fc53feaf3d83b4
 
    
 
@@ -115,7 +154,7 @@ def registration(request):
     #     form=CustomerForm()
     # return render (request,"signup.html",{'form':form})
                     
-@login_required()
+@login_required(login_url='/login')
 def home(request): 
 
     user=Registration.objects.raw('select * from registration')
@@ -131,41 +170,41 @@ def logout_view(request):
     return redirect('/firstpage')
 
 # login for hotels
-def Hsignin(request):
-    print(request)
-    if request.method=='POST':
-        customer_name=request.POST.get("customer_name")
-        customer_pasword=request.POST.get("customer_pasword")
+# def Hsignin(request):
+#     print(request)
+#     if request.method=='POST':
+#         customer_name=request.POST.get("customer_name")
+#         customer_pasword=request.POST.get("customer_pasword")
 
-        user=Registration.objects.get(customer_name=customer_name,customer_pasword=customer_pasword)
-        if user is not None:
-            return redirect ("/registration/index")
+#         user=Registration.objects.get(customer_name=customer_name,customer_pasword=customer_pasword)
+#         if user is not None:
+#             return redirect ("/registration/index")
 
-        else:
-            messages.info(request,"incorect username and password") 
-    return render(request,'registration/login.html')
+#         else:
+#             messages.info(request,"incorect username and password") 
+#     return render(request,'registration/login.html')
 
 #for hotel registration
-def Hregistration(request):
-        # print(request)
+# def Hregistration(request):
+#         # print(request)
 
-        if request.method=="POST":
+#         if request.method=="POST":
 
-            form=CustomerForm(request.POST)
-        # print(form)
+#             form=CustomerForm(request.POST)
+#         # print(form)
 
-            if form.is_valid():
-                try:
-                    print("valid")
-                    form.save()
+#             if form.is_valid():
+#                 try:
+#                     print("valid")
+#                     form.save()
                     
-                    return redirect ("/registration/index")
-                except:
+#                     return redirect ("/registration/index")
+#                 except:
                     
-                 print("invalid")
+#                  print("invalid")
 
-        else:
+#         else:
 
-                form=CustomerForm()
-                print("invalid")
-                return render (request,"registration/registration.html",{'form':form})
+#                 form=CustomerForm()
+#                 print("invalid")
+#                 return render (request,"registration/registration.html",{'form':form})

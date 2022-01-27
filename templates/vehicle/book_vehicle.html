@@ -1,9 +1,37 @@
 
 <h1>booked vehicle</h1>
 
-<form>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" ><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" >
-  </form>
+
+<table>
+  <thead>
+<tr>
+<th>Id</th>
+<th>address</th>
+</tr>
+  </thead>
+  <tbody>
+    {% for boking_vehicle in vehicles %}
+    <tr>
+    <td>{{boking_vehicle.vehicle.v_id}}</td>
+    <td>{{boking_vehicle.address}}</td>
+    <td>{{boking_vehicle.customer.id}}</td>
+    <td>{{boking_vehicle.start_date}}</td>
+    <td> end_date:{{boking_vehicle.end_date}}</td>
+    <td> <a href= '/edit/{{boking_vehicle.vbooking_id}}' style="text-decoration: none">edit</a>
+  
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+  <!-- id:{{boking_vehicle.vehicle.v_id}}<br>
+  address:{{boking_vehicle.address}}<br>
+  user.id:{{boking_vehicle.customer.id}}<br>
+
+  start_date:{{boking_vehicle.start_date}}<br>
+  end_date:{{boking_vehicle.end_date}}<br>
+  <a href= '/edit/{{boking_vehicle.vbooking_id}}' style="text-decoration: none">edit</a>
+   -->
+
+

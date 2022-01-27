@@ -16,10 +16,13 @@ urlpatterns = [
           path('faq',views.faq),
            path('flights',views.flights,name="flights"),
             path('user_profile',views.user_profile),
-            path('contact',views.contact),
             path('about_us',views.about_us),
             path('hotel',views.hotel),
+            path('logout',views.logout_view),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3cbc634621f61610d37e74dc54b31f19aec0daed
             path('forget_password',views.forget_password),
             path('forget_username',views.forget_username),
             path('having_trouble',views.having_trouble),
@@ -35,4 +38,18 @@ urlpatterns = [
 
 
 
+<<<<<<< HEAD
+            
+=======
+
+>>>>>>> 3cbc634621f61610d37e74dc54b31f19aec0daed
+          
+           
+       
+   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3cbc634621f61610d37e74dc54b31f19aec0daed
 ]

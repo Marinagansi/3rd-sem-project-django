@@ -5,3 +5,8 @@ class vbooked(forms.ModelForm):
     class Meta:
      model = VBooking
      fields = ("__all__")
+
+class vupdatebooked(forms.ModelForm):
+    class Meta:
+     model = VBooking
+     fields = ('address','start_date','end_date')
