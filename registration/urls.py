@@ -28,7 +28,10 @@ urlpatterns = [
             path('partneracc_signin2',views.partneracc_signin2),
             path('partneracc_signup',views.partneracc_signup),
             path('partneracc_signup2',views.partneracc_signup2),
-            path('partneracc_signup3',views.partneracc_signup3)       
+            path('partneracc_signup3',views.partneracc_signup3),
+            path('add_hotel',views.add_hotel),
+            path('add_guide',views.add_guide)
+
 
 
 
