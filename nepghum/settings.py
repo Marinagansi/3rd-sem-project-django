@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'vehicle',
     'rent',
     'booking_vehicle',
-    'contact'
+    'contact',
+    'book_flights'
 ]
 
 MIDDLEWARE = [

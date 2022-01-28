@@ -38,15 +38,15 @@
     <!-- booking form section starts  -->
 
     <header class="book-form" id="book-form">
-      <form action="search_flight" method="POST">
+      <form action="" method="POST">
         {% csrf_token %}
         <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
           <span>From?</span>
-          <input type="text" placeholder="place name" value="" name="searched"/>
+          <input type="text" placeholder="place name" value="" name="flight_name" />
         </div>
         <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
           <span>To?</span>
-          <input type="text" placeholder="place name" value="" />
+          <input type="text" placeholder="place name" value="" name="fight_to" />
         </div>
         <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
           <span>when?</span>
@@ -65,9 +65,6 @@
         />
       </form>
     </header>
-
-    <!-- booking form section ends -->
-    <!-- start table -->
     {% if searched %}
     <h1 style="color:white">you search for {{searched}}</h1><br/>
     <table class="table " style="color:white">
@@ -109,7 +106,29 @@
     {% else %}
     <h1 style="color:white">you search for > Hey ! You forget to searched for flight</h1>
     {% endif %} 
-    <!-- table end -->
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="banner">
       <div class="content" data-aos="zoom-in-up" data-aos-delay="300">

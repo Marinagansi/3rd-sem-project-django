@@ -1,6 +1,70 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
 
+    <title>nepGhuma</title>
+    <link rel="stylesheet" href="{% static '/css/user_profile2.css' %}">
+</head>
+<body>
+    <div class="regform"> <h1> Event form </h1></div>
+    <div class="main">
+        <!-- <form action="" method="POST" >
+            {% csrf_token %}
+        <div class="class1">
+        <label class="label">First Name</label><br>
+        <input class="fname" type="text" name="fname"><br>
 
+        <label class="label">Last Name</label><br>
+        <input class="lname" type="text" name="lname"><br>
+
+        
+        <label class="label">Email</label><br>
+        <input class="mail" type="text" name="e_email"><br>
+
+        <label class="label">Phone</label><br>
+        <input class="phone" type="text" name="e_phone"><br>
+
+        <label class="label">message</label><br>
+        <input class="msg" type="text" name="e_message"><br>
+
+        <label class="label">Date</label><br>
+        <input class="date" type="date" name="e_date"><br>
+
+        <label class="label">Budget</label><br>
+        <input class="price" type="text" name="e_budget"><br>
+
+        <label class="label">Purpose</label><br>
+        <input class="purpose" type="text" name="e_purpose"><br>
+        
+        <button type="submit">Submit</button>
+    </div>
+        </form>
+    
+</body>
+</html> -->
 <form action="" method="POST" >
+    {% csrf_token %}
+    <label class="label" for="fname">First name:</label><br>
+    <input class="fname" type="text" name="first" id="fname" name="fname"><br>
+    <label class="label"for="lname">Last name:</label><br>
+    <input class="lname" type="text" name="last" id="lname" name="lname"><br>
+    <label class="label" for="email">email:</label><br>
+    <input class="mail" type="email"  name="e_email"><br>
+    <label class="label" for="phone">phone:</label><br>
+    <input class="phone" type="text"  name="e_phone"><br>
+    <label class="label" for="message">message:</label><br>
+    <input class="msg" type="text"  name="e_message"><br>
+    <label class="label" for="budeget">budget:</label><br>
+    <input class="price" type="text" name="e_budget"><br>
+    <label class="label"  for="date">purpose:</label><br>
+    <input class="purpose" type="text" name="e_purpose"><br>
+    <label class="label" for="date">date:</label><br>
+    <input class="date" type="date" name="e_date"><br>
+    <input value="Register Data" type="submit" class="btn btn-success ml-5"/> 
+</form> --> 
+{% endblock content %}
+
+ <!-- <form action="" method="POST" >
     {% csrf_token %}
     <label for="fname">First name:</label><br>
     <input type="text" name="first" id="fname" name="fname"><br>
@@ -19,4 +83,4 @@
     <label for="date">date:</label><br>
     <input type="date" name="e_date"><br>
     <input value="Register Data" type="submit" class="btn btn-success ml-5"/> 
-</form>
+</form> -->  -->

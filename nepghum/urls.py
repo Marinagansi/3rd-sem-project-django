@@ -25,8 +25,9 @@ urlpatterns = [
      path('', include('Event.urls')),
      path('', include('flights.urls')),
      path('', include('rent.urls')),
-     path('', include('booking_vehicle.urls')),
-     path('', include('contact.urls'))
+     path('booking/', include('booking_vehicle.urls')),
+     path('', include('contact.urls')),
+     path('fbooking/',include('book_flights.urls'))
      
      
     

@@ -307,6 +307,46 @@ padding: 3rem 17% 2rem 12%;
     opacity:1;   
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #222;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+  }
+  
+  .header .navbar a {
+    font-size: 1.7rem;
+    color: #aaa;
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  
+  .header .navbar a:hover {
+    color: #29d9d5;
+  }
+  
+  .header .btn {
+    margin-top: 0;
+  }
+  
+  #menu-btn {
+    font-size: 2.5rem;
+    color: #29d9d5;
+    cursor: pointer;
+    display: none;
+  }
 @media(max-width:870px){
     .conatiner{
         min-height: 800px;

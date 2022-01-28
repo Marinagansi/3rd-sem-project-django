@@ -30,20 +30,22 @@ def having_trouble(request):
     return render(request,'list_property/having_trouble.html')
 def partneracc_addproperty(request): 
     return render(request,'list_property/partneracc_addproperty.html') 
+def userprofile2(request): 
+    return render(request,'user_profile2.html') 
 # for login list property 
 def partneracc_signin(request): 
    
     if request.method=='POST':
         customer_name=request.POST.get("customer_name")
         customer_pasword=request.POST.get("customer_address")
-
-        user=Registration.objects.get(customer_name=customer_name,customer_address=customer_pasword)
+        try:
+            user=Registration.objects.get(customer_name=customer_name,customer_address=customer_pasword)
        
-        if user is not None:
-            messages.info(request,"incorect username and password")
-            return redirect ("/partneracc_addproperty")
+            if user is not None:
+          
+             return redirect ("/partneracc_addproperty")
            
-        else:
+        except:
             print("invalid")
             messages.info(request,"incorect username and password")
        

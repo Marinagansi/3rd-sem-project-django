@@ -15,10 +15,10 @@ def fillform(request,p_id):
     else:
         form=vbooked()
     vehicle=VBooking.objects.get(vbooking_id=p_id)
-    return render(request,"vehicle/book_vehicle.html",{'form':form},{'p_id_id':p_id,'vehicle':vehicle})
+    return render(request,"vehicle/book_vehicle.html",{'form':form},{'p_id':p_id,'vehicle':vehicle})
 
   
-
+# for booking
 def booking(request,p_id): 
     print(request)
     if request.method=="POST":
@@ -43,6 +43,7 @@ def edit(request,p_id):
 
 def update(request,p_id):
     #data verification
+    print(request.POST)
     vehicles=VBooking.objects.get(vbooking_id=p_id)
     #bind data in form with instance of customer
     form = vbooked(request.POST, instance=vehicles)

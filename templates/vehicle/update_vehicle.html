@@ -1,16 +1,16 @@
-<form action="/update/{{vehicles.vbooking_id}}" method="POST">
+<form action="/booking/update/{{vehicles.vbooking_id}}" method="POST">
     {% csrf_token %}
     <label for="fname">Vehicle name:</label><br>
-    <input type="text" value={{vehicles.vehicle.v_id}} ><br>
+    <input type="text" name="vehicle" value={{vehicles.vehicle.v_id}} ><br>
     <label for="lname">customer name:</label><br>
-    <input type="text" value={{vehicles.customer.id}}>
+    <input type="text" name="customer"value={{vehicles.customer.id}}>
     <label for="fname">address</label><br>
     <input type="text" name="address" value="{{vehicles.address}}" ><br>
     <label for="lname">start_date:</label><br>
-    <input type="text" name="start_date" value="{{vehicles.start_date}}" >
+    <input type="date" name="start_date" value="{{vehicles.start_date}}" >
     <label for="lname">end_date:</label><br>
-    <input type="text" name="end_date" value="{{vehicles.end_date}}" >
-
+    <input type="date" name="end_date" value="{{vehicles.end_date}}" >
+    {{vehicles.start_date}}
     <input type="submit" value="update" >
 
 
