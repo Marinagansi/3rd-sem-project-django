@@ -94,10 +94,18 @@ def faq(request):
 def flights(request): 
     return render(request,'flight/flights.html')
 
+
+def add_hotel(request): 
+    return render(request,'list_property/add_hotel.html')
+
+def add_guide(request): 
+    return render(request,'list_property/add_guide.html')
+
+
+
 def user_profile(request): 
     return render(request,'user_profile.html')
 
-   
 
 
 
