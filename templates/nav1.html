@@ -31,7 +31,11 @@
 
       <a href="{% url 'home' %}"
         ><img src="{% static "assets/404 logo.png" %}" width="150" height="80"
+
+  
       /></a> 
+      <p style="color:white; font-size:3rem">{{request.session.customer_name}}</p> 
+
     </header>
 
 

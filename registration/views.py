@@ -49,8 +49,10 @@ def partneracc_signin(request):
             user=Registration.objects.get(customer_name=customer_name,customer_address=customer_pasword)
        
             if user is not None:
-          
-             return redirect ("/partneracc_addproperty")
+
+                request.session['customer_name']=user.customer_name
+                request.session['customer_email']=user.customer_email
+                return redirect ("/partneracc_addproperty")
            
         except:
             print("invalid")
@@ -68,8 +70,8 @@ def partneracc_signup3(request):
     if request.method=="POST":
         form=CustomerForm(request.POST)
         # print(form)
-        form.save()
-                
+        result=form.save()
+        request.session['customer_id']=result.customer_id
         return redirect ("/home")
            
 
@@ -102,8 +104,7 @@ def flights(request):
     return render(request,'flight/flights.html')
 
 
-def add_hotel(request): 
-    return render(request,'list_property/add_hotel.html')
+
 
 
 
