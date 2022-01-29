@@ -1,0 +1,15 @@
+let suggestions = [
+    "Pokhara",
+    "Kathmandu",
+    "Kathmandu2",
+    "Kathmandu3",
+    "Sukute",
+    "Mustang",
+    "Manang",
+    "Rara",
+    "Gosaikunda",
+    "Pokhara",
+    "Nagarkot",
+    "Ilam",
+    "Bhaktapur",
+];

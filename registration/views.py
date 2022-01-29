@@ -105,6 +105,9 @@ def flights(request):
 def add_hotel(request): 
     return render(request,'list_property/add_hotel.html')
 
+def find_guide(request): 
+    return render(request,'find_guide/find_guide.html')
+
 
 
 def user_profile(request): 

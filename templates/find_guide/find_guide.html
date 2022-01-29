@@ -1,0 +1,37 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+
+<link rel=stylesheet href="{% static '/css/find_guide.css' %}">
+
+
+<!-- custom js file link  -->
+
+<script src="{% static '/js/suggestions.js' %}" defer></script>
+<script src="{% static '/js/find_guide.js' %}" defer></script>
+
+<body>
+    <section class="home" id="home">
+
+      <div class="content">
+          <span data-aos="fade-up" data-aos-delay="150">Find Your Tour Guide</span>
+  
+          <p data-aos="fade-up" data-aos-delay="450">Look for the location where your tour guide is needed.</p>
+  
+          <div data-aos="fade-up" data-aos-delay="600" class="wrapper" >
+            <div class="search-input">
+              <a href="" target="_blank" hidden></a>
+              <input type="text" placeholder="Search a place where you want to travel">
+              <div class="autocom-box">
+                <!-- here list are inserted from javascript -->
+              </div>
+              <div class="icon"><i class="fas fa-search"></i></div>
+            </div>
+    </div>
+
+  </section>
+
+</body>
+
+{% endblock content %}
