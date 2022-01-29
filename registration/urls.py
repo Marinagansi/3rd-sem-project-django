@@ -33,6 +33,8 @@ urlpatterns = [
             path('list_nav',views.list_nav),
             path('trip',views.package),
             path('things_to_do',views.things_to_do),
+            path('find_guide',views.find_guide),
+            
 
 
 
