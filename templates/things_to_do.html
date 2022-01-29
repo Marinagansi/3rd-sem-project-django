@@ -1,0 +1,175 @@
+<{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+<head>
+	<title>Things to do</title>
+	<!-- favicon-->
+	<link href="img/pashupathinath.jpg" rel="icon">
+
+	
+
+ <!--Bootstrap link -->
+	<link rel="stylesheet" href="{% static 'css/Things_to_do_bootstrap.min.css' %} ">    
+	
+	<!-- css file and icons stylesheet-->
+
+    <link rel="stylesheet" href="{% static 'css/Things_to_do.css' %}">    
+   
+
+</head>
+
+
+<body>
+
+
+
+<!--=========Slider section =========-->
+<div id="slides" class="cover-slides">
+	<ul class="slides-container">
+		<li class="text-left">
+			<img src="{% static 'assets/pashupathinath.jpg' %}" alt="">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="m-b-20"><strong>Things To Do<br> Nepal</strong></h1>
+						<p class="m-b-40">The country surrounded by natural beuty   <br> 
+							And take you back in time.</p>
+						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Visit</a></p>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="text-left">
+			<img src="{% static 'assets/Boudhanath_Stupa-IMG_7048.jpg' %}" alt="">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="m-b-20"><strong>Things To Do <br> Nepal</strong></h1>
+						<p class="m-b-40">The country surrounded by natural beuty <br> 
+						And take you back in time.</p>
+						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Visit</a></p>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="text-left">
+			<img src="{% static 'assets/Swayambhunath_2018.jpg' %}" alt="">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="m-b-20"><strong>Things To Do <br> Nepal</strong></h1>
+						<p class="m-b-40">The country surrounded by natural beuty   <br> 
+							And take you back in time.</p>
+						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Visit</a></p>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="slides-navigation">
+		<a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+	</div>
+</div><!-- End slider Section-->
+
+<!--===========About Section===========-->
+<div class="about-section-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+				<div class="inner-column">
+					<h1>Welcome To <span>Pokhara</span></h1>
+					<h4>Pokhara</h4>
+					<p>Pokhara is a city on Phewa Lake, in central Nepal. It’s known as a gateway to the Annapurna Circuit, a popular trail in the Himalayas. Tal Barahi Temple, a 2-story pagoda</p>
+					<p>, sits on an island in the lake. On the eastern shore, the Lakeside district has yoga centers and restaurants. In the city’s south, the International Mountain Museum has exhibits on the history of mountaineering and the people of the Himalayas.</p>
+					<a class="btn btn-lg-btn-circle btn-outline-new-white" href="#">Reservation</a>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12"><img src="{% static '/assets/pokhara.jpg' %}" alt="" class="img-fluid"></div>
+		</div>
+	</div>
+</div><!-- End Section -->
+<!--============Start QT Section===========-->
+<div class="qt-box qt-background">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 ml-auto mr-auto text-center">
+				<p class="lead">" If you're not the one cooking, stay out of the way and compliment the chif, "</p>
+				<span class="lead">Shantanu jana</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End section-->
+
+<!--===========Start Gallery========-->
+<div class="gallery-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Gallery</h2>
+					<p>Featured photo</p>
+
+				</div>
+			</div>
+		</div>
+		<div class="tz-gallery">
+			<div class="row">
+				<div class="col-sm-12 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static '/assets/gallery-img-01.jpg' %}">
+					<img class="img-fluid" src="{% static '/assets/gallery-img-01.jpg' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static '/assets/Chitwan.jpeg' %}">
+					<img class="img-fluid" src="{% static '/assets/Chitwan.jpeg' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static '/assets/Chitwan.jpeg' %}">
+					<img class="img-fluid" src="{% static '/assets/Chitwan.jpeg' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-12 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static '/assets/lumbini.jpg' %}">
+					<img class="img-fluid" src="{% static '/assets/lumbini.jpg' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static '/assets/ktm.jpg' %}">
+					<img class="img-fluid" src="{% static '/assets/ktm.jpg' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static 'assets/pashupathinath.jpg' %}">
+					<img class="img-fluid" src="{% static 'assets/pashupathinath.jpg' %}" alt="Gallery Images">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!--End gallery -->
+
+
+
+
+
+
+
+<!--============ Back to Top ============-->
+<a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+
+
+
+	<!-- ALL JS FILES -->
+	<script src="{% static 'js/Things_to_do_jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/Things_to_do_jquery.superslides.min.js' %}"></script>
+    <script src="{% static 'js/things_to_do.js' %}"></script>
+</body>
+</html>
+
+
+{% endblock content %}
+
+

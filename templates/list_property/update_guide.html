@@ -1,0 +1,69 @@
+{% extends 'list_property/list_nav.html' %}
+{% load static %}
+{% block content %}
+<section class="form" id="form">
+    <h1 class="heading"><span></span>Add Guide Form</h1>
+    {% if guide_name1 %}
+
+   
+{% for book_guide in guides %}
+    <form action="/update1/{{book_guide.guide_name}}" method="POST" enctype="multipart/form-data">
+        <img style="width:30%" src="{% static 'assets/' %}{{ book_guide.guide_image }}">
+
+        {% csrf_token %}
+        <input class="file" type="file" id="img" name="guide_image" placeholder="change photo">
+        <h5>Name</h5>
+        <input type="text" name="guide_name"  value="{{ book_guide.guide_name }}" placeholder="Name" class="box" />
+        <!-- <h5>Gender</h5>
+      <input class="list" list="Gender" placeholder="Please select your gender"/>
+      <datalist id="Gender">
+        <option value="Male"></option>
+        <option value="Female"></option>
+        <option value="Custom"></option>
+      </datalist> -->
+
+        <h5>Email ID</h5>
+        <input type="text" name="guide_email" value="{{ book_guide.guide_email }}" placeholder="" class="box" />
+        <h5>Phone Number</h5>
+        <input type="text" name="guide_phone" value="{{ book_guide.guide_phone}}" placeholder="" class="box" />
+        <h5>Places of Expertise</h5>
+        <input type="text" name="guide_address" value="{{ book_guide.guide_address}}" placeholder="" class="box" />
+
+        
+        
+        <h5>Guide Description</h5>
+        <input type="text" class="box" name="guide_descripition" value="{{ book_guide.guide_descripition}}"
+            placeholder="Your Description" id="" cols="30" rows="10"> </input>
+        <input value="Update Data" type="submit" class="btn btn-success ml-5" />
+      
+    </form>
+    {% endfor %}
+  
+
+    {% else %}
+<h1 style="color:black">Hey ! You forget to searched for flight</h1>
+{% endif %}
+</section>
+
+<!-- Basic Info section ends -->
+
+<!-- custom js file link  -->
+<script src="{% static '/css/add_guide.css' %}"></script>
+</body>
+
+</html>
+
+
+{% endblock content %}
+<!-- <hhh>ggg</hhh>
+{% if guide_name1 %}
+you searched for {{guide_name1}}
+
+{% for book_guide in guides %}
+{{ guide_name }}
+{{ book_guide.guide_email}}
+{% endfor %}
+
+{% else %}
+<h1 style="color:black">Hey ! You forget to searched for flight</h1>
+{% endif %}  -->

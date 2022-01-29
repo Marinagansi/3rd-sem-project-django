@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nepGhuma</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/add_guide.css' %}" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+
+      <a href="home.html"><img src="{% static 'assets/404 logo.png'%}" width="150" height="100"></a>
+
+
+      <nav class="navbar">
+        <a href="#form">Add Guide</a>
+      </nav>
+<form action="guide_info" method="POST">
+  {% csrf_token %}
+  <input type="text" name="searched">
+  <input type="submit" class="btn" value="edit your information">
+</form>
+      <!-- <a href="" class="btn">Edit Your Information</a>
+      <p></p> -->
+      <a href="/partneracc_addproperty" class="btn">Log out</a>
+    </header>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    {% block content %} {% endblock content %}

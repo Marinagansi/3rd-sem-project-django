@@ -1,4 +1,71 @@
-<h1>vechicle_rent</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nepGhuma</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/add_guide.css' %}" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+
+      <a href="home.html"><img src="{% static 'assets/404 logo.png'%}" width="150" height="100"></a>
+
+
+      <nav class="navbar">
+        <a href="#form">Add Vehicle</a>
+      </nav>
+
+      <a href="search.html" class="btn">Edit Your Information</a>
+      <p></p>
+      <a href="/partneracc_addproperty" class="btn">Log out</a>
+    </header>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <!-- Basic Info section starts -->
+    <section class="form" id="form">
+      <h1 class="heading"><span></span>Add Vehicle Form</h1>
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h5>Name</h5>
+        <input type="text"  name="V_model" placeholder="Name" class="box" />
+        
+        <h5>color</h5>
+        <input type="text" name="v_color" placeholder="" class="box" />
+        
+        <h5>Seat capacity</h5>
+        <input type="text"  name="v_rent" placeholder="" class="box" />
+      
+        <h5>Image</h5>
+        <input class= "file" type="file" id="img" name="v_image">
+         <h5>Purchased on</h5>
+        <input type="date" class="box" name="v_purchase" placeholder="Your Description" id="" cols="30" rows="10"> 
+         
+     <input value="Register Data" type="submit" class="btn btn-success ml-5"/> 
+      </form>
+    </section>
+
+    <!-- Basic Info section ends -->
+
+    <!-- custom js file link  -->
+    <script src="{% static '/css/add_guide.css' %}"></script>
+  </body>
+</html>
+
+<!-- <h1>vechicle_rent</h1>
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <label >First name:</label><br>
@@ -13,4 +80,4 @@
     <input type="date"  name="v_purchase"><br>
 
     <input value="Register Data" type="submit" class="btn btn-success ml-5"/> 
-</form>
+</form> -->

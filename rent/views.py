@@ -11,7 +11,7 @@ def create(request):
     if request.method=="POST":
         rents=RentForm(request.POST,request.FILES)
         rents.save()
-        return redirect ("/vehicle/vehicle_rent")
+        return redirect ("/partneracc_addproperty")
           
 
     else:

@@ -13,6 +13,13 @@ from django.contrib.auth.decorators import login_required
 def firstpage(request):
     return render(request,'firstpage.html')
 
+def things_to_do(request):
+    return render(request,'things_to_do.html')
+
+def package(request):
+    return render(request,'packages.html')
+
+
 def guide(request): 
 
     guides=Book_guide.objects.raw('select * from book_guide')
@@ -98,9 +105,6 @@ def flights(request):
 def add_hotel(request): 
     return render(request,'list_property/add_hotel.html')
 
-def add_guide(request): 
-    return render(request,'list_property/add_guide.html')
-
 
 
 def user_profile(request): 
@@ -169,42 +173,7 @@ def logout_view(request):
     logout(request)
     return redirect('/firstpage')
 
-# login for hotels
-# def Hsignin(request):
-#     print(request)
-#     if request.method=='POST':
-#         customer_name=request.POST.get("customer_name")
-#         customer_pasword=request.POST.get("customer_pasword")
 
-#         user=Registration.objects.get(customer_name=customer_name,customer_pasword=customer_pasword)
-#         if user is not None:
-#             return redirect ("/registration/index")
 
-#         else:
-#             messages.info(request,"incorect username and password") 
-#     return render(request,'registration/login.html')
-
-#for hotel registration
-# def Hregistration(request):
-#         # print(request)
-
-#         if request.method=="POST":
-
-#             form=CustomerForm(request.POST)
-#         # print(form)
-
-#             if form.is_valid():
-#                 try:
-#                     print("valid")
-#                     form.save()
-                    
-#                     return redirect ("/registration/index")
-#                 except:
-                    
-#                  print("invalid")
-
-#         else:
-
-#                 form=CustomerForm()
-#                 print("invalid")
-#                 return render (request,"registration/registration.html",{'form':form})
+def list_nav(request): 
+    return render(request,'list_property/list_nav.html')        

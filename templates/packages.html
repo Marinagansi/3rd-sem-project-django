@@ -13,7 +13,8 @@
     />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="..static/css/packages.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/packages.css' %}" />
 
     <link
       rel="stylesheet"
