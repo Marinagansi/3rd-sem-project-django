@@ -1,0 +1,31 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/searched_guide.css' %}">
+<script src="{% static '/js/searched_guide.js' %}" defer></script>
+<section class="heading-link">
+    <h3>Guides For Your Searched Place</h3>
+    <p>  Searched wrong place / <a href="find_guide">Go Back</a></p>
+</section>
+
+<section class="guide" id="guide">
+
+    <div class="box-container">
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="img/img-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Guide Name</h3>
+                <li>Places of Expertise</li>
+                <li>Descriptions</li>
+                <a href="#">Book <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock content %}
