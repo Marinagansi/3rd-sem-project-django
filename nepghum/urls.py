@@ -27,7 +27,8 @@ urlpatterns = [
      path('', include('rent.urls')),
      path('booking/', include('booking_vehicle.urls')),
      path('', include('contact.urls')),
-     path('fbooking/',include('book_flights.urls'))
+     path('fbooking/',include('book_flights.urls')),
+     path('hotel/',include('hotel.urls'))
      
      
     

@@ -30,7 +30,6 @@ urlpatterns = [
             path('partneracc_signup',views.partneracc_signup),
             path('partneracc_signup2',views.partneracc_signup2),
             path('partneracc_signup3',views.partneracc_signup3),
-            path('add_hotel',views.add_hotel),
             path('list_nav',views.list_nav),
             path('trip',views.package),
             path('things_to_do',views.things_to_do),

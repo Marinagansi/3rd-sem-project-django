@@ -39,10 +39,10 @@ def search_flights(request):
         print(count)
         if (count > 1):
             #  return render(request,'flight/search_f.html',{'searched':searched,'venues':venues})
-            return render(request,'flight/book_flights.html',{'searched':searched,'venues':venues})
+            return render(request,'flight/search_f.html',{'searched':searched,'venues':venues})
     else:
         # return render(request,'flight/search_f.html',{})
-         return render(request,'flight/book_flights.html',{})
+         return render(request,'flight/search_f.html',{})
 
  
    
