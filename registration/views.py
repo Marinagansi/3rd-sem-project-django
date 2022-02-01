@@ -107,6 +107,8 @@ def add_hotel(request):
 
 def find_guide(request): 
     return render(request,'find_guide/find_guide.html')
+def searched_guide(request): 
+    return render(request,'find_guide/searched_guide.html')
 
 
 
