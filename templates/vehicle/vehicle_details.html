@@ -1,24 +1,51 @@
+{% extends 'nav.html' %}
 {% load static %}
-<h1>{{rents.V_model}}</h1>
-<h1>{{rents.v_color}}</h1>
-<h1>{{rents.v_purchase}}</h1>
-<h1>{{rents.v_rent}}</h1>
-<img style="width:30%" src="{% static 'assets/' %}{{rents.v_image}}">
-<form action="" method="POST">
-    {% csrf_token %}
-    <label>Vehicle</label>
-    <input type="text"  name="vehicle" value={{rents.v_id}}></br>
-    <label>user_id</label>
-    <input type="text" name="customer" value={{user.id}} ></br>
-    <label>address</label>
-    <input type="text" name="address"></br>
+{% block content %}
+
+<!-- custom css file link  -->
+<link rel="stylesheet" href="{% static '/css/vehicle_detail.css' %}" />
+
+
+
+<div class="container details">
+    <div class="row">
+        <div class="col-lg-8 col-lg-6 col-sm-12" style="display:flex">
+
+            <img style="width:53rem; height:49rem" src="{% static 'assets/' %}{{rents.v_image}}">
+            <div class="car_detail">
+                <h1>Model:{{rents.V_model}}</h1>
+                <h1>Color:{{rents.v_color}}</h1>
+                <h1>purchase on:{{rents.v_purchase}}</h1>
+                <h1>Price:{{rents.v_rent}}</h1>
+            </div>
+
+            <div class="col-lg- col-lg-6 col-sm-12 form">
+                <form action="" method="POST">
+                    <h1> Fill up the form for booking</h1>
+                    {% csrf_token %}
+                    <label>Vehicle</label>
+                    <input type="text" name="vehicle" value={{rents.v_id}}></br>
+                    <label>user_id</label>
+                    <input type="text" name="customer" value={{user.id}}></br>
+                    <label>address</label>
+                    <input type="text" name="address"></br>
     
-    <label>start_date</label>
-    <input type="date" name='start_date'></br>
-    <label>end_date</label>
-    <input type="date" name="end_date"></br>
+                    <label>start_date</label>
+                    <input type="date" name='start_date'></br>
+                    <label>end_date</label>
+                    <input type="date" name="end_date"></br>
+    
+                    <input type="submit" value="Book Now">
+    
+                </form>
+    
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
 
-    <input type="submit" value="Book Now">
 
-</form>
 
+{% endblock content %}
