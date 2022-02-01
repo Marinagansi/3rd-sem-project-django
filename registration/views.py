@@ -181,3 +181,8 @@ def logout_view(request):
 
 def list_nav(request): 
     return render(request,'list_property/list_nav.html')        
+
+def hotelreview(request):
+    return render (request,'hotelreview.html')
+
+

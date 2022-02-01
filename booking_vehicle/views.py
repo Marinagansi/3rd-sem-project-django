@@ -4,7 +4,7 @@ from booking_vehicle.forms import vbooked, vupdatebooked
 # Create your views here.
 
 
-
+# fill form for booking vehicle
 def fillform(request,p_id):
     print(request)
     if request.method=="POST":

@@ -1,7 +1,7 @@
-
+{% extends 'list_property/add_hotel_nav.html' %}
 {% load static %}
-
-<!DOCTYPE html>
+{% block content %}
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,22 +10,22 @@
     <title>nepGhuma</title>
 
     <!-- font awesome cdn link  -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="{% static '/css/hotel_registration.css' %}" />
+     custom css file link  -->
+    <!-- <--<link rel="stylesheet" href="{% static '/css/hotel_registration.css' %}" />
   </head>
-  <body>
+  <body> -->
     <!-- header section starts  -->
 
-    <header class="header">
+    <!-- <header class="header">
 
-      <a href="home.html"><img src="{% static 'assets/404 logo.png'%}" width="150" height="100"></a>
+      <a href="home.html"><img src="{% static 'assets/404 logo.png'%}" width="150" height="100"></a> -->
 
-
+<!-- 
       <nav class="navbar">
         <a href="#form">Basic Info</a>
         <a href="#form1">Layout and Pricing</a>
@@ -39,7 +39,7 @@
       <a href="search.html" class="btn">Log out</a>
     </header>
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+    <div id="menu-btn" class="fas fa-bars"></div>  -->
 
     <!-- Basic Info section starts -->
     <section class="form" id="form">
@@ -461,7 +461,8 @@
     <!-- Policies section ends -->
 
     <!-- custom js file link  -->
-    <script src="{% static '/js/hotel_registration.js' %}></script>
-  </body>
-</html>
+    <script src="{% static '/js/hotel_registration.js' %}"></script>
+  <!-- </body>
+</html> -->
 
+{% endblock content %}

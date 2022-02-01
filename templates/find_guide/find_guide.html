@@ -9,7 +9,7 @@
 <!-- custom js file link  -->
 
 <script src="{% static '/js/suggestions.js' %}" defer></script>
-<script src="{% static '/js/find_guide.js' %}" defer></script>
+<!-- <script src="{% static '/js/find_guide.js' %}" defer></script> -->
 
 <body>
     <section class="home" id="home">
@@ -20,17 +20,62 @@
           <p data-aos="fade-up" data-aos-delay="450">Look for the location where your tour guide is needed.</p>
   
           <div data-aos="fade-up" data-aos-delay="600" class="wrapper" >
+            <form action="searched_guide" method="POST">
+              {% csrf_token %}
             <div class="search-input">
               <a href="" target="_blank" hidden></a>
-              <input type="text" placeholder="Search a place where you want to travel">
+              <input type="text" placeholder="Search a place where you want to travel" name="searched">
               <div class="autocom-box">
                 <!-- here list are inserted from javascript -->
               </div>
               <div class="icon"><i class="fas fa-search"></i></div>
+              <input
+          data-aos="zoom-in"
+          data-aos-delay="750"
+          type="submit"
+          value="find now"
+          class="btn"
+        />
             </div>
+          </form>
     </div>
 
   </section>
+
+  {% if searched %}
+ <h1 style="color:white; font-size: larger;">you searched for{{searched}}</h1>
+ 
+ <div class="box-container">
+  {% for book_guide in venues %}
+  <div class="box" data-aos="fade-up" data-aos-delay="150">
+      <div class="image">
+          <img data-aos="fade-up" data-aos-delay="150" src="{% static 'assets/' %}{{book_guide.guide_image}}" alt="">
+      </div>
+      <div class="content" style="background-color: cornflowerblue;">
+          <h3 data-aos="fade-up" data-aos-delay="300"> 
+            {{book_guide.guide_name}}</h3>
+              <h3 data-aos="fade-up" data-aos-delay="300"> 
+                {{book_guide.guide_address}}</h3>
+                  
+          <a data-aos="zoom-in-left" data-aos-delay="300" href="book_guide/{{book_guide.guide_id}}">Details <i class="fas fa-angle-right"></i></a>
+          <p class="ml-5" >
+              </p>
+        
+      </div>
+  </div>
+  {% endfor %}
+  
+  
+  {% else %}
+  <h1 style="color:white">you search for > Hey ! You forget to searched for flight</h1>
+  {% endif %}
+     
+</div>
+ 
+
+  
+            
+        
 
 </body>
 

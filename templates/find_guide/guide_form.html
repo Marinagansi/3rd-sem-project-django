@@ -1,0 +1,32 @@
+<h1>hello</h1>
+<form action="/booking_guide/guide_form/{{guides.guide_id}}" method="POST">
+    {% csrf_token %}
+<div class="class1">
+<label class="label">Guide id</label><br>
+<input class="airlines" type="text" name="guide" style="color:black; background-color: white;"  value="{{guides.guide_id}}"><br>
+
+<label class="label">Customer_id</label><br>
+<input class="from" type="text" name="customer" style="color:black; background-color: white;"   value="{{user.id}}"><br>
+
+<label class="label">Nationality</label><br>
+<input class="to" type="text" name="Nationality" required><br>
+<label class="label">where to visit</label><br>
+<input class="date" type="text" name="visit" required><br>
+
+<label class="label">group_size</label><br>
+<input class="date" type="text" name="group_size" required><br>
+
+<label class="label">days</label><br>
+<input class="date" type="text" name="days" required><br>
+
+<label class="label">date</label><br>
+<input class="date" type="date" name="start_date" required><br>
+
+<label class="label">more</label><br>
+<input class="date" type="text" name="More_details" required><br>
+
+
+
+<input type="submit" vlaue="submit">
+</div>
+</form>

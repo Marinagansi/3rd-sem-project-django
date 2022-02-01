@@ -1,0 +1,44 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nepGhuma</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/hotel_registration.css' %}" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+
+      <a href="home.html"><img src="{% static 'assets/404 logo.png'%}" width="150" height="100"></a>
+
+
+      <nav class="navbar">
+        <a href="/hotel/add_hotel">Basic Info</a>
+        <a href="/hotel/add_hotel2">Layout and Pricing</a>
+        <a href="#form2">Facilities & Services</a>
+        <a href="#form3">Photos</a>
+        <a href="#form4">Policies</a>
+      </nav>
+
+      <a href="search.html" class="btn">Edit Your Property</a>
+      <p></p>
+      <a href="search.html" class="btn">Log out</a>
+    </header>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    {% block content %} {% endblock content %}

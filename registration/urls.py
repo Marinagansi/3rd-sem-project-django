@@ -34,6 +34,7 @@ urlpatterns = [
             path('trip',views.package),
             path('things_to_do',views.things_to_do),
             path('find_guide',views.find_guide),
+            path('hotelreview',views.hotelreview)
             
 
 

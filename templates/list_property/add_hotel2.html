@@ -1,0 +1,113 @@
+{% extends 'list_property/add_hotel_nav.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- layyout and pricing -->
+    <section class="form1" id="form1">
+        <h1 class="heading"><span></span> Layout and Pricing</h1>
+  
+        <form action="/hotel/hotel2" method="POST">
+          <h5>Please select</h5>
+          <span>Room Type</span>
+          {% csrf_token %}
+          <input
+            class="list" type="text" name="room_type"
+            list="room type"
+            placeholder="Please select room type"
+          />
+          <datalist id="room type">
+            <option value="Single"></option>
+            <option value="Double"></option>
+            <option value="Twin"></option>
+            <option value="Twin/Double"></option>
+            <option value="Triple"></option>
+            <option value="Family"></option>
+            <option value="Dormitory room"></option>
+            <option value="Bed in Dormitory"></option>
+          </datalist>
+          <span>Smoking Policy</span>
+          <input
+            class="list" name="smoking_policy" type="text"
+            list="smoking type"
+            placeholder="Please select smoking policy"
+          />
+          <datalist id="smoking type">
+            <option value="Non-smoking"></option>
+            <option value="Smoking"></option>
+            <option
+              value="I have both smoking and non-smoking options for this room type"
+            ></option>
+          </datalist>
+          <span>Number of rooms (of this type)</span>
+          <p></p>
+          <input type="text" name="no_of_rooms" placeholder="1" class="box2" />
+       
+          <h5>Bed Options</h5>
+          <ol>
+            Tell us only about the existing beds in a room. Do not include extra
+            beds.
+          </ol>
+          <span>What kind of beds are available in this room?</span>
+          <ol></ol>
+          <input
+            class="list2" type="text"
+            list="bed"  name="Beds"
+            placeholder="Please select types of beds"
+          />
+          <pre>X</pre>
+          <input type="text"
+            class="list2"
+            list="bed numbers"
+            placeholder="Please select number of beds"
+          />
+          <datalist id="bed type">
+            <option value="Single bed"></option>
+            <option value="Double bed"></option>
+            <option value="Large bed (King size)"></option>
+            <option value="Extra-large double bed (Super-king size)"></option>
+            <option value="Sofa bed"></option>
+          </datalist>
+          <datalist id="bed numbers">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+            <option value="10"></option>
+            <option value="12"></option>
+            <option value="12"></option>
+          </datalist>
+  
+          <span>How many guests can stay in this room?</span>
+          <p></p>
+          <input type="text" name="no_of_guest" placeholder="1" class="box2" />
+          <input type="submit" value="continue">
+        </form>
+  
+        <form action="">
+          <span>Base price per night</span>
+          <ul>
+            This is the lowest price that we automatically apply to this room for
+            all dates. Before your property goes live, you can set seasonal
+            pricing in your property dashboard.
+          </ul>
+          <span>Price for 1 person</span>
+          <p></p>
+          <input type="number" placeholder="0" class="box2" />
+         
+  <!-- 
+          <a
+            href="#form2"
+            alt=""
+            class="btn3"
+            style="display: inline-block; text-align: center; color: black"
+            >Continue</a
+          > -->
+        </form>
+      </section>
+      {% endblock content %}

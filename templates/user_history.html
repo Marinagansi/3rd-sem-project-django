@@ -1,0 +1,67 @@
+
+
+
+
+
+
+<h1>vehicle</h1>
+
+
+
+
+<table class="table ">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th  scope="col">from</th>
+        <th scope="col">to</th>
+        <th scope="col">way</th>
+        <th scope="col">date</th>
+        <th scope="col">time</th>
+        <th scope="col">price</th>
+        <th scope="col">Avaible</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        {% for boking_vehicle in vehicles %}
+       
+        <!-- <td>{{ flights.flight_name }}</td>
+        <td>{{ flights.flight_from }} </td> -->
+        <td>{{ boking_vehicle.address }}</td>
+        <!-- <td>{{flights.flight_way}}</td>
+        <td>{{flights.flight_date}}</td>
+        <td>{{flights.flight_time}}</td>
+        <td>{{flights.flight_money}}</td> -->
+        <!-- <td><a href="flights/flight_ticket/{{flights.flight_id}}" class="btn btn-secondary">Book Now</a></td> -->
+        <!-- <td><a href="fbook/{{flights.flight_id}}" class="btn btn-secondary">Book Now</a></td> -->
+
+      </tr>
+
+      {% endfor %}
+      <tr>
+
+    </tbody>
+ 
+  
+  </table>
+
+
+</div>
+<h1>guide</h1>
+{% for guide_booked in guides %}
+<h4>{{guide_booked.group_size}}</h4>
+{% endfor %}
+
+<h1>flights</h1>
+
+{% for book_flight in flights %}
+<td>{{book_flight.phone}}</td>
+<td>{{book_flight.tickets}}</td>
+{% endfor %}
+</div>
+</div>
+
+
