@@ -42,41 +42,6 @@
 
   </section>
 
-  {% if searched %}
- <h1 style="color:white; font-size: larger;">you searched for{{searched}}</h1>
- 
- <div class="box-container">
-  {% for book_guide in venues %}
-  <div class="box" data-aos="fade-up" data-aos-delay="150">
-      <div class="image">
-          <img data-aos="fade-up" data-aos-delay="150" src="{% static 'assets/' %}{{book_guide.guide_image}}" alt="">
-      </div>
-      <div class="content" style="background-color: cornflowerblue;">
-          <h3 data-aos="fade-up" data-aos-delay="300"> 
-            {{book_guide.guide_name}}</h3>
-              <h3 data-aos="fade-up" data-aos-delay="300"> 
-                {{book_guide.guide_address}}</h3>
-                  
-          <a data-aos="zoom-in-left" data-aos-delay="300" href="book_guide/{{book_guide.guide_id}}">Details <i class="fas fa-angle-right"></i></a>
-          <p class="ml-5" >
-              </p>
-        
-      </div>
-  </div>
-  {% endfor %}
-  
-  
-  {% else %}
-  <h1 style="color:white">you search for > Hey ! You forget to searched for flight</h1>
-  {% endif %}
-     
-</div>
- 
-
-  
-            
-        
-
 </body>
 
 {% endblock content %}

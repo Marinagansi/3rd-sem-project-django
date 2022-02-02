@@ -6,24 +6,31 @@
 <script src="{% static '/js/searched_guide.js' %}" defer></script>
 <section class="heading-link">
     <h3>Guides For Your Searched Place</h3>
-    <p>  Searched wrong place / <a href="find_guide">Go Back</a></p>
+    <p>  Searched wrong place? / <a href="find_guide">Go Back</a></p>
 </section>
 
+{% if searched %}
 <section class="guide" id="guide">
 
     <div class="box-container">
-
+        {% for book_guide in venues %}
         <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
-                <img src="img/img-1.jpg" alt="">
+                <img src="{% static 'assets/' %}{{book_guide.guide_image}}"  alt="">
             </div>
             <div class="content">
-                <h3>Guide Name</h3>
-                <li>Places of Expertise</li>
-                <li>Descriptions</li>
-                <a href="#">Book <i class="fas fa-angle-right"></i></a>
+                <h3>{{book_guide.guide_name}}</h3>
+                <li> {{book_guide.guide_address}}</li>
+                <li>{{book_guide.guide_descripition}}</li>
+                <!-- <a href="#">Book <i class="fas fa-angle-right"></i></a> -->
+                <a  href="book_guide/{{book_guide.guide_id}}">Book <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
+        {% endfor %}
+
+        {% else %}
+        <h1 style="color:white">Hey ! You forget to searched for places</h1>
+        {% endif %}
     </div>
 
 </section>
