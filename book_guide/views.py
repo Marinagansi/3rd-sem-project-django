@@ -55,9 +55,9 @@ def search_guide(request):
     if request.method == "POST":
         searched=request.POST['searched']
         venues=Book_guide.objects.filter(guide_address__icontains=searched)
-        return render(request,'find_guide/find_guide.html',{'searched':searched,'venues':venues})
+        return render(request,'find_guide/searched_guide.html',{'searched':searched,'venues':venues})
     else:
-        return render(request,'find_guide/find_guide.html',{})
+        return render(request,'find_guide/searched_guide.html',{})
 
 
 def guide_form(request,p_id):

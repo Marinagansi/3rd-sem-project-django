@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 * {
   font-family: 'Poppins', sans-serif;
@@ -8,7 +9,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-
+  text-transform: capitalize;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
@@ -34,7 +35,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: #111;
+  background: rgb(0, 0, 0);
   overflow-x: hidden;
 }
 
@@ -49,7 +50,7 @@ section {
 
 .heading span {
   color: #29d9d5;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .heading h1 {
@@ -93,14 +94,14 @@ section {
   padding: 1.5rem 9%;
 }
 
-.header .navbarr a {
+.header .navbar a {
   font-size: 1.7rem;
   color: #aaa;
   display: inline-block;
   margin: 0 1rem;
 }
 
-.header .navbarr a:hover {
+.header .navbar a:hover {
   color: #29d9d5;
 }
 
@@ -108,12 +109,14 @@ section {
   margin-top: 0;
 }
 
+
 #menu-btn {
   font-size: 2.5rem;
-  color: #fff;
+  color: #29d9d5;
   cursor: pointer;
   display: none;
 }
+
 
 
 .heading-link {
