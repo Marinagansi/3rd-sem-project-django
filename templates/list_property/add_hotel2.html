@@ -7,7 +7,7 @@
     <section class="form1" id="form1">
         <h1 class="heading"><span></span> Layout and Pricing</h1>
   
-        <form action="/hotel/hotel2" method="POST">
+        <form action="/hotel/add_hotel/{{data.hotel_id}}" method="POST">
           <h5>Please select</h5>
           <span>Room Type</span>
           {% csrf_token %}

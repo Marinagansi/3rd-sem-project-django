@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render,redirect
-from hotel.forms import HotelForm1,HotelForm2
+from hotel.forms import HotelForm1,HotelForm2,HotelFormStepOne,HotelFormStepTwo
 from hotel.models import Hotel
 
 # Create your views here.
@@ -34,6 +34,20 @@ from hotel.models import Hotel
 # def hotel2(request):
 #     return render(request,"list_property/add_hotel2.html")
 
+def stepOneSubmit(request):
+    print(request)
+    if request.method=='POST':
+        form=HotelFormStepOne(request.POST)
+        data=form.save()
+        return render(request,'list_property/add_hotel2.html',{'data':data})
+    return render(request,'list_property/add_hotel.html')
+
+def stepTwoSubmit(request,p_id):
+    hotel=Hotel.objects.get(hotel_id=p_id)
+    form=HotelFormStepTwo(request.POST,instance=hotel)
+    data=form.save()
+    print(data)
+    return render(request,'list_property/add_hotel2.html',{'data':data})
 
 #views
 def step1(request):
