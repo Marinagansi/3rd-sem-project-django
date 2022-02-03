@@ -126,7 +126,7 @@ section {
   text-align: center;
   /* background: url(../img/shop-bg2.png) no-repeat; */
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 36, 36, 0.7)), to(rgba(37, 37, 37, 0.7))), url(img/search_guide.png) no-repeat;
-  background: linear-gradient(rgba(37, 36, 36, 0.7), rgba(37, 37, 37, 0.7)), url(img/search_guide.png) no-repeat;
+  background: linear-gradient(rgba(37, 36, 36, 0.7), rgba(37, 37, 37, 0.7)), url(/static/assets/sea) no-repeat;
   background-size: cover;
   background-position: center;
 }

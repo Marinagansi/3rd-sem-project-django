@@ -49,7 +49,9 @@ INSTALLED_APPS = [
     'contact',
     'book_flights',
     'hotel',
-    'guide_booked'
+    'guide_booked',
+    'trip',
+    'book_trip'
 ]
 
 MIDDLEWARE = [

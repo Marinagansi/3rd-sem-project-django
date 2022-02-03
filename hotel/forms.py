@@ -10,3 +10,5 @@ class HotelForm2(forms.ModelForm):
     class Meta:
      model = Hotel
      fields = ("room_type","smoking_policy","no_of_rooms","Beds","no_of_guest")
+
+
