@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
+from hotel.models import Hotel
 
 
 # Create your views here.
@@ -28,7 +29,10 @@ def guide(request):
    
 
 def hotel(request): 
-    return render(request,'hotel.html')
+    hotels=Hotel.objects.raw('select * from hotel')
+    return render(request,'hotel.html',{'hotels':hotels})
+
+
 def forget_password(request): 
     return render(request,'list_property/forget_password.html')
 def forget_username(request): 

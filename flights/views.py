@@ -34,12 +34,13 @@ def flightsTicket(request,p_id):
 def search_flights(request):
     if request.method == "POST":
         searched = request.POST['searched']
-        venues = Book_guide.objects.filter(flight_from__icontains= searched)
+        searched1 = request.POST['searched1']
+        venues = Book_guide.objects.filter(flight_from= searched, flight_to=searched1)
         count = Book_guide.objects.count()
         print(count)
         if (count > 1):
             #  return render(request,'flight/search_f.html',{'searched':searched,'venues':venues})
-            return render(request,'flight/search_f.html',{'searched':searched,'venues':venues})
+            return render(request,'flight/search_f.html',{'searched':searched,'searched1':searched1,'venues':venues})
     else:
         # return render(request,'flight/search_f.html',{})
          return render(request,'flight/search_f.html',{})
