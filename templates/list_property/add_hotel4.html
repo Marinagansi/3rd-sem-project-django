@@ -1,0 +1,44 @@
+{% extends 'list_property/add_hotel_nav.html' %}
+{% load static %}
+{% block content %}
+ <!-- Property Photos section starts  -->
+
+ <section class="form3" id="form3">
+    <h1 class="heading"><span></span> Property Photos</h1>
+    <form action="/hotel/add_hotel3/{{data.hotel_id}}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+      <ol>
+        Great photos invite guests to get the full experience of your
+        property, so upload some high-resolution photos that represent all
+        your property has to offer. We will display these photos on your
+        property's page on the nepGhuma website.
+      </ol>
+      <h3>Upload at least 2 photo</h3>
+      <h4>You will also be able to upload more after registration</h4>
+      <h5>Upload your photos here</h5>
+      <input class= "file" type="file" id="img" name="image1" accept="image/*">
+      <input class= "file" type="file" id="img" name="image2" accept="image/*">
+      
+      <input type="submit" value="submit">
+
+      <a
+        href="#form4"
+        alt=""
+        class="btn3"
+        style="display: inline-block; text-align: center; color: black"
+        >Continue</a
+      >
+   
+      <h3>No professional photos? No problem.</h3>
+      <p>> You can use: A smartphone A digital camera</p>
+      <p>
+        > If you don't know who took a photo, it's best to avoid using it.
+        Only use photos which you took or own the copyright to, or if it was
+        taken by someone else, make sure you have the photographer’s consent
+        to use the photo.
+      </p>
+    </form>
+  </section>
+
+  <!-- Property photos section ends -->
+{% endblock content %}
