@@ -1,0 +1,147 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/hotel_details.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- custom js file link  -->
+    <script src="js/hotel_details.js" defer></script>
+
+
+    
+<!-- header section starts  -->
+                                 
+<!-- <header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="home.html"><img src="img/404 logo.png" width="150" height="80"></a>
+
+    <nav class="navbar">
+        <a href="flights.html" style="text-decoration: none;">Flights</a>
+        <a href="hotel.html" style="text-decoration: none;">Hotel</a>
+        <a href="vehichle_rent.html" style="text-decoration: none;">Vehichle Rent</a>
+        <a href="things_to_do.html" style="text-decoration: none;">Things to do</a>
+        <a href="explore.html" style="text-decoration: none;">Explore</a>
+        <a href="trip.html" style="text-decoration: none;">Trip</a>
+        <a href="event.html" style="text-decoration: none;">Event</a>
+        <a href="guide.html" style="text-decoration: none;">Find a guide</a>
+        <a href="food.html" style="text-decoration: none;">Food</a>
+        <a href="shop.html" style="text-decoration: none;">Shop</a>
+        <a href="about_us.html" style="text-decoration: none;">About us</a>
+        <a href="f_q.html" style="text-decoration: none;">F&Q</a>
+        <a href="contact.html" style="text-decoration: none;">CONTACT</a>
+    </nav>
+
+    <a data-aos="zoom-in-left" data-aos-delay="1300" href="search.html" class="btn">Search</a>
+    <a data-aos="zoom-in-left" data-aos-delay="1300" href="login.html" class="btn">Login</a>
+
+</header> -->
+
+<!-- header section ends -->
+
+<section class="book" id="book">
+
+    <h1 class="heading"> Book Your <span> Hotels </span> </h1>
+    
+    <div class="row-1">
+    
+        <div class="image">
+            <img src="{% static 'assets/roughimg.png'%}"  alt="">
+            <img src="{% static 'assets/roughimg.png'%}"  alt="">
+        </div>
+        
+    
+
+        <div class="content">
+            <h3>Hotel Name </h3>
+            <h4>Details:</h4>
+            <div class="box-container">
+                <div class="box">
+                    <p> <span> Address: </span> Kalanki, Kathmandu, Bagmati, 4600 </p>
+                    <p> <span> Room Types: </span> Dormitory room </p>
+                    <p> <span> Smoking Policy: </span> Yes </p>
+                    <p> <span> Bed Options: </span> Large bed (King size) * 4 </p>
+                </div>
+                <div class="box">
+                    <p> <span> Base price per night: </span> 5000 </p>
+                    <p> <span> Parking: </span> Yes </p>
+                    <p> <span> Breakfast: </span> Yes, included in the price </p>
+                    <p> <span> Free Cancelations before: </span> (3 days) of arrival </p>
+                </div>
+                <div class="box">
+                    
+                    <p> <span> Check-in Time From</span> 8:00 </p>
+                    <p> <span> Check-in Time To </span> 23:30 </p>
+                    <p> <span> Check-out Time From</span> 8:00 </p>
+                    <p> <span> Check-out Time To </span> 23:30 </p>
+
+                </div>
+                <div class="box">
+                    <p> <span> Do you allow pets? </span> Yes, upon request </p>
+                    <p> <span> Contact name: </span> Sundar Kumar </p>
+                    <p> <span> Phone Number: </span> 9856898989 </p>
+                </div>
+            </div>
+            
+            <h1 class="heading"><span></span> Book</h1>
+                          
+            <form action="">
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Your name</span>
+                        <input type="text" placeholder="Guest's name" name="" id="" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Your number</span>
+                        <input type="number" placeholder="Guest's mobile number" name="" id="" required>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Email-id</span>
+                        <input type="email" placeholder="Email-id" name="" id="" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>How many room</span>
+                        <input type="number" placeholder="No. of room you need" required>
+                    </div>
+                </div>
+        
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Check in Time</span>
+                        <input type="datetime-local" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Check out Time</span>
+                        <input type="datetime-local" required>
+                    </div>
+                </div>
+
+        
+                <div class="flex">
+                    <div class="inputBox2">
+                        <span>Special Request</span>
+                        <p>Please explain your request: arrival time, flight details, food preferences...</p>
+                        <textarea placeholder="Details" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+        
+                <input type="submit" value="Final Booking" class="btn2">
+        
+            </form>  
+                
+            
+        </div>
+    
+    </div>
+</section>
+{% endblock content %}

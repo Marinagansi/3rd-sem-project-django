@@ -43,6 +43,8 @@ def partneracc_addproperty(request):
     return render(request,'list_property/partneracc_addproperty.html') 
 def userprofile2(request): 
     return render(request,'user_profile2.html') 
+def hotel_details(request): 
+    return render(request,'hotel_details.html')     
 # for login list property 
 def partneracc_signin(request): 
    
