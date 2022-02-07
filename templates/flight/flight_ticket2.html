@@ -1,0 +1,59 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+<link rel=stylesheet href="{% static '/css/flight_ticket2.css' %}">
+<link rel="stylesheet" href="{% static '/css/aos.css' %}">
+<section class="form" id="form">
+    <h1 class="heading"><span></span>{{flight.flight_name}} Airlines</h1>
+    <h3>
+      {{flight.flight_from}}to {{flight.flight_to}}
+    </h3>
+    <h2>{{flight.flight_way}}</h2>
+    <h4> {{flight.flight_date}} {{flight.flight_time}}</h4>
+
+    <form action="" method="POST">
+      {% csrf_token %}
+     <h5>Flight Id</h5> 
+      <input type="text" name="flights"  value="{{flight.flight_id}}" placeholder="Automatically Generated" class="box2" required/>
+      <h5>Customer Id</h5>
+      <input type="text" name="customer" placeholder="Automatically Generated" class="box2"  value="{{user.id}}" required/>
+      <!-- <h5>Name of Passengers</h5>
+      <input type="number" placeholder="Please Enter Passenger's Name" class="box3" required/> --> -->
+      <h5>Phone Number</h5>
+      <input type="text" placeholder="Please Enter Your Phone Number" name="phone" class="box3" required />
+      <h5>Numbers of Ticket</h5>
+      <input type="text" name="tickets"  placeholder="Please Enter Your Numbers of Ticket Required" class="box" required/>
+      <h5>Names of Passengers</h5>
+      <!-- <p>(If passengers are more than one)</p> 
+     <input type="text" placeholder="Please Enter Your Numbers of Ticket Required" class="box" required/> -->
+    <h6>Price: Nrs. {{flight.flight_money}}</h6>
+      <input type="submit" class="btn3"
+      style="display: inline-block; text-align: center; color: black"
+     value="submit">
+
+   
+      <!-- {% csrf_token %}
+<div class="class1">
+  <label class="label">Flight id</label><br>
+  <input class="airlines" type="text" name="flights" style="color:black; background-color: white;" disabled value="{{flight.flight_id}}"><br>
+
+  <label class="label">Customer_id</label><br>
+  <input class="from" type="text" name="customer" style="color:black; background-color: white;"  disabled value="{{user.id}}"><br>
+
+  <label class="label">phone</label><br>
+  <input class="to" type="text" name="phone" required><br>
+
+  <label class="label">No of ticket</label><br>
+  <input class="date" type="text" name="tickets" required><br>
+  <label class="label">price:{{flight.flight_money}}</label>
+  
+
+  
+  <input  type="submit" value="submit">
+</div>
+  
+      
+    </form>
+</section> -->
+{% endblock content %}

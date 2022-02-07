@@ -47,7 +47,11 @@ INSTALLED_APPS = [
     'rent',
     'booking_vehicle',
     'contact',
-    'book_flights'
+    'book_flights',
+    'hotel',
+    'guide_booked',
+    'trip',
+    'book_trip'
 ]
 
 MIDDLEWARE = [
@@ -87,7 +91,7 @@ WSGI_APPLICATION = 'nepghum.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-         'NAME': 'nepghum',
+        'NAME': 'nepghum',
         'HOST':'127.0.0.1',
         'PORT':'3307',
         'USER':'root',

@@ -2,179 +2,111 @@
 {% load static %}
 {% block content %}
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="{% static '/css/vehicle_rent.css' %}" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
+<!-- custom css file link  -->
+<link rel="stylesheet" href="{% static '/css/vehicle_rent.css' %}" />
 
-    <!-- custom js file link  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-    <script src="{% static '/js/vehicle_rent.js' %}" defer></script>
-  </head>
-  <body>
-    <!-- header section starts  -->
+<!-- custom js file link  -->
 
-    
-    <!-- header section ends -->
+<script src="{% static '/js/vehicle_rent.js' %}" defer></script>
+</head>
 
-    <!-- home section starts  -->
+<body>
+  <!-- header section starts  -->
 
-    <section class="home" id="home">
+
+  <!-- header section ends -->
+
+  <!-- home section starts  -->
+
+
+
+
+  <section class="home" id="home">
+    <div class="message">
+      {% for msg in messages %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hey!</strong> {{msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {% endfor %}
+      </div>
+
+      <div class="content">
+
+        <span data-aos="fade-up" data-aos-delay="150">nepGhumau</span>
+        <h3 data-aos="fade-up" data-aos-delay="300">Vehicle Rent</h3>
+        <p data-aos="fade-up" data-aos-delay="450">
+          Book a vehicle
+        </p>
+        <a data-aos="fade-up" data-aos-delay="600" href="#our_vehicles" class="btn">Rent</a>
+      </div>
+  </section>
+
+  <!-- home section ends -->
+
+  <!-- vehicle rent details section starts  -->
+
+  <section class="our_vehicles" id="our_vehicles">
+
+    <div class="heading">
+      <span data-aos="fade-up" data-aos-delay="150">Popular Vehicles</span>
+      <h1 data-aos="fade-up" data-aos-delay="150">Choose vehicle of your choice</h1>
+    </div>
+
+
+
+
+    <div class="box-container">
+      {% for rent in rents %}
+      <div class="box" data-aos="fade-up" data-aos-delay="150">
+        <div class="image">
+          <img data-aos="fade-up" data-aos-delay="150" src="{% static 'assets/' %}{{rent.v_image}}" alt="">
+        </div>
         <div class="content">
-            <span data-aos="fade-up" data-aos-delay="150">nepGhumau</span>
-            <h3 data-aos="fade-up" data-aos-delay="300">Vehicle Rent</h3>
-            <p data-aos="fade-up" data-aos-delay="450">
-              Book a vehicle
-            </p>
-            <a data-aos="fade-up" data-aos-delay="600" href="#our_vehicles" class="btn" >Rent</a>
-          </div>
-    </section>
+          <h3 data-aos="fade-up" data-aos-delay="300">
+            {{rent.v_color}}</h3>
+          <h3 data-aos="fade-up" data-aos-delay="300">
+            {{rent.V_model}}</h3>
 
-    <!-- home section ends -->
+          <a data-aos="zoom-in-left" data-aos-delay="300" href="vehicle_detail/{{rent.v_id}}">Details <i
+              class="fas fa-angle-right"></i></a>
+          <p class="ml-5">
+          </p>
 
-    <!-- vehicle rent details section starts  -->
-
-    <section class="our_vehicles" id="our_vehicles">
-
-        <div class="heading">
-            <span data-aos="fade-up" data-aos-delay="150">Popular Vehicles</span>
-            <h1 data-aos="fade-up" data-aos-delay="150">Choose vehicle of your choice</h1>
         </div>
-      
+      </div>
+      {% endfor %}
 
-      
-    
-        <div class="box-container">
-            {% for rent in rents %}
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static 'assets/' %}{{rent.v_image}}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300"> 
-                        {{rent.v_color}}</h3>
-                        <h3 data-aos="fade-up" data-aos-delay="300"> 
-                            {{rent.V_model}}</h3>
-                            
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="vehicle_detail/{{rent.v_id}}">Details <i class="fas fa-angle-right"></i></a>
-                    <p class="ml-5" >Your Customer ID is:
-                        {{request.session.customer_id}}</p>
-                  
-                </div>
-            </div>
-            {% endfor %}
-            <!-- <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
-                </div>
-            </div>
-    
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
-                </div>
-            </div>
-    
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
-                </div>
-            </div>
-    
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
-                </div>
-            </div>
-    
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
-                </div>
-            </div>
-    
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
-                </div>
-            </div>
-    
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
-                </div>
-            </div>
-    
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat-1.jpg" %}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
-                </div>
-            </div>
-    
-            <div class="box" data-aos="fade-up" data-aos-delay="150">
-                <div class="image">
-                    <img data-aos="fade-up" data-aos-delay="150" src="{% static "assets/cat1.jpg" %}" alt="">
-                </div>
-                <div class="content">
-                    <h3 data-aos="fade-up" data-aos-delay="300">Prado</h3>
-                    <a data-aos="zoom-in-left" data-aos-delay="300" href="#">Details <i class="fas fa-angle-right"></i></a>
-                </div>
-            </div>     -->
-        </div>
-    
-    </section>
 
-    <!-- vehicle details section ends  -->
 
-    <!-- footer section starts  -->
+    </div>
 
-    
+  </section>
 
-    <!-- footer section ends -->
+  <!-- vehicle details section ends  -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- footer section starts  -->
 
-    <script>
-      AOS.init({
-        duration: 800,
-        offset: 150,
-      });
-    </script>
-  </body>
+
+
+  <!-- footer section ends -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script>
+    AOS.init({
+      duration: 800,
+      offset: 150,
+    });
+  </script>
+</body>
+
 </html>
 {% endblock content %}

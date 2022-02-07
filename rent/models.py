@@ -7,6 +7,7 @@ class VDetails(models.Model):
     v_color=models.CharField(max_length=100)
     v_rent=models.CharField(max_length=100)
     v_purchase=models.DateField()
+ 
     v_image=models.FileField(upload_to='rent')
 
     class Meta:

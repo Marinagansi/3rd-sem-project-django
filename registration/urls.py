@@ -30,10 +30,18 @@ urlpatterns = [
             path('partneracc_signup',views.partneracc_signup),
             path('partneracc_signup2',views.partneracc_signup2),
             path('partneracc_signup3',views.partneracc_signup3),
-            path('add_hotel',views.add_hotel),
             path('list_nav',views.list_nav),
             path('trip',views.package),
             path('things_to_do',views.things_to_do),
+            path('find_guide',views.find_guide),
+            path('hotelreview',views.hotelreview),
+<<<<<<< HEAD
+            path('pannel',views.admin_pannel)
+=======
+            path('hotel_details',views.hotel_details),
+>>>>>>> 830d4abe2a6b75163107c55578d5433247f4da0d
+          
+            
 
 
 

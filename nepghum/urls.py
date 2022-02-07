@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+import book_trip
 
 import registration
 
@@ -27,7 +28,11 @@ urlpatterns = [
      path('', include('rent.urls')),
      path('booking/', include('booking_vehicle.urls')),
      path('', include('contact.urls')),
-     path('fbooking/',include('book_flights.urls'))
+     path('fbooking/',include('book_flights.urls')),
+     path('hotel/',include('hotel.urls')),
+     path('booking_guide/',include('guide_booked.urls')),
+     path('trip/',include('trip.urls')),
+     path('tbooking/',include('book_trip.urls'))
      
      
     

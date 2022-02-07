@@ -23,14 +23,14 @@
     {{flight.flight_time}}<br>
     </div>
     <div class="main">
-        <form action="" method="POST">
+        <form action="/fbooking/ticket/{{flight.flight_id}}" method="POST">
             {% csrf_token %}
     <div class="class1">
         <label class="label">Flight id</label><br>
-        <input class="airlines" type="text" name="flights" style="color:black; background-color: white;" disabled value="{{flight.flight_id}}"><br>
+        <input class="airlines" type="text" name="flights" style="color:black; background-color: white;"  value="{{flight.flight_id}}"><br>
 
         <label class="label">Customer_id</label><br>
-        <input class="from" type="text" name="customer" style="color:black; background-color: white;"  disabled value="{{user.id}}"><br>
+        <input class="from" type="text" name="customer" style="color:black; background-color: white;"  value="{{user.id}}"><br>
 
         <label class="label">phone</label><br>
         <input class="to" type="text" name="phone" required><br>
@@ -41,7 +41,7 @@
         
 
         
-        <button type="submit">Submit</button>
+        <input  type="submit" value="submit">
     </div>
         </form>
     

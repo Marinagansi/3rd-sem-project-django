@@ -1,0 +1,123 @@
+
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="book_guide.css">
+<script src="js/book_guide.js" defer></script>
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/book_guide.css' %}">
+<script src="{% static '/js/book_guide.js' %}" defer></script>
+
+
+<section class="heading-link">
+    <h3>Guides For Your Searched Place</h3>
+    <p>  Searched wrong place / <a href="find_guide">Go Back</a></p>
+</section>
+
+<section class="guide" id="guide">
+
+    <div class="box-container">
+
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="{% static 'assets/' %}{{book_guide.guide_image}}"  alt="">
+            </div>
+            <div class="content">
+                <h3>{{guides.guide_name}}</h3>
+                <li> {{guides.guide_address}}</li>
+                <li>{{guides.guide_descripition}}</li>
+                <!-- <a href="#">Book <i class="fas fa-angle-right"></i></a> -->
+                <a  href="#modal/book_guide/{{guides.guide_id}}">Book <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="img/guide1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Guide Name</h3>
+                <li>Places of Expertise</li>
+                <li>Descriptions</li>
+                <li>Descriptions</li>
+                <a href="#modal" id="trigger" >Book <i class="fas fa-angle-right"></i></a>
+
+                <div class="icons">
+
+                    <span> <i class="fas fa-money-bill"></i> Price per day: Nrs. 5000 </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="img/guide2.jpeg" alt="">
+            </div>
+            <div class="content">
+                <h3>Guide Name</h3>
+                <li>Places of Expertise</li>
+                <li>Descriptions</li>
+                <li>Descriptions</li>
+                <a href="#modal" id="trigger" >Book <i class="fas fa-angle-right"></i></a>
+
+                <div class="icons">
+
+                    <span> <i class="fas fa-money-bill"></i> Price per day: Nrs. 5000 </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="img/guide3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Guide Name</h3>
+                <li>Places of Expertise</li>
+                <li>Descriptions</li>
+                <li>Descriptions</li>
+                <a href="#modal" id="trigger" >Book <i class="fas fa-angle-right"></i></a>
+
+                <div class="icons">
+
+                    <span> <i class="fas fa-money-bill"></i> Price per day: Nrs. 5000 </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal__wrapper">
+            <div class="modal__container">
+                <button class="close">&times;</button>
+                <form action="/booking_guide/guide_form/{{guides.guide_id}}" method="POST">
+                    {% csrf_token %}
+                    <h1>Book Your Guide</h1>
+                    <h5>Guide Id</h5> 
+                    <input type="text" name="guide"  placeholder="Automatically Generated" value="{{guides.guide_id}}">class="box3" required/>
+                    <h5>Customer Id</h5> 
+                    <input type="text"  name="customer"placeholder="Automatically Generated" class="box3" value="{{user.id}}" required/>
+                    <h5>Nationality</h5>
+                    <input type="text" name="Nationality" placeholder="Please Enter Your Nationality" class="box3" required/>
+                    <h5>Where to visit</h5>
+                    <input type="text" name="visit" placeholder="Please Enter Places Name Where You want To Visit" class="box3" required/>
+                    <h5>Phone Number</h5>
+                    <input type="number" placeholder="Please Enter Your Phone Number" class="box3" required/>
+                    <h5>Group Size</h5>
+                    <input type="number" name="group_size" placeholder="Please Enter Your Group Size" class="box" required/>
+                    <h5>For How Many Days</h5>
+                    <input type="number"  name="days" placeholder="For How Many Days Do You Want To Book" class="box" required/>
+                    <h5>Starting Date</h5>
+                    <input type="date" name="start_date" placeholder="Please Enter Your Group Size" class="box" required/>
+                    <h5>Other Details</h5>
+                    <textarea name="More_details"placeholder="Please write about your plans and inquiries" class="box4" id="" cols="10" rows="5"></textarea>
+
+                    <div class="action">
+                        <button type="submit" class="btn3">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock content %}

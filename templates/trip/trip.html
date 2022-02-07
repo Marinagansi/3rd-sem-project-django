@@ -1,0 +1,90 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+
+<link rel=stylesheet href="{% static '/css/trip.css' %}">
+<link rel="stylesheet" href="{% static '/css/aos.css' %}">
+
+<!-- custom js file link  -->
+
+<script src="{% static '/js/trip.js' %}" defer></script>
+
+<section class="home" id="home">
+ z
+    <div class="content">
+        <span data-aos="fade-up" data-aos-delay="150">Trips</span>
+        <h3 data-aos="fade-up" data-aos-delay="300">We provide stunning mountain views and restful vacation packages for families, as well as pilgrims' Muktinath tour packages and exciting Nepal trip packages packed with activities.</h3>
+        <p data-aos="fade-up" data-aos-delay="450">Please check our customized trips below and contact us to customize & get affordable quotation.</p>
+        <a data-aos="fade-up" data-aos-delay="600" href="#packages" class="btn">Explore</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+
+<section class="packages" id="packages">
+
+    <h1 data-aos="fade-up" data-aos-delay="150" class="heading">Popular Packages</h1>
+
+    <div data-aos="fade-up" data-aos-delay="300" class="box-container">
+        {% for trip in trips %}
+        <div class="box">
+            
+            <div class="image">
+                <img src="{% static 'assets/' %}{{trip.trip_image}}"  alt="">
+            </div>
+            <div class="content">
+                <h3>{{trip.package_name}}</h3>
+                <li>{{trip.itinary_route}}</li>
+                <li>{{trip.details1}}</li>
+                <li>{{trip.details2}}</li>
+                <a href="/trip/tripp/{{trip.package_id}}" id="trigger" class="btn">Inquiry</a>
+
+                <div class="icons">
+                    <span> <i class="fas fa-clock"></i> {{trip.trip_days}}</span>
+                    <span> <i class="fas fa-money-bill"></i> Price per person: Nrs. 5000 </span>
+                 </div>
+            </div>
+           
+        </div>
+   
+        {% endfor %}
+        
+        <div class="modal__wrapper">
+            <div class="modal__container">
+                <button class="close">&times;</button>
+                <form action="" method="post">
+                    <h1>Best of Nepal Tour Package</h1>
+                    {% csrf_token %}
+                    <input type="text" name="packages" value="{{packages.package_id}}"  class="box3" required/>
+                    <input type="text" name="customer" value="{{user.id}}"  class="box3" required/>
+                    <h5>Your Name</h5> 
+                    <input type="text" name="Name" placeholder="Your Name" class="box3" required/>
+                    <h5>Your Email</h5>
+                    <input type="email"  name="email" placeholder="Please Enter Your Email" class="box3" required/>
+                    <h5>Nationality</h5>
+                    <input type="text" name="Nationality" placeholder="Please Enter Your Nationality" class="box3" required/>
+                    <h5>Phone Number</h5>
+                    <input type="number" name="number" placeholder="Please Enter Your Phone Number" class="box3" required/>
+                    <h5>Group Size</h5>
+                    <input type="number" name="group_size" placeholder="Please Enter Your Group Size" class="box" required/>
+                    <h5>Arrival Date</h5>
+                    <input type="date" name="arrival_data" placeholder="Please Enter Your Group Size" class="box" required/>
+                    <h5>Other Details</h5>
+                    <textarea name="other_details" placeholder="Your Budjet & other details" class="box4" id="" cols="10" rows="5"></textarea>
+
+                    <div class="action">
+                        <button type="submit" class="btn3">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+{% endblock content %}
