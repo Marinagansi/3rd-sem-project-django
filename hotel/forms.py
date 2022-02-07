@@ -35,11 +35,8 @@ class HotelFormStepFour(forms.ModelForm):
      model = Hotel
      fields=("image1","image2")
     
-<<<<<<< HEAD
-=======
 class HotelFormStepFive(forms.ModelForm):
     class Meta:
      model = Hotel
      fields=("cancelation","Day_of_payment","Hotel_description","check_in_from","check_in_to","check_out_from","check_out_to","pet")
   
->>>>>>> eff8379d20f6868fbc5271159e6e542d33826cfb
