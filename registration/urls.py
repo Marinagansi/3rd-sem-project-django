@@ -35,7 +35,11 @@ urlpatterns = [
             path('things_to_do',views.things_to_do),
             path('find_guide',views.find_guide),
             path('hotelreview',views.hotelreview),
+<<<<<<< HEAD
             path('pannel',views.admin_pannel)
+=======
+            path('hotel_details',views.hotel_details),
+>>>>>>> 830d4abe2a6b75163107c55578d5433247f4da0d
           
             
 
