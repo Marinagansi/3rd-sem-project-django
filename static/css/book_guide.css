@@ -9,18 +9,19 @@
   --box-shadow-inset: 0.4rem 0.4rem 1rem #111 inset,
     -0.4rem -0.4rem 1rem #333 inset;
 }
+
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
 
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 html {
@@ -44,7 +45,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: rgb(0, 0, 0);
+  background: #111;
   overflow-x: hidden;
 }
 
@@ -59,7 +60,7 @@ section {
 
 .heading span {
   color: #29d9d5;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .heading h1 {
@@ -83,7 +84,6 @@ section {
   background: #29d9d5;
   color: #111;
 }
-
 .header {
   position: fixed;
   top: 0;
@@ -103,19 +103,30 @@ section {
   padding: 1.5rem 9%;
 }
 
-.header .navbarr a {
+.header .navbar a {
   font-size: 1.7rem;
   color: #aaa;
   display: inline-block;
   margin: 0 1rem;
 }
 
-.header .navbarr a:hover {
+.header .navbar a:hover {
   color: #29d9d5;
 }
 
 .header .btn {
   margin-top: 0;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.logo i {
+  color: #29d9d5;
+  padding-right: 0.5rem;
 }
 
 #menu-btn {
@@ -124,6 +135,7 @@ section {
   cursor: pointer;
   display: none;
 }
+
 
 .heading-link {
   /* margin-top: 11.5rem; */
@@ -138,9 +150,9 @@ section {
       from(rgba(37, 36, 36, 0.7)),
       to(rgba(37, 37, 37, 0.7))
     ),
-    url(img/search_guide.png) no-repeat;
+    url(/static/assets/guidepage.jpeg)  no-repeat;
   background: linear-gradient(rgba(37, 36, 36, 0.7), rgba(37, 37, 37, 0.7)),
-    url(img/search_guide.png) no-repeat;
+    url(/static/assets/guidepage.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
 }

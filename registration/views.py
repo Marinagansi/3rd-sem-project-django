@@ -8,6 +8,9 @@ from django.contrib import messages
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from hotel.models import Hotel
+from book_flights.models import FBooking
+from guide_booked.models import GBooking
+from booking_vehicle.models import VBooking
 
 
 # Create your views here.
@@ -43,6 +46,9 @@ def partneracc_addproperty(request):
     return render(request,'list_property/partneracc_addproperty.html') 
 def userprofile2(request): 
     return render(request,'user_profile2.html') 
+
+
+
 # for login list property 
 def partneracc_signin(request): 
    
@@ -73,11 +79,14 @@ def partneracc_signin2(request):
 def partneracc_signup3(request): 
     if request.method=="POST":
         form=CustomerForm(request.POST)
+        try:
         # print(form)
-        result=form.save()
-        request.session['customer_id']=result.customer_id
-        return redirect ("/home")
+            result=form.save()
+            request.session['customer_id']=result.customer_id
+            return redirect ("/home")
            
+        except:
+            print("invalid")
 
     else:
 
@@ -107,40 +116,46 @@ def faq(request):
 def flights(request): 
     return render(request,'flight/flights.html')
 
-
-
-
 def find_guide(request): 
     return render(request,'find_guide/find_guide.html')
-
-
-
 
 def user_profile(request): 
     return render(request,'user_profile.html')
 
+def admin_pannel(request): 
+    flights=FBooking.objects.all
+    guides=GBooking.objects.all
+    vehicles=VBooking.objects.all
+    return render(request,'adminn/admin_pannel.html',{'flights':flights,'guides':guides,'vehicles':vehicles})
 
 
 
+# sigin from firstpage
 
 def signin(request):
     if request.method=='POST':
-        customer_name=request.POST.get("customer_name")
-        customer_password=request.POST.get("customer_phone")
-
-        # user=Registration.objects.get(customer_name=customer_name,customer_phone=customer_password)
-        # if user is not None:
-        
-
-        user = authenticate(request, username=customer_name,password=customer_password)
+        print(request)
+        try:
+            customer_name=request.POST.get("customer_name")
+            customer_password=request.POST.get("customer_phone")
+            user = authenticate(request, username=customer_name,password=customer_password)
       
-        if user is not None:
-            login(request, user)
-            print(request.user.username)
-            return redirect ("home")
+            if user is not None:
+                    login(request, user)
+                    print(request.user.username)
+                    return redirect ("home")
+        except:
+            customer_name=request.POST.get("customer_name")
+            customer_pasword=request.POST.get("customer_address")
+            print(request)   
+            admin=Registration.objects.get(customer_name=customer_name,customer_address=customer_pasword)
+       
+            if admin is not None:
+                return redirect ("pannel")
+            
 
-        else:
-            messages.info(request,'Invalid user')
+    else:
+        messages.info(request,'Invalid user')
     return render(request,"signup.html")
     
     
@@ -157,15 +172,8 @@ def registration(request):
         user=User.objects.create_user(username=name,email=email,password=psw)
         user.save()
     return render (request,"signup.html")
-    # print(request)
-    # if request.method=="POST":
-    #     form=CustomerForm(request.POST)
-    #     form.save()
-    #     return redirect ("home")
-              
-    # else:
-    #     form=CustomerForm()
-    # return render (request,"signup.html",{'form':form})
+
+
                     
 @login_required(login_url='/login')
 def home(request): 

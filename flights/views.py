@@ -18,18 +18,18 @@ def flights(request):
 
 
 
-def flightsTicket(request,p_id): 
-    print(request)
-    if request.method=="POST":
-        form=fbooked(request.POST)
-        form.save()
-        return redirect ('/flights')
+# def flightsTicket(request,p_id): 
+#     print(request)
+#     if request.method=="POST":
+#         form=fbooked(request.POST)
+#         form.save()
+#         return redirect ('/flights')
               
-    else:
-        form=fbooked()
+#     else:
+#         form=fbooked()
 
-    flight=Book_guide.objects.get(flight_id=p_id)
-    return render(request,"flight/flight_ticket.html",{'flight':flight})
+#     flight=Book_guide.objects.get(flight_id=p_id)
+#     return render(request,"flight/flight_ticket.html",{'flight':flight})
 
 def search_flights(request):
     if request.method == "POST":
