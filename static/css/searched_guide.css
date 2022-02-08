@@ -1,17 +1,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 html {
@@ -35,7 +35,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: rgb(0, 0, 0);
+  background: #111;
   overflow-x: hidden;
 }
 
@@ -86,11 +86,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 1.5rem 9%;
 }
 
@@ -109,10 +109,20 @@ section {
   margin-top: 0;
 }
 
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.logo i {
+  color: #29d9d5;
+  padding-right: 0.5rem;
+}
 
 #menu-btn {
   font-size: 2.5rem;
-  color: #29d9d5;
+  color: #fff;
   cursor: pointer;
   display: none;
 }
@@ -125,8 +135,8 @@ section {
   padding: 13rem;
   text-align: center;
   /* background: url(../img/shop-bg2.png) no-repeat; */
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 36, 36, 0.7)), to(rgba(37, 37, 37, 0.7))), url(img/search_guide.png) no-repeat;
-  background: linear-gradient(rgba(37, 36, 36, 0.7), rgba(37, 37, 37, 0.7)), url(/static/assets/sea) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 36, 36, 0.7)), to(rgba(37, 37, 37, 0.7))), url(/static/assets/guidepage.jpeg) no-repeat;
+  background: linear-gradient(rgba(37, 36, 36, 0.7), rgba(37, 37, 37, 0.7)), url(/static/assets/guidepage.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
 }

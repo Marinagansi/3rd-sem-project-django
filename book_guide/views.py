@@ -62,6 +62,6 @@ def search_guide(request):
 
 def guide_form(request,p_id):
     guides=Book_guide.objects.get(guide_id=p_id)
-    return render (request,"find_guide/guide_form.html",{'guides':guides})
+    return render (request,"find_guide/guide_form2.html",{'guides':guides})
 
 

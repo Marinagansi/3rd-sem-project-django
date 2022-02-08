@@ -1,0 +1,115 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/hotel_details.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- custom js file link  -->
+    <script src="js/hotel_details.js" defer></script>
+
+
+<section class="book" id="book">
+
+    <h1 class="heading"> Book Your <span> Hotels </span> </h1>
+    
+    <div class="row-1">
+    
+        <div class="image">
+            <img src="{% static 'assets/roughimg.png'%}"  alt="">
+            <img src="{% static 'assets/roughimg.png'%}"  alt="">
+        </div>
+        
+    
+
+        <div class="content">
+            <h3>Hotel Name </h3>
+            <h4>Details:</h4>
+            <div class="box-container">
+                <div class="box">
+                    <p> <span> Address: </span> Kalanki, Kathmandu, Bagmati, 4600 </p>
+                    <p> <span> Room Types: </span> Dormitory room </p>
+                    <p> <span> Smoking Policy: </span> Yes </p>
+                    <p> <span> Bed Options: </span> Large bed (King size) * 4 </p>
+                </div>
+                <div class="box">
+                    <p> <span> Base price per night: </span> 5000 </p>
+                    <p> <span> Parking: </span> Yes </p>
+                    <p> <span> Breakfast: </span> Yes, included in the price </p>
+                    <p> <span> Free Cancelations before: </span> (3 days) of arrival </p>
+                </div>
+                <div class="box">
+                    
+                    <p> <span> Check-in Time From</span> 8:00 </p>
+                    <p> <span> Check-in Time To </span> 23:30 </p>
+                    <p> <span> Check-out Time From</span> 8:00 </p>
+                    <p> <span> Check-out Time To </span> 23:30 </p>
+
+                </div>
+                <div class="box">
+                    <p> <span> Do you allow pets? </span> Yes, upon request </p>
+                    <p> <span> Contact name: </span> Sundar Kumar </p>
+                    <p> <span> Phone Number: </span> 9856898989 </p>
+                </div>
+            </div>
+            
+            <h1 class="heading"><span></span> Book</h1>
+                          
+            <form action="">
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Your name</span>
+                        <input type="text" placeholder="Guest's name" name="" id="" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Your number</span>
+                        <input type="number" placeholder="Guest's mobile number" name="" id="" required>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Email-id</span>
+                        <input type="email" placeholder="Email-id" name="" id="" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>How many room</span>
+                        <input type="number" placeholder="No. of room you need" required>
+                    </div>
+                </div>
+        
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Check in Time</span>
+                        <input type="datetime-local" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Check out Time</span>
+                        <input type="datetime-local" required>
+                    </div>
+                </div>
+
+        
+                <div class="flex">
+                    <div class="inputBox2">
+                        <span>Special Request</span>
+                        <p>Please explain your request: arrival time, flight details, food preferences...</p>
+                        <textarea placeholder="Details" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+        
+                <input type="submit" value="Final Booking" class="btn2">
+        
+            </form>  
+                
+            
+        </div>
+    
+    </div>
+</section>
+{% endblock content %}
