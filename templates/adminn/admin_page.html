@@ -1,0 +1,276 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nepGhuma</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/admin.css' %}" />
+
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="home.html"
+        ><img src="img/404 logo.png" width="150" height="100"
+      /></a>
+
+      <nav class="navbar">
+        <a href="#home_section">Vehicle Rent</a>
+        <a href="#home_section2">Book Guide</a>
+        <a href="#home_section3">Flights</a>
+      </nav>
+
+      <a href="search.html" class="btn">Log out</a>
+    </header>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <!-- vehicle rent section starts -->
+    <section class="home_section" id="home_section">
+      <div class="details">
+        <div class="more_details">
+          <div class="card_header">
+            <h2>Vehicle Rent Details</h2>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Address</td>
+                <td>Start Date</td>
+                <td>Expire Dare</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>KTm</td>
+                <td>Jan 21, 2022</td>
+                <td>Jan 25, 2022</td>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>KTm</td>
+                <td>Jan 21, 2022</td>
+                <td>Jan 25, 2022</td>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>KTm</td>
+                <td>Jan 21, 2022</td>
+                <td>Jan 25, 2022</td>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>KTm</td>
+                <td>Jan 21, 2022</td>
+                <td>Jan 25, 2022</td>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>KTm</td>
+                <td>Jan 21, 2022</td>
+                <td>Jan 25, 2022</td>
+              </tr>
+              <tr>
+                <td>Mark</td>
+                <td>KTm</td>
+                <td>Jan 21, 2022</td>
+                <td>Jan 25, 2022</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- vehicle rent section ends -->
+
+    <!-- book guide section starts  -->
+
+    <section class="home_section2" id="home_section2">
+      <div class="details">
+        <div class="more_details">
+          <div class="card_header">
+            <h2>Guide</h2>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Guide Name</td>
+                <td>Place</td>
+                <td>Group Size</td>
+                <td>Total Days</td>
+                <td>Start Date</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Vidwat Nepal</td>
+                <td>Pokhara</td>
+                <td>40</td>
+                <td>12</td>
+                <td>Jan 12 2022</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Vidwat Nepal</td>
+                <td>Pokhara</td>
+                <td>40</td>
+                <td>12</td>
+                <td>Jan 12 2022</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Vidwat Nepal</td>
+                <td>Pokhara</td>
+                <td>40</td>
+                <td>12</td>
+                <td>Jan 12 2022</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Vidwat Nepal</td>
+                <td>Pokhara</td>
+                <td>40</td>
+                <td>12</td>
+                <td>Jan 12 2022</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Vidwat Nepal</td>
+                <td>Pokhara</td>
+                <td>40</td>
+                <td>12</td>
+                <td>Jan 12 2022</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Vidwat Nepal</td>
+                <td>Pokhara</td>
+                <td>40</td>
+                <td>12</td>
+                <td>Jan 12 2022</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- book guide section ends -->
+
+    <!-- flight details section starts  -->
+
+    <section class="home_section3" id="home_section3">
+      <div class="details">
+        <div class="more_details">
+          <div class="card_header">
+            <h2>Flight</h2>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Flight Name</td>
+                <td>From</td>
+                <td>To</td>
+                <td>Way</td>
+                <td>Price</td>
+                <td>Date</td>
+                <td>Time</td>
+                <td>No. of Tickets</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Domastic</td>
+                <td>Kathmandu</td>
+                <td>Chitwan</td>
+                <td>One Way</td>
+                <td>4500</td>
+                <td>Feb 12 2022</td>
+                <td>11:30 AM</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Domastic</td>
+                <td>Kathmandu</td>
+                <td>Chitwan</td>
+                <td>One Way</td>
+                <td>4500</td>
+                <td>Feb 12 2022</td>
+                <td>11:30 AM</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Domastic</td>
+                <td>Kathmandu</td>
+                <td>Chitwan</td>
+                <td>One Way</td>
+                <td>4500</td>
+                <td>Feb 12 2022</td>
+                <td>11:30 AM</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Domastic</td>
+                <td>Kathmandu</td>
+                <td>Chitwan</td>
+                <td>One Way</td>
+                <td>4500</td>
+                <td>Feb 12 2022</td>
+                <td>11:30 AM</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Domastic</td>
+                <td>Kathmandu</td>
+                <td>Chitwan</td>
+                <td>One Way</td>
+                <td>4500</td>
+                <td>Feb 12 2022</td>
+                <td>11:30 AM</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Aayush Shrestha</td>
+                <td>Domastic</td>
+                <td>Kathmandu</td>
+                <td>Chitwan</td>
+                <td>One Way</td>
+                <td>4500</td>
+                <td>Feb 12 2022</td>
+                <td>11:30 AM</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- fligt details section ends -->
+
+    <!-- custom js file link  -->
+    <script src="{% static '/js/hotel_registration.js' %}"></script>
+  </body>
+</html>
