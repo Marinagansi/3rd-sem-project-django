@@ -108,14 +108,28 @@ section {
   margin-top: 0;
 }
 
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.logo i {
+  color: #29d9d5;
+  padding-right: 0.5rem;
+}
+
 #menu-btn {
   font-size: 2.5rem;
-  color: #29d9d5;
+  color: #fff;
   cursor: pointer;
   display: none;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7926d69b176bfd1f796dfe46531d5799aebd83fd
 .home {
   margin: 0 auto;
   margin-top: 9rem;
@@ -163,11 +177,6 @@ section {
   color: rgb(255, 255, 255);
   line-height: 2;
 }
-
-/* ::selection{
-  color: #fff;
-  background: #664AFF;
-} */
 
 .wrapper{
   max-width: 80rem;

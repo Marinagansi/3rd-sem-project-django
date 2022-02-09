@@ -47,7 +47,14 @@ def partneracc_addproperty(request):
 def userprofile2(request): 
     return render(request,'user_profile2.html') 
 
+<<<<<<< HEAD
  
+=======
+
+
+def hotel_details(request): 
+    return render(request,'hotel_details.html')     
+>>>>>>> 7926d69b176bfd1f796dfe46531d5799aebd83fd
 # for login list property 
 def partneracc_signin(request): 
    
@@ -128,6 +135,8 @@ def admin_pannel(request):
     guides=GBooking.objects.all
     vehicles=VBooking.objects.all
     return render(request,'adminn/admin_pannel.html',{'flights':flights,'guides':guides,'vehicles':vehicles})
+def admin_page(request): 
+    return render(request,'adminn/admin_page.html')
 
 
 
