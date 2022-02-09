@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --green: #29d9d5;
+    --black:#fff;
+    --light-color:#ddd;
+    --bg-color:#222;
+    --border:.1rem solid rgba(0,0,0,.4);
+    --box-shadow:.4rem .4rem 1rem #111,
+                -.4rem -.4rem 1rem #333;
+    --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                      -.4rem -.4rem 1rem #333 inset;
+
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #222;
+    padding-left: 30rem;
+}
+
+section{
+    min-height: 100vh;
+    padding:2rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:1rem 3.5rem;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    background: none;
+    color:var(--black);
+    box-shadow: var(--box-shadow);
+}
+
+.btn:hover{
+    box-shadow: var(--box-shadow-inset);
+    color:var(--green);
+}
+
+.heading{
+    text-align: center;
+    font-size: 5rem;
+    color:#29d9d5;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.heading span{
+    color:#1cc3c1;
+}
+
+.header{
+    position: fixed;
+    top:0; left: 0; right:0,;
+    z-index: 999;
+    background: var(--bg-color);
+    width: 30rem;
+    border-right: var(--border);
+    height: 100%;
+    padding:2rem;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+
+.header .navbar{
+    padding-top: 10rem;
+
+}
+
+.header .navbar a{
+    display: block;
+    margin:1.5rem 0;
+    padding:.7rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    box-shadow: var(--box-shadow);
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    box-shadow: var(--box-shadow-inset);
+    color: #29d9d5;
+}
+
+#menu-btn{
+    position: fixed;
+    top:1.5rem; left: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color:var(--black);
+    background: var(--bg-color);
+    display: none;
+}
+
+#menu-btn:hover{
+    color:var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+
+.details {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
+}
+
+.details .more_details{
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  position: relative;
+  background: rgb(236, 236, 236);
+  margin: 0 1rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 .5rem 2.6rem #29d9d5;
+}
+
+.details table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.details .card_header h2 {
+  position: relative;
+  font-size: 3rem;
+  /* line-height: 1.2; */
+  color: #343a40;
+  background: #1cc3c1;
+  text-align: center;
+}
+
+.details .more_details table tr {
+  border-bottom: 1px solid #080808;
+  font-size: 2rem;
+}
+
+.details .more_details table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.details .more_details table tr td {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: rgb(27, 133, 151);
+}
+
+.details .more_details table tbody tr td {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--dark-blue);
+}
+
+.details .more_details table tbody tr td:nth-child(2) {
+  padding-left: 2rem;
+}
+.details .more_details table tbody tr td:last-child {
+  padding-left: 2rem;
+}
+
+.details .badge {
+  position: relative;
+  display: inline-block;
+  padding: 0.38em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--white);
+  border-radius: 0.375rem;
+}
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    body{
+        padding-left: 0;
+    }
+
+    .header{
+        left:-110%;
+    }
+
+    .header.active{
+        left:0%;
+        transition: .4s linear;
+    }
+
+    #menu-btn{
+        display: initial;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .header{
+        width:50%;
+        border-right: 0;
+    }
+    #menu-btn{
+        display: initial;
+    }
+
+}

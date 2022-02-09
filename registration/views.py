@@ -129,6 +129,8 @@ def admin_pannel(request):
     guides=GBooking.objects.all
     vehicles=VBooking.objects.all
     return render(request,'adminn/admin_pannel.html',{'flights':flights,'guides':guides,'vehicles':vehicles})
+def admin_page(request): 
+    return render(request,'adminn/admin_page.html')
 
 
 
