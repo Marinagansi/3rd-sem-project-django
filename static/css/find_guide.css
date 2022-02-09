@@ -115,13 +115,14 @@ section {
   display: none;
 }
 
+
 .home {
   margin: 0 auto;
   margin-top: 9rem;
   width: 90%;
   border-radius: 1rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(/static/assets/find_guide.jpg) no-repeat;
-  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(/static/assets/find_guide.jpg) no-repeat;
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url no-repeat;
   background-size: cover;
   background-position: center;
   display: -webkit-box;

@@ -20,8 +20,8 @@
     <div class="row-1">
     
         <div class="image">
-            <img src="{% static 'assets/roughimg.png'%}"  alt="">
-            <img src="{% static 'assets/roughimg.png'%}"  alt="">
+            <img src="{% static 'assets/' %}{{hotel.image1}}"   alt="hotel">
+            <img src="{% static 'assets/' %}{{hotel.image2}}"  alt="hotel">
         </div>
         
     
@@ -31,66 +31,68 @@
             <h4>Details:</h4>
             <div class="box-container">
                 <div class="box">
-                    <p> <span> Address: </span> Kalanki, Kathmandu, Bagmati, 4600 </p>
-                    <p> <span> Room Types: </span> Dormitory room </p>
-                    <p> <span> Smoking Policy: </span> Yes </p>
-                    <p> <span> Bed Options: </span> Large bed (King size) * 4 </p>
+                    <p> <span> Address: </span> {{hotel.hotel_address}} 4600 </p>
+                    <p> <span> Room Types: </span> {{hotel.room_type}} </p>
+                    <p> <span> Smoking Policy: </span>{{hotel.smoking_policy}}</p>
+                    <p> <span> Bed Options: </span> {{hotel.Beds}}</p>
                 </div>
                 <div class="box">
                     <p> <span> Base price per night: </span> 5000 </p>
-                    <p> <span> Parking: </span> Yes </p>
-                    <p> <span> Breakfast: </span> Yes, included in the price </p>
-                    <p> <span> Free Cancelations before: </span> (3 days) of arrival </p>
+                    <p> <span> Parking: </span> {{hotel.parking}} </p>
+                    <p> <span> Breakfast: </span> {{hotel.Breakfast}} </p>
+                    <p> <span> Free Cancelations before: </span> {{hotel.cancelation}}</p>
                 </div>
                 <div class="box">
                     
-                    <p> <span> Check-in Time From</span> 8:00 </p>
-                    <p> <span> Check-in Time To </span> 23:30 </p>
-                    <p> <span> Check-out Time From</span> 8:00 </p>
-                    <p> <span> Check-out Time To </span> 23:30 </p>
+                    <p> <span> Check-in Time From</span>{{hotel.check_in_from}} </p>
+                    <p> <span> Check-in Time To </span>{{hotel.check_in_to}}</p>
+                    <p> <span> Check-out Time From</span> {{hotel.check_out_from}} </p>
+                    <p> <span> Check-out Time To </span> {{hotel.check_out_to}} </p>
 
                 </div>
                 <div class="box">
-                    <p> <span> Do you allow pets? </span> Yes, upon request </p>
-                    <p> <span> Contact name: </span> Sundar Kumar </p>
-                    <p> <span> Phone Number: </span> 9856898989 </p>
+                    <p> <span> Do you allow pets? </span>{{hotel.pet}} </p>
+                    <p> <span> Contact name: </span> {{hotel.contact_name}}</p>
+                    <p> <span> Phone Number: </span> {{hotel.phonenumber}}</p>
                 </div>
             </div>
             
             <h1 class="heading"><span></span> Book</h1>
                           
-            <form action="">
-
+            <form action="/hotel/hotel_book/{{hotel.hotel_id}}" method="POST">
+                {% csrf_token %}
                 <div class="flex">
                     <div class="inputBox">
+                        <input type="text"  name="hotel" value="{{hotel.hotel_id}}" hidden id="" required>
+                        <input type="text"  name="customer" value="{{user.id}}" hidden id="" required>
                         <span>Your name</span>
-                        <input type="text" placeholder="Guest's name" name="" id="" required>
+                        <input type="text" placeholder="Guest's name" name="name" id="" required>
                     </div>
                     <div class="inputBox">
                         <span>Your number</span>
-                        <input type="number" placeholder="Guest's mobile number" name="" id="" required>
+                        <input type="text" placeholder="Guest's mobile number" name="number" id="" required>
                     </div>
                 </div>
 
                 <div class="flex">
                     <div class="inputBox">
                         <span>Email-id</span>
-                        <input type="email" placeholder="Email-id" name="" id="" required>
+                        <input type="email" placeholder="Email-id" name="email" id="" required>
                     </div>
                     <div class="inputBox">
                         <span>How many room</span>
-                        <input type="number" placeholder="No. of room you need" required>
+                        <input type="number" placeholder="No. of room you need" name="room" required>
                     </div>
                 </div>
         
                 <div class="flex">
                     <div class="inputBox">
                         <span>Check in Time</span>
-                        <input type="datetime-local" required>
+                        <input type="date"  name="check_in" required>
                     </div>
                     <div class="inputBox">
                         <span>Check out Time</span>
-                        <input type="datetime-local" required>
+                        <input type="date" name="check_out" required>
                     </div>
                 </div>
 
@@ -99,7 +101,7 @@
                     <div class="inputBox2">
                         <span>Special Request</span>
                         <p>Please explain your request: arrival time, flight details, food preferences...</p>
-                        <textarea placeholder="Details" id="" cols="30" rows="10"></textarea>
+                        <textarea placeholder="Details" id=""  name="details"cols="30" rows="10"></textarea>
                     </div>
                 </div>
         
