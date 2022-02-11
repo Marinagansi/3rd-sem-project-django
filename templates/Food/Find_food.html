@@ -1,0 +1,65 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+    
+<link rel="stylesheet" href="{% static '/css/guide.css' %}" />
+
+<script src="../js/guide.js" defer></script>
+
+    <section class="home" id="home">
+        <div class="content">
+            <span data-aos="fade-up" data-aos-delay="150">nepGhumau</span>
+            <h3 data-aos="fade-up" data-aos-delay="300">Food Near You</h3>
+            <p data-aos="fade-up" data-aos-delay="450">
+              Search your city
+            </p>
+            <a data-aos="fade-up" data-aos-delay="600" href="#guide-details" class="btn" >Visit</a>
+          </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- food details section starts  -->
+
+    <section class="food-details" >
+         
+        <div class="swiper-container food-slider">
+        
+            <div class="swiper-wrapper">
+              {% for Find_food in food %}
+    
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img data-aos="zoom-in" data-aos-delay="150" src="{% static "assets/food.jpg" %}"  alt="">  D:\College stuff\3rd-sem-project-django\static\assets\Food.jpg
+                        <a href="#phn_btn" class="btn btn-secondary">Call Now</a>
+                        <h3 data-aos="fade-up" data-aos-delay="300">{{Find_food.food_name}}</h3>
+                        <p data-aos="fade-up" data-aos-delay="450">{{Find_food.food_address}}</p>
+                        <p data-aos="fade-up" data-aos-delay="450">{{Find_food.food_descripition}}</p>
+                        <p id="phn_btn" data-aos="fade-up" data-aos-delay="450">{{Find_food.food_phone}}</p>
+                        <div data-aos="zoom-in" data-aos-delay="600" class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+              
+                      
+                   
+    
+            </div>
+    
+        </div> 
+    </section>
+    
+    
+    {% endblock content %}
+
+    <!-- food details section ends  -->
+
+    <!-- footer section starts  -->
+
+    
