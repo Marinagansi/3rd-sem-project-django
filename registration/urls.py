@@ -37,8 +37,8 @@ urlpatterns = [
             path('hotelreview',views.hotelreview),
             path('pannel',views.admin_pannel),
             path('explore',views.explore,name="explore"),
-            path('admin_page',views.admin_page)
-            
+            path('admin_page',views.admin_page),
+           
           
             
 

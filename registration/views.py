@@ -203,3 +203,4 @@ def hotelreview(request):
     return render (request,'hotelreview.html')
 
 
+

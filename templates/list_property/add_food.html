@@ -46,26 +46,17 @@
       <h1 class="heading"><span></span>Add food Form</h1>
       <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <h5>Name</h5>
+        <h5>food Name</h5>
         <input type="text"  name="food_name"placeholder="Name" class="box" />
-        <!-- <h5>Gender</h5>
-        <input class="list" list="Gender" placeholder="Please select your gender"/>
-        <datalist id="Gender">
-          <option value="Male"></option>
-          <option value="Female"></option>
-          <option value="Custom"></option>
-        </datalist> -->
-        <h5>Email ID</h5>
+        <h5>Type</h5>
         <input type="text" name="food_type" placeholder="" class="box" />
-        <h5>Phone Number</h5>
-        <input type="text" name="food_rating" placeholder="" class="box" />
-        <h5>Places of Expertise</h5>
-        <input type="text" name="food_address" placeholder="" class="box" />
+           <h5>Places of Expertise</h5>
+        <input type="text" name="food_place" placeholder="" class="box" />
       
         <h5>Submit your Photo</h5>
         <input class= "file" type="file" id="img" name="food_image">
          <h5>food Description</h5>
-        <textarea type="text" class="box" name="food_descripition"placeholder="Your Description" id="" cols="30" rows="10"> </textarea>
+        <textarea type="text" class="box" name="food_details"placeholder="Your Description" id="" cols="30" rows="10"> </textarea>
         <input value="Register Data" type="submit" class="btn btn-success ml-5"/> 
       </form>
     </section>

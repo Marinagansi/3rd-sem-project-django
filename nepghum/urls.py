@@ -32,7 +32,8 @@ urlpatterns = [
      path('hotel/',include('hotel.urls')),
      path('booking_guide/',include('guide_booked.urls')),
      path('trip/',include('trip.urls')),
-     path('tbooking/',include('book_trip.urls'))
+     path('tbooking/',include('book_trip.urls')),
+       path('food/',include('food.urls'))
      
      
     
