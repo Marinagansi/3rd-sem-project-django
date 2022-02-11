@@ -14,13 +14,13 @@ def fillform(request,p_id):
     if request.method=="POST":
         form=gbooked(request.POST)
         form.save()
-        messages.success(request,"your booking was done")
-        return redirect ('find_guide')
+        messages.success(request,"your booking was done thank")    
+        return redirect ('/find_guide')
               
     else:
         form=gbooked()
     guide=Book_guide.objects.get(guide_id=p_id)
-    return render(request,"find_guide/guide_form2.html",{'guide':guide})
+    return render(request,"/find_guide/guide_form2.html",{'guide':guide})
 
 
 # history of user

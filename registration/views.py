@@ -47,10 +47,14 @@ def partneracc_addproperty(request):
 def userprofile2(request): 
     return render(request,'user_profile2.html') 
 
+<<<<<<< HEAD
+ 
+=======
 
 
 def hotel_details(request): 
     return render(request,'hotel_details.html')     
+>>>>>>> 7926d69b176bfd1f796dfe46531d5799aebd83fd
 # for login list property 
 def partneracc_signin(request): 
    
@@ -124,6 +128,8 @@ def find_guide(request):
 def user_profile(request): 
     return render(request,'user_profile.html')
 
+def explore(request): 
+    return render(request,'explore.html')
 def admin_pannel(request): 
     flights=FBooking.objects.all
     guides=GBooking.objects.all
@@ -139,27 +145,26 @@ def admin_page(request):
 def signin(request):
     if request.method=='POST':
         print(request)
-        try:
-            customer_name=request.POST.get("customer_name")
-            customer_password=request.POST.get("customer_phone")
-            user = authenticate(request, username=customer_name,password=customer_password)
       
+        customer_name=request.POST["customer_name"]
+        customer_password=request.POST["customer_phone"]
+        try:
+            print(request)   
+            admin=Registration.objects.get(customer_name=customer_name,customer_address=customer_password)
+            if admin is not None:
+                return redirect ("/pannel")
+            
+        except:
+            user = authenticate(request, username=customer_name,password=customer_password)
             if user is not None:
                     login(request, user)
-                    print(request.user.username)
-                    return redirect ("home")
-        except:
-            customer_name=request.POST.get("customer_name")
-            customer_pasword=request.POST.get("customer_address")
-            print(request)   
-            admin=Registration.objects.get(customer_name=customer_name,customer_address=customer_pasword)
-       
-            if admin is not None:
-                return redirect ("pannel")
-            
+                    # print(request.user.username)
+                    return redirect ("/home")
+            return render("/login")
 
     else:
         messages.info(request,'Invalid user')
+       
     return render(request,"signup.html")
     
     

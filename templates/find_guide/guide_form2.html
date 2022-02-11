@@ -18,7 +18,7 @@
 
     <div class="box-container">
 
-
+<!-- 
         <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
                 <img src="{% static 'assets/' %}{{book_guide.guide_image}}"  alt="">
@@ -28,18 +28,18 @@
                 <li> {{guides.guide_address}}</li>
                 <li>{{guides.guide_descripition}}</li>
                 <!-- <a href="#">Book <i class="fas fa-angle-right"></i></a> -->
-                <a  href="#modal/book_guide/{{guides.guide_id}}">Book <i class="fas fa-angle-right"></i></a>
-            </div>
-        </div>
+                <!-- <a  href="#modal/book_guide/{{guides.guide_id}}">Book <i class="fas fa-angle-right"></i></a> -->
+            <!-- </div>
+        </div> --> -->
 
         <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
-                <img src="img/guide1.jpg" alt="">
+                <img src="{% static 'assets/{{guide.guide_image}}' %}" alt="">
             </div>
             <div class="content">
-                <h3>Guide Name</h3>
-                <li>Places of Expertise</li>
-                <li>Descriptions</li>
+                <h3>{{guides.guide_name}}</h3>
+                <li>{{guides.guide_address}}</li>
+                <li>{{guides.guide_description}}</li>
                 <li>Descriptions</li>
                 <a href="#modal" id="trigger" >Book <i class="fas fa-angle-right"></i></a>
 
@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <div class="box" data-aos="fade-up" data-aos-delay="150">
+        <!-- <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
                 <img src="img/guide2.jpeg" alt="">
             </div>
@@ -66,9 +66,9 @@
                     <span> <i class="fas fa-money-bill"></i> Price per day: Nrs. 5000 </span>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="box" data-aos="fade-up" data-aos-delay="150">
+        <!-- <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
                 <img src="img/guide3.jpg" alt="">
             </div>
@@ -84,7 +84,7 @@
                     <span> <i class="fas fa-money-bill"></i> Price per day: Nrs. 5000 </span>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="modal__wrapper">
             <div class="modal__container">

@@ -36,8 +36,12 @@ urlpatterns = [
             path('find_guide',views.find_guide),
             path('hotelreview',views.hotelreview),
             path('pannel',views.admin_pannel),
+<<<<<<< HEAD
+            path('explore',views.explore),
+=======
             path('admin_page',views.admin_page)
             
+>>>>>>> 7926d69b176bfd1f796dfe46531d5799aebd83fd
           
             
 
