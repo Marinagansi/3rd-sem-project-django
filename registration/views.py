@@ -12,7 +12,6 @@ from book_flights.models import FBooking
 from guide_booked.models import GBooking
 from booking_vehicle.models import VBooking
 
-
 # Create your views here.
 def firstpage(request):
     return render(request,'firstpage.html')
@@ -46,11 +45,19 @@ def partneracc_addproperty(request):
     return render(request,'list_property/partneracc_addproperty.html') 
 def userprofile2(request): 
     return render(request,'user_profile2.html') 
+<<<<<<< HEAD
  
 
 
 def hotel_details(request): 
     return render(request,'hotel_details.html')     
+=======
+
+def hotel_details(request): 
+    return render(request,'hotel_details.html') 
+    
+        
+>>>>>>> 2a57676da1b5617d8aa03e33e230ba522a87bde3
 # for login list property 
 def partneracc_signin(request): 
    
@@ -130,7 +137,7 @@ def admin_pannel(request):
     flights=FBooking.objects.all
     guides=GBooking.objects.all
     vehicles=VBooking.objects.all
-    return render(request,'adminn/admin_pannel.html',{'flights':flights,'guides':guides,'vehicles':vehicles})
+    return render(request,'adminn/admin_page.html',{'flights':flights,'guides':guides,'vehicles':vehicles})
 def admin_page(request): 
     return render(request,'adminn/admin_page.html')
 

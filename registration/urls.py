@@ -12,11 +12,11 @@ urlpatterns = [
         path('try',views.try2),
          path('signup',views.registration),
          path('login',views.signin),
-         path('firstpage',views.firstpage),
+         path('firstpage',views.firstpage,name="firstpage"),
           path('faq',views.faq),
            path('flights',views.flights,name="flights"),
             path('user_profile',views.user_profile),
-            path('about_us',views.about_us),
+            path('about_us',views.about_us,name="about_us"),
             path('hotel',views.hotel),
             path('logout',views.logout_view),
              path('userprofile2',views.userprofile2),
@@ -36,7 +36,26 @@ urlpatterns = [
             path('find_guide',views.find_guide),
             path('hotelreview',views.hotelreview),
             path('pannel',views.admin_pannel),
+<<<<<<< HEAD
             path('explore',views.explore),
             path('admin_page',views.admin_page)
+=======
+            path('explore',views.explore,name="explore"),
+            path('admin_page',views.admin_page)
+            
+          
+            
+
+
+
+
+            
+
+          
+           
+       
+   
+
+>>>>>>> 2a57676da1b5617d8aa03e33e230ba522a87bde3
 
 ]
