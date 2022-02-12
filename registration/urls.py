@@ -13,11 +13,11 @@ urlpatterns = [
          path('signup',views.registration),
          path('login',views.signin),
          path('firstpage',views.firstpage,name="firstpage"),
-          path('faq',views.faq),
+          path('faq',views.faq,name='faq'),
            path('flights',views.flights,name="flights"),
             path('user_profile',views.user_profile),
             path('about_us',views.about_us,name="about_us"),
-            path('hotel',views.hotel),
+            path('hotel',views.hotel,name="hotel"),
             path('logout',views.logout_view),
              path('userprofile2',views.userprofile2),
 
@@ -33,15 +33,11 @@ urlpatterns = [
             path('list_nav',views.list_nav),
             path('trip',views.package),
             path('things_to_do',views.things_to_do),
-            path('find_guide',views.find_guide),
-            path('hotelreview',views.hotelreview),
+            path('find_guide',views.find_guide,name='find_guide'),
+            path('hotelreview',views.hotelreview,name='hotelreview'),
             path('pannel',views.admin_pannel),
-<<<<<<< HEAD
-            path('explore',views.explore),
-            path('admin_page',views.admin_page)
-=======
             path('explore',views.explore,name="explore"),
-            path('admin_page',views.admin_page),
+            path('admin_page',views.admin_page,name="admin_page"),
            
           
             
@@ -56,6 +52,5 @@ urlpatterns = [
        
    
 
->>>>>>> 2a57676da1b5617d8aa03e33e230ba522a87bde3
 
 ]
