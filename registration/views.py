@@ -45,6 +45,10 @@ def partneracc_addproperty(request):
     return render(request,'list_property/partneracc_addproperty.html') 
 def userprofile2(request): 
     return render(request,'user_profile2.html') 
+<<<<<<< HEAD
+ 
+=======
+>>>>>>> c675cc07b1e5cf379b823ef52cbddffcbe3c57a3
 
 
 def hotel_details(request): 
