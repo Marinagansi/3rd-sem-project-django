@@ -36,9 +36,25 @@ urlpatterns = [
             path('find_guide',views.find_guide,name='find_guide'),
             path('hotelreview',views.hotelreview,name='hotelreview'),
             path('pannel',views.admin_pannel),
+<<<<<<< HEAD
             path('explore',views.explore,name="explore"),
             path('admin_page',views.admin_page,name="admin_page"),
+=======
+            path('explore',views.explore),
+<<<<<<< HEAD
+            path('admin_page',views.admin_page)
+            
+=======
+            
+            path('explore',views.explore,name="explore"),
+<<<<<<< HEAD
+            path('admin_page',views.admin_page)
+  
+=======
+            path('admin_page',views.admin_page),
+>>>>>>> c675cc07b1e5cf379b823ef52cbddffcbe3c57a3
            
+>>>>>>> a13402b7a9a88c0abfae2bd16c5ee8effd075b83
           
             
 
@@ -53,4 +69,5 @@ urlpatterns = [
    
 
 
+>>>>>>> 74784d6c5df8bf8f74cbb3176f12ef21744fa27b
 ]
