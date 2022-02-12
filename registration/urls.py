@@ -6,6 +6,7 @@ from registration import views
 
 urlpatterns = [
   
+  
     path('home',views.home,name="home"),
       path('boy_shop',views.shop1,name="shop"),
        path('girl_shop',views.shop2),
@@ -36,29 +37,6 @@ urlpatterns = [
             path('find_guide',views.find_guide),
             path('hotelreview',views.hotelreview),
             path('pannel',views.admin_pannel),
-            path('explore',views.explore),
-            
             path('explore',views.explore,name="explore"),
-<<<<<<< HEAD
             path('admin_page',views.admin_page)
-  
-=======
-            path('admin_page',views.admin_page),
-           
-          
-            
-
-
-
-
-            
-
-          
-           
-       
-   
-
->>>>>>> 2a57676da1b5617d8aa03e33e230ba522a87bde3
-
->>>>>>> 74784d6c5df8bf8f74cbb3176f12ef21744fa27b
 ]
