@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'guide_booked',
     'trip',
     'book_trip',
+    'food'
 
 ]
 
