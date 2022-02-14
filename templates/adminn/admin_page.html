@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nepGhuma</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/admin.css' %}" />
+
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+     
+        <img src="{% static 'assets/404 logo.png' %}" width="150" height="100">
+      
+
+      <nav class="navbar">
+        <a href="#home_section">Vehicle Rent</a>
+        <a href="#home_section2">Book Guide</a>
+        <a href="#home_section3">Flights</a>
+      </nav>
+
+      <a href="/firstpage" class="btn">Log out</a>
+    </header>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <!-- vehicle rent section starts -->
+    <section class="home_section" id="home_section">
+      <div class="details">
+        <div class="more_details">
+          <div class="card_header">
+            <h2>Vehicle Rent Details</h2>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Address</td>
+                <td>Start Date</td>
+                <td>Expire Dare</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {% for boking_vehicle in vehicles %}
+                <td>{{ boking_vehicle.customer.username }}</td>
+                <td>{{ boking_vehicle.address }}</td>
+                <td>{{ boking_vehicle.start_date}}</td>
+                <td>{{ boking_vehicle.end_date }}</td>
+              </tr>
+              {% endfor %}
+              <tr>
+               
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- vehicle rent section ends -->
+
+    <!-- book guide section starts  -->
+
+    <section class="home_section2" id="home_section2">
+      <div class="details">
+        <div class="more_details">
+          <div class="card_header">
+            <h2>Guide</h2>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Guide Name</td>
+                <td>Place</td>
+                <td>Group Size</td>
+                <td>Total Days</td>
+                <td>Start Date</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {% for guide_booked in guides %}
+                <td>{{ guide_booked.customer.username }}</td>
+                <td>{{ guide_booked.guide.guide_name }}</td>
+                <td>{{ guide_booked.visit }}</td>
+                <td>{{ guide_booked.group_size }}</td>
+                <td>{{ guide_booked.days}}</td>
+                <td>{{guide_booked.start_date}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- book guide section ends -->
+
+    <!-- flight details section starts  -->
+
+    <section class="home_section3" id="home_section3">
+      <div class="details">
+        <div class="more_details">
+          <div class="card_header">
+            <h2>Flight</h2>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Flight Name</td>
+                <td>From</td>
+                <td>To</td>
+                <td>Way</td>
+                <td>Price</td>
+                <td>Date</td>
+                <td>Time</td>
+                <td>No. of Tickets</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {% for book_flight in flights %}
+                <td>{{book_flight.customer.username}}</td>
+                <td>{{book_flight.flights.flight_name}}</td>
+                <td>{{book_flight.flights.flight_from}}</td>
+                <td>{{book_flight.flights.flight_to}}</td>
+                <td>{{book_flight.flights.flight_way}}</td>
+                <td>{{book_flight.flights.flight_money}}</td>
+                <td>{{book_flight.flights.flight_date}}</td>
+                <td>{{book_flight.flights.flight_time}}</td>
+                <td>{{book_flight.tickets}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- fligt details section ends -->
+
+    <!-- custom js file link  -->
+    <script src="{% static '/js/hotel_registration.js' %}"></script>
+  </body>
+</html>

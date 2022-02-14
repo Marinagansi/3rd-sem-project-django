@@ -1,0 +1,52 @@
+{% extends 'list_property/add_hotel_nav.html' %}
+{% load static %}
+{% block content %}
+
+ <!-- Facilities & Services section starts  -->
+
+ <section class="form2" id="form2">
+    <h1 class="heading"><span></span> Facilities & Services</h1>
+    <h3>
+      Now, tell us some general details about your property, such as
+      facilities available, internet, parking and the languages you speak.
+    </h3>
+
+    <form action="/hotel/add_hotel2/{{data.hotel_id}}" method="post">
+        {% csrf_token %}
+      <h5>Parking</h5>
+      <ol>
+        This information is especially important for those travelling to your
+        accommodation by car.
+      </ol>
+      <span>Is parking available to guests?</span>
+      <input
+        class="list"
+        list="parking" name="parking" type="text"
+        placeholder="Please select parking type"
+      />
+      <datalist id="parking">
+        <option value="No"></option>
+        <option value="Yes paid"></option>
+        <option value="Yes free"></option>
+      </datalist>
+   
+      <h5>Breakfast</h5>
+      <span>Is breakfast available to guests?</span>
+      <input
+        class="list"
+        list="breakfast" name="Breakfast" type="text"
+        placeholder="Please select breakfast type"
+      />
+      <datalist id="breakfast">
+        <option value="No"></option>
+        <option value="Yes, included in the price"></option>
+        <option value="Yes, it's optional"></option>
+      </datalist>
+      <input type="submit" class="btn3"
+      style="display: inline-block; text-align: center; color: black" value="submit">
+     
+    </form>
+  </section>
+
+  <!-- Facilities & Services section ends -->
+{% endblock content %}

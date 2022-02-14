@@ -2,76 +2,97 @@
 {% load static %}
 {% block content %}
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="{% static '/css/user_profile.css' %}">
-    
+<!-- custom css file link  -->
+<link rel="stylesheet" href="{% static '/css/user_profile.css' %}">
 
-   
 
-    <!-- custom js file link  -->
 
-    <script src="{% static '/js/user_profile.js' %}" defer></script>
-  </head>
-  <body>
+
+<!-- custom js file link  -->
+
+<script src="{% static '/js/user_profile.js' %}" defer></script>
+</head>
+
+<body>
     <!-- header section starts  -->
 
-   
+
     <!-- home section starts  -->
-    
+
     <section class="home" id="home">
 
         <div class="content">
             <span data-aos="fade-up" data-aos-delay="150">User Profile</span>
-           <span data-aos="fade-up" data-aos-delay="150" class="hii"> <h3 >HII </h3> </span>
+            <span data-aos="fade-up" data-aos-delay="150" class="hii">
+                <h3>HII </h3>
+            </span>
             <h3 class="tanuja" data-aos="fade-up" data-aos-delay="150">{{user.username}}</h3>
 
-            <p class="bastola">{{user.email}}<br> Welcome to your Nepghumau profile page.<br>
-            You can see your profile details,notifications,history and other progress.
-            </p>
-        
-           
+            <p class="bastola" style="font-size:3rem; color:white;">{{user.email}}<br> Welcome to your Nepghumau profile
+                page.<br>
 
-            <p data-aos="fade-up" data-aos-delay="150">{{user.email}}<br> Welcome to your Nepghumau profile page.
-            You can see your profile details,notifications,history and other progress.</p>
-        
-            <a data-aos="fade-up" data-aos-delay="600" href="#our_vehicles" class="btn" >edit</a>
+            </p>
+            <!-- <p data-aos="fade-up" data-aos-delay="150">{{user.email}}<br> Welcome to your Nepghumau profile page.
+            You can see your profile details,notifications,history and other progress.</p> -->
+
+            <!-- <a data-aos="fade-up" data-aos-delay="600" href="#our_vehicles" class="btn" >edit</a> -->
 
             <div class="profile-area">
                 <form class="formbutton">
                     <div class="form-group row">
-                        <div class="col-12">
-                            <button type="submit" class="btn">Profile Details</button>
-                        </div>
+                        <section class="our_vehicles" id="our_vehicles">
+
+                            <div class="heading">
+                                <span data-aos="fade-up" data-aos-delay="150">Manage Your Account</span>
+                                <!-- <h1 data-aos="fade-up" data-aos-delay="150">My Account</h1> -->
+                            </div>
+
+                            <!-- <a data-aos="fade-up" data-aos-delay="1300" href="#" class="btn">Dashboard</a>  -->
+                            <a data-aos="fade-up" data-aos-delay="1300" href="booking_guide/history/{{user.id}}"
+                                class="btn" style="margin-top:.3rem">History
+                            </a>
+                            <a data-aos="fade-up" data-aos-delay="1300" href="booking_guide/history/{{user.id}}"
+                                class="btn2">update
+                            </a>
+                            <!-- <a data-aos="fade-up" data-aos-delay="1300" href="#" class="btn">Settings</a> -->
+
+
+                        </section>
+
+
                     </div>
-                
+
                     <div class="form-group row">
                         <div class="col-12">
-                            <button type="submit" class="btn">Notifications</button>
+                            <!-- <button type="submit" class="btn">Notifications</button> -->
                         </div>
                     </div>
                 </form>
-                   
-               
+
+
+                <!-- </div>
+                <img class="dp" src="{% static "assets/surprise.jpg" %}" alt="Profile Picture" > -->
             </div>
-            <img class="dp" src="{% static "assets/surprise.jpg" %}" alt="Profile Picture" >
-          </div>
+
+
+
 
     </section>
 
     <section id="scroller" class="scroll">
-                <a href="#our_vehicles"> Scroll For More
-                    <span></span>
-                </a>
-        
+        <a href="#our_vehicles"> Scroll For More
+            <span></span>
+        </a>
+
     </section>
 
     <!-- home section ends -->
     <!-- profile pic and info section starts-->
-    
-   
+
+
 
     <!-- vehicle rent details section starts  -->
-
+    <!-- 
     <section class="our_vehicles" id="our_vehicles">
 
         <div class="heading">
@@ -81,22 +102,28 @@
     
         <div class="navigation-menu">
            <a data-aos="fade-up" data-aos-delay="1300" href="#" class="btn">Dashboard</a>
-           <a data-aos="fade-up" data-aos-delay="1300" href="#" class="btn">History</a>
+           <a data-aos="fade-up" data-aos-delay="1300" href="booking_guide/history/{{user.id}}" class="btn">History</a>
            <a data-aos="fade-up" data-aos-delay="1300" href="#" class="btn">Settings</a>
         </div>
     
-    </section>
+    </section> -->
 
     <!-- vehicle details section ends  -->
 
-   
 
-    
-   
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
 {% endblock content %}
-   

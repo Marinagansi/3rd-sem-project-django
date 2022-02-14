@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nepGhuma</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static '/css/add_guide.css' %}" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+
+      <a href="home.html"><img src="{% static 'assets/404 logo.png'%}" width="150" height="100"></a>
+
+      <p style="color:white; font-size:5rem">{{request.session.customer_name}}</p> 
+      <p style="color:white; font-size:5rem">{{request.session.customer_email}}</p> 
+      <nav class="navbar">
+        <a href="#form">Add Guide</a>
+      </nav>
+      
+
+      <!-- <a href="" class="btn">Edit Your Information</a>
+      <p></p> -->
+      <a href="/partneracc_addproperty" class="btn">Log out</a>
+    </header>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <!-- Basic Info section starts -->
+    <section class="form" id="form">
+      <h1 class="heading"><span></span>Add trip Form</h1>
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h5>days</h5>
+        <input type="text"  name="trip_days"placeholder="Name" class="box" />
+        <!-- <h5>Gender</h5>
+        <input class="list" list="Gender" placeholder="Please select your gender"/>
+        <datalist id="Gender">
+          <option value="Male"></option>
+          <option value="Female"></option>
+          <option value="Custom"></option>
+        </datalist> -->
+        <h5>package_name</h5>
+        <input type="text" name="package_name" placeholder="" class="box" />
+        <h5>Itinary routes</h5>
+        <input type="text" name="itinary_route" placeholder="" class="box" />
+        <h5>details 1</h5>
+        <input type="text" name="details1" placeholder="" class="box" />
+      
+        <h5>Submit your Photo</h5>
+        <input class= "file" type="file" id="img" name="trip_image">
+         <h5>details2</h5>
+        <textarea type="text" class="box" name="details2" placeholder="Your Description" id="" cols="30" rows="10"> </textarea>
+        <input value="Register Data" type="submit" class="btn btn-success ml-5"/> 
+      </form>
+    </section>
+
+    <!-- Basic Info section ends -->
+
+    <!-- custom js file link  -->
+    <script src="{% static '/css/add_guide.css' %}"></script>
+  </body>
+</html>

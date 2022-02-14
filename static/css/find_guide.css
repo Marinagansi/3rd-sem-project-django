@@ -108,12 +108,24 @@ section {
   margin-top: 0;
 }
 
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.logo i {
+  color: #29d9d5;
+  padding-right: 0.5rem;
+}
+
 #menu-btn {
   font-size: 2.5rem;
-  color: #29d9d5;
+  color: #fff;
   cursor: pointer;
   display: none;
 }
+
 
 .home {
   margin: 0 auto;
@@ -121,7 +133,7 @@ section {
   width: 90%;
   border-radius: 1rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(/static/assets/find_guide.jpg) no-repeat;
-  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(/static/assets/find_guide.jpg) no-repeat;
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),url(/static/assets/find_guide.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -162,11 +174,6 @@ section {
   color: rgb(255, 255, 255);
   line-height: 2;
 }
-
-/* ::selection{
-  color: #fff;
-  background: #664AFF;
-} */
 
 .wrapper{
   max-width: 80rem;

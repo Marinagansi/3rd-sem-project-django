@@ -1,0 +1,149 @@
+{% extends 'list_property/add_hotel_nav.html' %}
+{% load static %}
+{% block content %}
+  <!-- Policies section starts -->
+
+  <section class="form4" id="form4">
+    <h1 class="heading"><span></span> Policies</h1>
+
+    <form action="/hotel/add_hotel4/{{data.hotel_id}}" method="post">
+        {% csrf_token %}
+      <ol>
+        Specify some basic policies. Do you allow children or pets? How
+        flexible are you with cancellations?
+      </ol>
+      <span>Cancellations</span>
+      <p>How many days in advance can guests cancel free of charge?</p>
+      <input
+        class="list" name="cancelation"
+        list="Day of arrival"
+        placeholder="Day of arrival"
+      />
+      <datalist id="Day of arrival">
+        <option value="1 Day"></option>
+        <option value="2 Days"></option>
+        <option value="3 Days"></option>
+        <option value="7 Days"></option>
+        <option value="14 Days"></option>
+      </datalist>
+      <p>or guests will pay 100%</p>
+      <input class="list" type="text" name="Day_of_payment" list="payment time" placeholder="Day of payment" />
+      <datalist id="payment time">
+        <option value="of the first night"></option>
+        <option value="of the full stay"></option>
+      </datalist>
+      <ul>
+        The guest must cancel by 18:00 on the day of arrival or pay 100% of
+        the price for the first night. Please note: You'll be able to make
+        changes to your policies later on. This is just to get you started.
+      </ul>
+   
+      <h5>Check-in</h5>
+      <span>From</span>
+      <p></p>
+      <input class="list2" type="text" list="check in" name="check_in_from" placeholder="Check in time" />
+      <datalist id="check in">
+        <option value="7:00"></option>
+        <option value="8:00"></option>
+        <option value="9:00"></option>
+        <option value="10:00"></option>
+        <option value="11:00"></option>
+        <option value="12:00"></option>
+        <option value="13:00"></option>
+        <option value="14:00"></option>
+        <option value="15:00"></option>
+        <option value="16:00"></option>
+        <option value="17:00"></option>
+        <option value="18:00"></option>
+        <option value="19:00"></option>
+        <option value="20:00"></option>
+      </datalist>
+      <p></p>
+      <span>To</span>
+      <p></p>
+      <input class="list2" type="text" list="check in2" name="check_in_to" placeholder="Check in time" />
+      <datalist id="check in2">
+        <option value="12:00"></option>
+        <option value="13:00"></option>
+        <option value="14:00"></option>
+        <option value="15:00"></option>
+        <option value="16:00"></option>
+        <option value="17:00"></option>
+        <option value="18:00"></option>
+        <option value="19:00"></option>
+        <option value="20:00"></option>
+        <option value="21:00"></option>
+        <option value="22:00"></option>
+        <option value="23:00"></option>
+        <option value="23:30"></option>
+        <option value="00:00"></option>
+      </datalist>
+   
+      <h5>Check-out</h5>
+      <span>From(optional)</span>
+      <p></p>
+      <input class="list2"  type="text" list="check out" name="check_out_from"placeholder="Check out time" />
+      <datalist id="check out">
+        <option value="00:00"></option>
+        <option value="01:00"></option>
+        <option value="02:00"></option>
+        <option value="03:00"></option>
+        <option value="04:00"></option>
+        <option value="05:00"></option>
+        <option value="06:00"></option>
+        <option value="07:00"></option>
+        <option value="08:00"></option>
+        <option value="09:00"></option>
+        <option value="10:00"></option>
+        <option value="11:00"></option>
+        <option value="12:00"></option>
+        <option value="13:00"></option>
+        <option value="14:00"></option>
+      </datalist>
+      <p></p>
+      <span>To</span>
+      <p></p>
+      
+      <input class="list2" type="text" list="check out2" name="check_out_to" placeholder="Check out time" />
+      <datalist id="check out2">
+        <option value="07:00"></option>
+        <option value="08:00"></option>
+        <option value="09:00"></option>
+        <option value="10:00"></option>
+        <option value="11:00"></option>
+        <option value="12:00"></option>
+        <option value="13:00"></option>
+        <option value="14:00"></option>
+        <option value="15:00"></option>
+        <option value="16:00"></option>
+        <option value="17:00"></option>
+        <option value="18:00"></option>
+        <option value="19:00"></option>
+        <option value="20:00"></option>
+      </datalist>
+
+
+      <span></span>
+      <input style="height:100px" class="list" name="Hotel_description" type="text"  placeholder=" hotel description"/>
+
+      <h5>Pets</h5>
+      <ol>
+        Some guests like to travel with their furry friends. Indicate if you
+        allow pets and if any charges apply.
+      </ol>
+      <span>Do you allow pets?</span>
+      <input class="list" list="Pets?" type="text" name="pet" placeholder="Do you allow pets?" />
+      <datalist id="Pets?">
+        <option value="No"></option>
+        <option value="Yes"></option>
+        <option value="Yes, upon request"></option>
+      </datalist>
+      <input type="submit"  class="btn3"
+      style="display: inline-block; text-align: center; color: black" value="submit">
+    </form>
+  </section>
+
+  <!-- Policies section ends -->
+{% endblock content %}
+
+   
