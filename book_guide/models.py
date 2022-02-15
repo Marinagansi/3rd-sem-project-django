@@ -12,3 +12,5 @@ class Book_guide(models.Model):
 
     class Meta:
         db_table="book_guide"
+
+    

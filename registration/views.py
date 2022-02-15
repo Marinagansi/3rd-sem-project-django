@@ -35,20 +35,10 @@ def hotel(request):
     return render(request,'hotel.html',{'hotels':hotels})
 
 
-def forget_password(request): 
-    return render(request,'list_property/forget_password.html')
-def forget_username(request): 
-    return render(request,'list_property/forget_username.html')
-def having_trouble(request): 
-    return render(request,'list_property/having_trouble.html')
+
 def partneracc_addproperty(request): 
     return render(request,'list_property/partneracc_addproperty.html') 
-def userprofile2(request): 
-    return render(request,'user_profile2.html') 
-<<<<<<< HEAD
- 
-=======
->>>>>>> c675cc07b1e5cf379b823ef52cbddffcbe3c57a3
+
 
 
 def hotel_details(request): 
@@ -200,6 +190,7 @@ def user_profile(request):
 
 def logout_view(request):
     logout(request)
+    request.session.clear()
     return redirect('/firstpage')
 
 
