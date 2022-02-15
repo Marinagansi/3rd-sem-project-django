@@ -2,7 +2,7 @@
 {% extends 'nav.html' %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" href="book_guide.css">
+<!-- <link rel="stylesheet" href="book_guide.css"> -->
 <script src="js/book_guide.js" defer></script>
 {% load static %}
 <link rel="stylesheet" href="{% static '/css/book_guide.css' %}">
@@ -18,23 +18,11 @@
 
     <div class="box-container">
 
-<!-- 
-        <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <div class="image">
-                <img src="{% static 'assets/' %}{{book_guide.guide_image}}"  alt="">
-            </div>
-            <div class="content">
-                <h3>{{guides.guide_name}}</h3>
-                <li> {{guides.guide_address}}</li>
-                <li>{{guides.guide_descripition}}</li>
-                <!-- <a href="#">Book <i class="fas fa-angle-right"></i></a> -->
-                <!-- <a  href="#modal/book_guide/{{guides.guide_id}}">Book <i class="fas fa-angle-right"></i></a> -->
-            <!-- </div>
-        </div> --> -->
+
 
         <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
-                <img src="{% static 'assets/{{guide.guide_image}}' %}" alt="">
+                <img src="{% static 'assets/' %}{{guides.guide_image}}"  alt="">
             </div>
             <div class="content">
                 <h3>{{guides.guide_name}}</h3>
@@ -50,41 +38,6 @@
             </div>
         </div>
 
-        <!-- <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <div class="image">
-                <img src="img/guide2.jpeg" alt="">
-            </div>
-            <div class="content">
-                <h3>Guide Name</h3>
-                <li>Places of Expertise</li>
-                <li>Descriptions</li>
-                <li>Descriptions</li>
-                <a href="#modal" id="trigger" >Book <i class="fas fa-angle-right"></i></a>
-
-                <div class="icons">
-
-                    <span> <i class="fas fa-money-bill"></i> Price per day: Nrs. 5000 </span>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <div class="image">
-                <img src="img/guide3.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Guide Name</h3>
-                <li>Places of Expertise</li>
-                <li>Descriptions</li>
-                <li>Descriptions</li>
-                <a href="#modal" id="trigger" >Book <i class="fas fa-angle-right"></i></a>
-
-                <div class="icons">
-
-                    <span> <i class="fas fa-money-bill"></i> Price per day: Nrs. 5000 </span>
-                </div>
-            </div>
-        </div> -->
 
         <div class="modal__wrapper">
             <div class="modal__container">

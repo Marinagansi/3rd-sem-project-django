@@ -6,8 +6,6 @@ from hotel.models import Hotel
 from django.contrib import messages
 
 
-
-
 def stepOneSubmit(request):
     print(request)
     if request.method=='POST':

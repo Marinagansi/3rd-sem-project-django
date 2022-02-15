@@ -13,18 +13,13 @@ urlpatterns = [
         path('try',views.try2),
          path('signup',views.registration),
          path('login',views.signin),
-         path('firstpage',views.firstpage,name="firstpage"),
+         path('',views.firstpage,name="firstpage"),
           path('faq',views.faq,name='faq'),
            path('flights',views.flights,name="flights"),
             path('user_profile',views.user_profile),
             path('about_us',views.about_us,name="about_us"),
             path('hotel',views.hotel,name="hotel"),
             path('logout',views.logout_view),
-             path('userprofile2',views.userprofile2),
-
-            path('forget_password',views.forget_password),
-            path('forget_username',views.forget_username),
-            path('having_trouble',views.having_trouble),
             path('partneracc_addproperty',views.partneracc_addproperty),
             path('partneracc_signin',views.partneracc_signin),
             path('partneracc_signin2',views.partneracc_signin2),
@@ -41,6 +36,7 @@ urlpatterns = [
 
             path('admin_page',views.admin_page),
 
+<<<<<<< HEAD
 
 
             path('explore',views.explore,name="explore"),
@@ -54,4 +50,17 @@ urlpatterns = [
             path('explore',views.explore,name="explore"),
 
    
+=======
+            path('explore',views.explore,name="explore"),
+            path('admin_page',views.admin_page,name="admin_page"),
+
+            path('explore',views.explore),
+
+            path('admin_page',views.admin_page),
+            
+
+
+            path('explore',views.explore,name="explore"),
+
+>>>>>>> a100af81fbfa2a930764e91d2ba49ad0b21e88d8
 ]

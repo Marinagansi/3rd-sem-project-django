@@ -186,12 +186,11 @@ section {
 }
 
 .guide .box-container .box {
-  margin: 1rem auto;
-  width: 70rem;
-  background: #0b0b0ced;
-  border-radius: 0.5rem;
-  box-shadow: var(--box-shadow);
-  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #222;
+  box-shadow: 0 1rem 2rem #29d9d5;
+  border-radius: 2rem;
 }
 
 .guide .box-container .box:hover img {
@@ -200,7 +199,7 @@ section {
 }
 
 .guide .box-container .box .image {
-  height: 40rem;
+  height: 30rem;
   overflow: hidden;
   width: 100%;
 }
@@ -296,7 +295,6 @@ section {
 .modal__container {
   background: #222;
   width: 70rem;
-  margin-top: 10rem;
   max-width: 90%;
   border-radius: 0.3rem;
   position: relative;
