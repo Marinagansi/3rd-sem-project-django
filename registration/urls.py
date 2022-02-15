@@ -32,21 +32,10 @@ urlpatterns = [
             path('find_guide',views.find_guide,name='find_guide'),
             path('hotelreview',views.hotelreview,name='hotelreview'),
             path('pannel',views.admin_pannel),
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 
             path('admin_page',views.admin_page),
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 5c65eab2537f6adee866201f112b0b6985e93684
             path('explore',views.explore,name="explore"),
             path('admin_page',views.admin_page,name="admin_page"),
 
@@ -54,55 +43,8 @@ urlpatterns = [
 
             path('admin_page',views.admin_page),
             
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> d85194fd25a77426d9c25edee2101532bbc382fd
->>>>>>> 5c65eab2537f6adee866201f112b0b6985e93684
-            
->>>>>>> a1d29c4e92676589a7862a1c40ebc122375e5436
+
             path('explore',views.explore,name="explore"),
-<<<<<<< HEAD
-          
-  
 
-=======
-<<<<<<< HEAD
-
-=======
-            path('admin_page',views.admin_page)
-<<<<<<< HEAD
-=======
-  
-=======
-            path('admin_page',views.admin_page),
->>>>>>> c675cc07b1e5cf379b823ef52cbddffcbe3c57a3
-           
->>>>>>> a13402b7a9a88c0abfae2bd16c5ee8effd075b83
->>>>>>> d85194fd25a77426d9c25edee2101532bbc382fd
->>>>>>> 5c65eab2537f6adee866201f112b0b6985e93684
-          
-            
-
-
-
-
-            
-
-          
-           
-<<<<<<< HEAD
-=======
-       
-   
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 74784d6c5df8bf8f74cbb3176f12ef21744fa27b
->>>>>>> a1d29c4e92676589a7862a1c40ebc122375e5436
->>>>>>> d85194fd25a77426d9c25edee2101532bbc382fd
->>>>>>> 5ca2431c64e3e0b72a9cfaec5356185a1a9d1675
->>>>>>> 5c65eab2537f6adee866201f112b0b6985e93684
 ]

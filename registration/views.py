@@ -38,13 +38,10 @@ def hotel(request):
 
 def partneracc_addproperty(request): 
     return render(request,'list_property/partneracc_addproperty.html') 
-<<<<<<< HEAD
 
-=======
 def userprofile2(request): 
     return render(request,'user_profile2.html') 
  
->>>>>>> 5c65eab2537f6adee866201f112b0b6985e93684
 
 
 def hotel_details(request): 
@@ -197,7 +194,7 @@ def user_profile(request):
 def logout_view(request):
     logout(request)
     request.session.clear()
-    return redirect('/firstpage')
+    return redirect('/')
 
 
 
