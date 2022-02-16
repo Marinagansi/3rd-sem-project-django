@@ -13,17 +13,20 @@ urlpatterns = [
         path('try',views.try2),
          path('signup',views.registration),
          path('login',views.signin),
-         path('firstpage',views.firstpage,name="firstpage"),
+         path('',views.firstpage,name="firstpage"),
           path('faq',views.faq,name='faq'),
            path('flights',views.flights,name="flights"),
             path('user_profile',views.user_profile),
             path('about_us',views.about_us,name="about_us"),
             path('hotel',views.hotel,name="hotel"),
             path('logout',views.logout_view),
+<<<<<<< HEAD
              path('userprofile2',views.userprofile2),
             path('forget_password',views.forget_password),
             path('forget_username',views.forget_username),
             path('having_trouble',views.having_trouble),
+=======
+>>>>>>> 1bc442b67cefa2e538175a3fe78a7cb8417d0d14
             path('partneracc_addproperty',views.partneracc_addproperty),
             path('partneracc_signin',views.partneracc_signin),
             path('partneracc_signin2',views.partneracc_signin2),
@@ -36,7 +39,41 @@ urlpatterns = [
             path('find_guide',views.find_guide,name='find_guide'),
             path('hotelreview',views.hotelreview,name='hotelreview'),
             path('pannel',views.admin_pannel),
+<<<<<<< HEAD
             path('admin_page',views.admin_page),
             path('explore',views.explore,name="explore"),
             path('admin_page',views.admin_page,name="admin_page"),
+=======
+
+
+            path('admin_page',views.admin_page),
+
+<<<<<<< HEAD
+
+
+            path('explore',views.explore,name="explore"),
+            path('admin_page',views.admin_page,name="admin_page"),
+
+            path('explore',views.explore),
+            path('admin_page',views.admin_page),
+            
+            
+
+            path('explore',views.explore,name="explore"),
+
+   
+=======
+            path('explore',views.explore,name="explore"),
+            path('admin_page',views.admin_page,name="admin_page"),
+
+            path('explore',views.explore),
+
+            path('admin_page',views.admin_page),
+            
+
+
+            path('explore',views.explore,name="explore"),
+
+>>>>>>> a100af81fbfa2a930764e91d2ba49ad0b21e88d8
+>>>>>>> 1bc442b67cefa2e538175a3fe78a7cb8417d0d14
 ]
