@@ -36,7 +36,6 @@ urlpatterns = [
 
             path('admin_page',views.admin_page),
 
-<<<<<<< HEAD
 
 
             path('explore',views.explore,name="explore"),
@@ -50,7 +49,6 @@ urlpatterns = [
             path('explore',views.explore,name="explore"),
 
    
-=======
             path('explore',views.explore,name="explore"),
             path('admin_page',views.admin_page,name="admin_page"),
 
@@ -62,5 +60,4 @@ urlpatterns = [
 
             path('explore',views.explore,name="explore"),
 
->>>>>>> a100af81fbfa2a930764e91d2ba49ad0b21e88d8
 ]
