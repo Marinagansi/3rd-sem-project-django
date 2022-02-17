@@ -6,5 +6,6 @@ It includes a complete list of hotels, car rentals, tourist guides, event planni
 Because this website is primarily meant to make people's trip more convenient and enjoyable, it includes a plethora of useful features and services. 
 
 Aim
+
 Provide enough to tourism sector with the high-quality personnel that 
 the sector requires and also allow owner to list their property for their own benefit.
