@@ -12,6 +12,7 @@ class GBooking(models.Model):
     group_size=models.CharField(max_length=200)
     days=models.CharField(max_length=100)
     start_date= models.DateField()
+    end_date=models.DateField()
     More_details=models.CharField(max_length=200)
 
 
