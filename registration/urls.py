@@ -21,9 +21,6 @@ urlpatterns = [
             path('hotel',views.hotel,name="hotel"),
             path('logout',views.logout_view),
              path('userprofile2',views.userprofile2),
-            path('forget_password',views.forget_password),
-            path('forget_username',views.forget_username),
-            path('having_trouble',views.having_trouble),
             path('partneracc_addproperty',views.partneracc_addproperty),
             path('partneracc_signin',views.partneracc_signin),
             path('partneracc_signin2',views.partneracc_signin2),
@@ -36,11 +33,7 @@ urlpatterns = [
             path('find_guide',views.find_guide,name='find_guide'),
             path('hotelreview',views.hotelreview,name='hotelreview'),
             path('pannel',views.admin_pannel),
-<<<<<<< HEAD
-            path('admin_page',views.admin_page),
-            path('explore',views.explore,name="explore"),
-            path('admin_page',views.admin_page,name="admin_page"),
-=======
+ 
 
 
             path('admin_page',views.admin_page),
@@ -69,12 +62,5 @@ urlpatterns = [
 
             path('explore',views.explore,name="explore"),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a100af81fbfa2a930764e91d2ba49ad0b21e88d8
->>>>>>> 1bc442b67cefa2e538175a3fe78a7cb8417d0d14
->>>>>>> 3a88e39528d5445548e3f64f565f2e80bf3e9af1
->>>>>>> d74543e5661360773a85ac8b3c61635115c8b03c
+
 ]
