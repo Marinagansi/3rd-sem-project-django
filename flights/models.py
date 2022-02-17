@@ -10,6 +10,7 @@ class Book_guide(models.Model):
     flight_money=models.CharField(max_length=500)
     flight_date=models.DateField()
     flight_time=models.TimeField()
+    
     class Meta:
         db_table="flights"
 

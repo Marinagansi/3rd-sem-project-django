@@ -20,6 +20,7 @@ urlpatterns = [
             path('about_us',views.about_us,name="about_us"),
             path('hotel',views.hotel,name="hotel"),
             path('logout',views.logout_view),
+             path('userprofile2',views.userprofile2),
             path('partneracc_addproperty',views.partneracc_addproperty),
             path('partneracc_signin',views.partneracc_signin),
             path('partneracc_signin2',views.partneracc_signin2),
@@ -32,10 +33,24 @@ urlpatterns = [
             path('find_guide',views.find_guide,name='find_guide'),
             path('hotelreview',views.hotelreview,name='hotelreview'),
             path('pannel',views.admin_pannel),
+ 
 
 
             path('admin_page',views.admin_page),
 
+
+
+            path('explore',views.explore,name="explore"),
+            path('admin_page',views.admin_page,name="admin_page"),
+
+            path('explore',views.explore),
+            path('admin_page',views.admin_page),
+            
+            
+
+            path('explore',views.explore,name="explore"),
+
+   
             path('explore',views.explore,name="explore"),
             path('admin_page',views.admin_page,name="admin_page"),
 
@@ -46,5 +61,6 @@ urlpatterns = [
 
 
             path('explore',views.explore,name="explore"),
+
 
 ]
